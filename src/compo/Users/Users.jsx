@@ -1,5 +1,11 @@
 import ums from "./Users.module.css";
 import userPhoto from "../../img/avatar.jpg";
+import styled from "styled-components";
+
+const BorderPageUsers = styled.div`
+  border: 0.5px solid rgba(0, 0, 0, 0.68);
+  padding: 10px;
+`
 
 function Users(props) {
 
@@ -11,7 +17,7 @@ function Users(props) {
         }
     }
 
-    return <div>
+    return <BorderPageUsers>
         <div className={ums.num_bar}>
             {pages.map(p => <span className={props.currentPage === p && ums.selected}
                                   onClick={(e) => {
@@ -40,7 +46,7 @@ function Users(props) {
                     </span>
                 {/*for locations*/}
                 </span>
-        </div>)}</div>
+        </div>)}</BorderPageUsers>
 }
 
 export default Users
