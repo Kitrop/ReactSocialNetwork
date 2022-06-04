@@ -1,0 +1,14 @@
+.header_img {
+    height: 70px;
+    width: 100px;
+    max-width: 100%;
+    justify-content: center;
+    vertical-align: center;
+}
+
+.header {
+    margin-left: 6px;
+    width: 100%;
+    grid-area: header;
+    background-color: #42cd6a;
+}

@@ -1,0 +1,10 @@
+.avatar {
+    width: 25px;
+    height: 25px;
+    background-color: orange;
+    border-radius: 50%;
+}
+
+.friend_username {
+    padding-left: 0px;
+}

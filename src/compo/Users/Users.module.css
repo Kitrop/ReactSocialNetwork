@@ -1,0 +1,38 @@
+.profile {
+    padding-bottom: 40px
+}
+
+.numbers {
+    font-size: 18px;
+}
+
+.num_bar {
+    cursor: pointer;
+}
+
+.num {
+    margin-right: 3px;
+}
+
+.ava_photo {
+    height: 250px;
+    width: 250px;
+}
+
+.profile_name {
+    color: darkred;
+    line-height: 18px;
+    font-size: 17px
+}
+
+.description {
+    font-style: italic;
+}
+
+.location {
+    font-weight: bolder;
+}
+
+.selected {
+    font-weight: bolder;
+}

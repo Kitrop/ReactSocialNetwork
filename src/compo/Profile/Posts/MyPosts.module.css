@@ -1,0 +1,18 @@
+.postsBlock {
+    padding: 10px;
+}
+
+.myP {
+    text-align: center
+}
+
+.newP {
+    cursor: pointer;
+    font-style: italic;
+    font-size: 1.2em;
+    width: auto;
+}
+
+.wallPost {
+    margin-top: 20px;
+}
