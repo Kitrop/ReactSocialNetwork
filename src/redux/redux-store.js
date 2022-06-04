@@ -12,6 +12,8 @@ let reducersPack = combineReducers({
 })
 
 let store = createStore(reducersPack);
+let new_store = 'new store'
+console.log(new_store)
 
 window.store = store;
 
