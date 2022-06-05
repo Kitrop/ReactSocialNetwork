@@ -1,7 +1,7 @@
 import ums from "./Users.module.css";
 import userPhoto from "../../img/avatar.jpg";
 import styled from "styled-components";
-
+import {NavLink} from "react-router-dom"
 const BorderPageUsers = styled.div`
   border: 0.5px solid rgba(0, 0, 0, 0.68);
   padding: 10px;
@@ -29,7 +29,7 @@ function Users(props) {
         {props.users.map(u => <div className={ums.profile} key={u.id}>
             {/*// for avatar and button "follow"*/}
             <span>
-                    <div> <img src={u.photos.small != null ? u.photos.small : userPhoto} className={ums.ava_photo} alt={"profile avatar"}/> </div>
+                    <div> <NavLink to={'/profile/' + u.id}><img src={u.photos.small != null ? u.photos.small : userPhoto} className={ums.ava_photo} alt={"profile avatar"}/></NavLink> </div>
                     <div>
                         {u.followed ?
                             <button onClick={() => {props.unfollow(u.id)}}> Follow </button> :
@@ -39,13 +39,12 @@ function Users(props) {
                 </span>
             {/*for name, location and status*/}
             <span>
-                    {/* for name and status*/}
+                {/* for name and status*/}
                 <span>
-                        <div className={ums.profile_name}> {u.name} </div>
-                        <div className={ums.description}> {u.status} </div>
-                    </span>
-                {/*for locations*/}
+                    <div className={ums.profile_name}> {u.name} </div>
+                    <div className={ums.description}> {u.status} </div>
                 </span>
+            </span>
         </div>)}</BorderPageUsers>
 }
 
