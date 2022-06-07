@@ -7,7 +7,6 @@
 }
 
 .header {
-    margin-left: 6px;
     width: 100%;
     grid-area: header;
     background-color: #42cd6a;
