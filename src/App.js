@@ -1,19 +1,20 @@
 import './App.module.css';
 import s from './App.module.css'
-import Header from "./compo/Header/Header";
 import Nav from "./compo/Nav/Nav";
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import DialogsContainer from "./compo/Message/DialogsContainer";
 import ScrollToTop from "react-scroll-to-top";
 import UsersContainer from "./compo/Users/UsersContainer";
 import ProfileContainer from "./compo/Profile/ProfileContainer";
+import HeaderContainer from "./compo/Header/HeaderComponent";
+
 
 function App(props) {
 
     return (
         <BrowserRouter>
             <div className={s.grid}>
-                <Header/>
+                <HeaderContainer/>
                 <Nav />
                 <ScrollToTop smooth/>
                 <div className={s.content}>
