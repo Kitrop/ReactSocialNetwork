@@ -1,6 +1,6 @@
-.header_img {
-    height: 70px;
-    width: 100px;
+.logo {
+    height: 100px;
+    width: 120px;
     max-width: 100%;
     justify-content: center;
     vertical-align: center;
@@ -10,4 +10,14 @@
     width: 100%;
     grid-area: header;
     background-color: #42cd6a;
+}
+
+.login_btn {
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.login_btn a{
+    text-decoration: none;
+    color: #054287;
 }
