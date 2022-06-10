@@ -2,6 +2,7 @@ import ums from "./Users.module.css";
 import userPhoto from "../../img/avatar.jpg";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom"
+import axios from "axios";
 
 const BorderPageUsers = styled.div`
   border: 0.5px solid rgba(0, 0, 0, 0.68);
@@ -33,8 +34,17 @@ function Users(props) {
                     <div> <NavLink to={'/profile/' + u.id}><img src={u.photos.small != null ? u.photos.small : userPhoto} className={ums.ava_photo} alt={"profile avatar"}/></NavLink> </div>
                     <div>
                         {u.followed ?
-                            <button onClick={() => {props.unfollow(u.id)}}> Follow </button> :
-                            <button onClick={() => {props.follow(u.id)}}> Unfollow </button>
+                            <button onClick={() => {
+                                axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,{withCredentials: true, headers: {"API-KEY": "fbf5b600-2f44-40fb-bc63-1e40c8ffb8fc"}}).then((r) => {
+                                    if (r.data.resultCode === 0) {props.unfollow(u.id)}
+                                })
+                            }}> Follow </button> :
+                            <button onClick={() => {
+                                axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {withCredentials: true, headers: {"API-KEY": "fbf5b600-2f44-40fb-bc63-1e40c8ffb8fc"}}).then((r) => {
+                                    if (r.data.resultCode === 0) {
+                                        props.follow(u.id)}
+                                })
+                            }}> Unfollow </button>
                         }
                     </div>
                 </span>
