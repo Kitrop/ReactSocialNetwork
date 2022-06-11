@@ -3,6 +3,7 @@ import userPhoto from "../../img/avatar.jpg";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom"
 import axios from "axios";
+import {deleteUserApi, postUserApi} from "../api/api";
 
 const BorderPageUsers = styled.div`
   border: 0.5px solid rgba(0, 0, 0, 0.68);
@@ -23,9 +24,8 @@ function Users(props) {
         <div className={ums.num_bar}>
             {pages.map(p => <span className={props.currentPage === p && ums.selected}
                                   onClick={(e) => {
-                                      props.onPageChanged(p)
-                                  }}> {p}
-            </span>)}
+                                      props.onPageChanged(p)}
+            }> {p} </span>)}
         </div>
 
         {props.users.map(u => <div className={ums.profile} key={u.id}>
@@ -35,15 +35,20 @@ function Users(props) {
                     <div>
                         {u.followed ?
                             <button onClick={() => {
-                                axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {withCredentials: true, headers: {"API-KEY": "fbf5b600-2f44-40fb-bc63-1e40c8ffb8fc"}}).then((r) => {
-                                    if (r.data.resultCode === 0) {props.unfollow(u.id)}
-                                })
+                                deleteUserApi(u.id)
+                                    .then((data) => {
+                                        if (data.resultCode === 0) {
+                                            props.unfollow(u.id)
+                                        }
+                                    })
                             }}> Follow </button> :
                             <button onClick={() => {
-                                axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {withCredentials: true, headers: {"API-KEY": "fbf5b600-2f44-40fb-bc63-1e40c8ffb8fc"}}).then((r) => {
-                                    if (r.data.resultCode === 0) {
-                                        props.follow(u.id)}
-                                })
+                                postUserApi(u.id)
+                                    .then((data) => {
+                                        if (data.resultCode === 0) {
+                                            props.follow(u.id)
+                                        }
+                                    })
                             }}> Unfollow </button>
                         }
                     </div>
