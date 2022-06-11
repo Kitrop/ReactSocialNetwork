@@ -3,29 +3,29 @@ import {
 } from "../../redux/usersReducer";
 import {connect} from "react-redux";
 import {useEffect} from "react";
-import axios from "axios";
 import Users from "./Users";
 import Preloader from "../preloader/Preloader";
+import {getUsersApi} from "../api/api";
 
 function UsersContainer(props) {
 
     useEffect(() => {
         props.switchIsFetching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${props.currentPage}&count=${props.pageSize}`)
-            .then(response => {
+        getUsersApi(props.currentPage, props.pageSize)
+            .then(data => {
                 props.switchIsFetching(false);
-                props.setUsers(response.data.items);
-                props.setTotalUsersCount(response.data.totalCount);
+                props.setUsers(data.items);
+                props.setTotalUsersCount(data.totalCount);
             });
     }, [])
 
     let onPageChanged = (pageNumber) => {
         props.switchIsFetching(true);
         props.setCurrentPage(pageNumber);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${props.pageSize}`)
-            .then(response => {
+        getUsersApi(pageNumber, props.pageSize)
+            .then(data => {
                 props.switchIsFetching(false);
-                props.setUsers(response.data.items)
+                props.setUsers(data.items)
             });
     }
 
