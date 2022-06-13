@@ -1,5 +1,6 @@
-/*import {rerenderEntireTree} from "../index"; */
-/*    addPost() {
+/*
+/!*import {rerenderEntireTree} from "../index"; *!/
+/!*    addPost() {
         let newPost = {
             name: 'Oleg',
             text: this._state.profilePage.newPostText,
@@ -8,7 +9,7 @@
         this._state.profilePage.postsData.push(newPost);
         this._state.profilePage.newPostText = '';
         this._rerenderEntireTree();
-    },*/
+    },*!/
 import profileReducer from "./profileReducer";
 import dialogsReducer from "./dialogsReducer";
 import friendsReducer from "./friendsReducer";
@@ -94,3 +95,4 @@ let store= {
 
 window.store = store;
 export default store;
+*/
