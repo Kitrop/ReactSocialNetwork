@@ -5,12 +5,12 @@ import {useEffect} from "react";
 import {connect} from "react-redux";
 import {setUserProfile} from "../../redux/profileReducer";
 import {useParams} from "react-router-dom";
-import {getProfileApi} from "../api/api";
+
 
 const ProfileContainer = (props) => {
     let {userId} = useParams()
     useEffect(() => {
-        getProfileApi(userId)
+        getProfileApi()
             .then(data => {
                 props.setUserProfile(data);
             });
