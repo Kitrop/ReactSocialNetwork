@@ -1,27 +1,32 @@
 import {
-    followSuccess,
-    getUsersThunkCreator,
-    setCurrentPage,
-    unfollow,
-    switchIsFollowing,
-    follow,
-    unfollowSuccess
+    follow, setCurrentPage, setTotalUsersCount, setUsers, switchIsFetching, switchIsFollowing, unfollow
 } from "../../redux/usersReducer";
 import {connect} from "react-redux";
 import {useEffect} from "react";
 import Users from "./Users";
 import Preloader from "../preloader/Preloader";
-
+import {getUserApi} from "../api/api";
 
 function UsersContainer(props) {
 
     useEffect(() => {
-        props.getUsersThunkCreator(props.currentPage, props.pageSize)
+        props.switchIsFetching(true);
+        getUserApi(props.currentPage,props.pageSize)
+            .then(data => {
+                props.switchIsFetching(false);
+                props.setUsers(data.items);
+                props.setTotalUsersCount(data.totalCount);
+            });
     }, [])
 
     let onPageChanged = (pageNumber) => {
+        props.switchIsFetching(true);
         props.setCurrentPage(pageNumber);
-        props.getUsersThunkCreator(pageNumber, props.pageSize)
+        getUserApi(pageNumber, props.pageSize)
+            .then(data => {
+                props.switchIsFetching(false);
+                props.setUsers(data.items)
+            });
     }
 
     return <>
@@ -30,12 +35,10 @@ function UsersContainer(props) {
                                                   currentPage={props.currentPage}
                                                   onPageChanged={onPageChanged}
                                                   users={props.users}
-                                                  followSuccess={props.followSuccess}
-                                                  unfollowSuccess={props.unfollowSuccess}
-                                                  switchIsFollowing={props.switchIsFollowing}
-                                                  isFollowing={props.isFollowing}
                                                   follow={props.follow}
-                                                  unfollow={props.unfollow}/>}
+                                                  unfollow={props.unfollow}
+                                                  switchIsFollowing={props.switchIsFollowing}
+                                                  isFollowing={props.isFollowing}/>}
     </>
 }
 
@@ -51,5 +54,5 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps,
-    {followSuccess, unfollowSuccess, setCurrentPage, switchIsFollowing, getUsersThunkCreator, follow, unfollow})(UsersContainer)
+    {follow, unfollow, setUsers, setCurrentPage, setTotalUsersCount, switchIsFetching, switchIsFollowing})(UsersContainer)
 
