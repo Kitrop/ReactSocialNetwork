@@ -2,7 +2,6 @@ import ums from "./Users.module.css";
 import userPhoto from "../../img/avatar.jpg";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom"
-import axios from "axios";
 import {deleteUserApi, postUserApi} from "../api/api";
 
 const BorderPageUsers = styled.div`
@@ -34,20 +33,20 @@ function Users(props) {
                     <div> <NavLink to={'/profile/' + u.id}><img src={u.photos.small != null ? u.photos.small : userPhoto} className={ums.ava_photo} alt={"profile avatar"}/></NavLink> </div>
                     <div>
                         {u.followed ?
-                            <button onClick={() => {
+                            <button disabled={props.isFollowing.some(id => id === u.id)} onClick={() => {
+                                props.switchIsFollowing(true, u.id)
                                 deleteUserApi(u.id)
                                     .then((data) => {
-                                        if (data.resultCode === 0) {
-                                            props.unfollow(u.id)
-                                        }
+                                        if (data.resultCode === 0) { props.unfollow(u.id) }
+                                        props.switchIsFollowing(false, u.id)
                                     })
                             }}> Follow </button> :
-                            <button onClick={() => {
+                            <button disabled={props.isFollowing.some(id => id === u.id)} onClick={() => {
+                                props.switchIsFollowing(true, u.id)
                                 postUserApi(u.id)
                                     .then((data) => {
-                                        if (data.resultCode === 0) {
-                                            props.follow(u.id)
-                                        }
+                                        if (data.resultCode === 0) { props.follow(u.id) }
+                                        props.switchIsFollowing(false, u.id)
                                     })
                             }}> Unfollow </button>
                         }

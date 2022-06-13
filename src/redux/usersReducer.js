@@ -5,14 +5,16 @@ const SET_USERS = 'SET_USERS';
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE'
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT'
 const SWITCH_IS_FETCHING = 'SWITCH_IS_FETCHING'
+const SWITCH_IS_FOLLOWING = 'SWITCH_IS_FOLLOWING'
 
 // state
 let initialState = {
     users: [],
     pageSize: 5,
-    ifFetching: false,
+    ifFetching: true,
     totalUsersCount: 0,
     currentPage: 1,
+    isFollowing: []
 }
 
 //reducer
@@ -50,6 +52,14 @@ const usersReducer = (state = initialState, action) => {
         case SWITCH_IS_FETCHING: {
             return {...state, ifFetching: action.ifFetching}
         }
+        case SWITCH_IS_FOLLOWING: {
+            return {
+                ...state,
+                isFollowing: action.ifFetching
+                    ? [...state.isFollowing, action.userId]
+                    : state.isFollowing.filter(id => id != action.userId)
+            }
+        }
         default:
             return state
     }
@@ -62,6 +72,7 @@ export const setUsers = (users) => ({type: SET_USERS, users})
 export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage})
 export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, totalUsersCount})
 export const switchIsFetching = (ifFetching) => ({type: SWITCH_IS_FETCHING, ifFetching})
+export const switchIsFollowing= (ifFetching, userId) => ({type: SWITCH_IS_FOLLOWING, ifFetching, userId})
 
 
 export default usersReducer

@@ -1,9 +1,8 @@
 import {
-    follow, setCurrentPage, setTotalUsersCount, setUsers, switchIsFetching, unfollow
+    follow, setCurrentPage, setTotalUsersCount, setUsers, switchIsFetching, switchIsFollowing, unfollow
 } from "../../redux/usersReducer";
 import {connect} from "react-redux";
 import {useEffect} from "react";
-import axios from "axios";
 import Users from "./Users";
 import Preloader from "../preloader/Preloader";
 import {getUserApi} from "../api/api";
@@ -37,7 +36,9 @@ function UsersContainer(props) {
                                                   onPageChanged={onPageChanged}
                                                   users={props.users}
                                                   follow={props.follow}
-                                                  unfollow={props.unfollow}/>}
+                                                  unfollow={props.unfollow}
+                                                  switchIsFollowing={props.switchIsFollowing}
+                                                  isFollowing={props.isFollowing}/>}
     </>
 }
 
@@ -47,10 +48,11 @@ const mapStateToProps = (state) => {
         pageSize: state.usersPage.pageSize,
         totalUsersCount: state.usersPage.totalUsersCount,
         currentPage: state.usersPage.currentPage,
-        ifFetching: state.usersPage.ifFetching
+        ifFetching: state.usersPage.ifFetching,
+        isFollowing: state.usersPage.isFollowing
     }
 }
 
 export default connect(mapStateToProps,
-    {follow, unfollow, setUsers, setCurrentPage, setTotalUsersCount, switchIsFetching})(UsersContainer)
+    {follow, unfollow, setUsers, setCurrentPage, setTotalUsersCount, switchIsFetching, switchIsFollowing})(UsersContainer)
 
