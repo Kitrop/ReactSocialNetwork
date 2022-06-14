@@ -1,32 +1,25 @@
 import {
-    follow, setCurrentPage, setTotalUsersCount, setUsers, switchIsFetching, switchIsFollowing, unfollow
+    follow, followThunk,
+    getUserThunk,
+    setCurrentPage,
+    switchIsFollowing,
+    unfollow,
+    unfollowThunk
 } from "../../redux/usersReducer";
 import {connect} from "react-redux";
 import {useEffect} from "react";
 import Users from "./Users";
 import Preloader from "../preloader/Preloader";
-import {getUserApi} from "../api/api";
 
 function UsersContainer(props) {
 
     useEffect(() => {
-        props.switchIsFetching(true);
-        getUserApi(props.currentPage,props.pageSize)
-            .then(data => {
-                props.switchIsFetching(false);
-                props.setUsers(data.items);
-                props.setTotalUsersCount(data.totalCount);
-            });
+        props.getUserThunk()
     }, [])
 
     let onPageChanged = (pageNumber) => {
-        props.switchIsFetching(true);
         props.setCurrentPage(pageNumber);
-        getUserApi(pageNumber, props.pageSize)
-            .then(data => {
-                props.switchIsFetching(false);
-                props.setUsers(data.items)
-            });
+        props.getUserThunk(pageNumber)
     }
 
     return <>
@@ -38,7 +31,9 @@ function UsersContainer(props) {
                                                   follow={props.follow}
                                                   unfollow={props.unfollow}
                                                   switchIsFollowing={props.switchIsFollowing}
-                                                  isFollowing={props.isFollowing}/>}
+                                                  isFollowing={props.isFollowing}
+                                                  unfollowThunk={props.unfollowThunk}
+                                                  followThunk={props.followThunk}/>}
     </>
 }
 
@@ -54,5 +49,5 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps,
-    {follow, unfollow, setUsers, setCurrentPage, setTotalUsersCount, switchIsFetching, switchIsFollowing})(UsersContainer)
+    {follow, unfollow, setCurrentPage, switchIsFollowing, getUserThunk, unfollowThunk, followThunk})(UsersContainer)
 
