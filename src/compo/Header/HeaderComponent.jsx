@@ -1,9 +1,8 @@
 import {connect} from "react-redux";
 import Header from "./Header";
 import {useEffect} from "react";
-import axios from "axios";
 import {loginThunk, setAuthUserData} from "../../redux/authReducer";
-import {getLoginApi} from "../api/api";
+
 
 const HeaderContainer = (props) => {
     useEffect( () => {

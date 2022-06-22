@@ -6,6 +6,7 @@ import {connect} from "react-redux";
 import {getProfileThunk, setUserProfile} from "../../redux/profileReducer";
 import {useParams} from "react-router-dom";
 
+
 const ProfileContainer = (props) => {
     let {userId} = useParams()
     useEffect(() => {
