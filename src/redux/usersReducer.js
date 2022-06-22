@@ -1,4 +1,6 @@
 // actions
+import {deleteUserApi, getUserApi, postUserApi} from "../compo/api/api";
+
 const FOLLOW_USER = 'FOLLOW_USER';
 const UNFOLLOW_USER = 'UNFOLLOW_USER';
 const SET_USERS = 'SET_USERS';
@@ -57,7 +59,7 @@ const usersReducer = (state = initialState, action) => {
                 ...state,
                 isFollowing: action.ifFetching
                     ? [...state.isFollowing, action.userId]
-                    : state.isFollowing.filter(id => id != action.userId)
+                    : state.isFollowing.filter(id => id !== action.userId)
             }
         }
         default:
@@ -73,6 +75,44 @@ export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, current
 export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, totalUsersCount})
 export const switchIsFetching = (ifFetching) => ({type: SWITCH_IS_FETCHING, ifFetching})
 export const switchIsFollowing= (ifFetching, userId) => ({type: SWITCH_IS_FOLLOWING, ifFetching, userId})
+
+// thunkCreator
+export const getUserThunk = (currentPage, pageSize) => {
+    return (dispatch) => {
+       dispatch( switchIsFetching(true));
+        getUserApi(currentPage, pageSize)
+            .then(data => {
+                dispatch( switchIsFetching(false));
+                dispatch( setUsers(data.items));
+                dispatch( setTotalUsersCount(data.totalCount));
+            });
+    }
+}
+export const unfollowThunk = (id) => {
+    return (dispatch) => {
+        dispatch(switchIsFollowing(true, id));
+        deleteUserApi(id)
+            .then((data) => {
+                if (data.resultCode === 0) {
+                    dispatch(unfollow(id));
+                }
+                dispatch( switchIsFollowing(false, id));
+            })
+    }
+}
+export const followThunk = (id) => {
+    return (dispatch) => {
+        dispatch( switchIsFollowing(true, id));
+        postUserApi(id)
+            .then((data) => {
+                if (data.resultCode === 0) {
+                    dispatch( follow(id));
+                }
+                dispatch( switchIsFollowing(false, id));
+            })
+    }
+}
+
 
 
 export default usersReducer

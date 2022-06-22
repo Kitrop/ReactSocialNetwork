@@ -1,4 +1,6 @@
 // actions
+import {getProfileAPI} from "../compo/api/api";
+
 const ADD_POST  = 'ADD-POST';
 const NEW_TEXT_UPDATE  = 'NEW-TEXT-UPDATE';
 const SET_USER_PROFILE = 'SET_USER_PROFILE'
@@ -48,6 +50,15 @@ export const addPostActionCreater = () =>({type: ADD_POST})
 export const updPostActionCreater = (textPost) => ({type: NEW_TEXT_UPDATE, newText: textPost})
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 
+// thunkCreator
+export const getProfileThunk = (userId) => {
+    return (dispatch) => {
+        getProfileAPI(userId)
+            .then(data => {
+                dispatch(setUserProfile(data))
+            })
+    }
+}
 
 
 export default profileReducer;

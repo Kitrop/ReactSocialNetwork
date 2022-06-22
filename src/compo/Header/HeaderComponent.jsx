@@ -1,19 +1,12 @@
 import {connect} from "react-redux";
 import Header from "./Header";
 import {useEffect} from "react";
-import axios from "axios";
-import {setAuthUserData} from "../../redux/authReducer";
-import {getLoginApi} from "../api/api";
+import {loginThunk, setAuthUserData} from "../../redux/authReducer";
+
 
 const HeaderContainer = (props) => {
     useEffect( () => {
-        getLoginApi()
-            .then(data => {
-                if (data.resultCode === 0) {
-                    let {id, login, email} = data.data;
-                    props.setAuthUserData(id , email, login);
-                }
-            });
+        props.loginThunk()
     }, []);
 
     return <Header {...props}/>
@@ -24,4 +17,4 @@ const mapStateToProps = (state) => ({
     login: state.auth.login,
 });
 
-export default connect(mapStateToProps, {setAuthUserData})(HeaderContainer);
+export default connect(mapStateToProps, {setAuthUserData, loginThunk})(HeaderContainer);
