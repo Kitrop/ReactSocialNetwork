@@ -7,6 +7,7 @@ import ScrollToTop from "react-scroll-to-top";
 import UsersContainer from "./compo/Users/UsersContainer";
 import ProfileContainer from "./compo/Profile/ProfileContainer";
 import HeaderContainer from "./compo/Header/HeaderComponent";
+// import Login from "./compo/Login/Login";
 
 
 function App(props) {
@@ -22,7 +23,7 @@ function App(props) {
                         <Route path="/dialogs/*" element={<DialogsContainer  />}/>
                         <Route path="/profile/:userId" element={<ProfileContainer />}/>
                         <Route path="/users" element={<UsersContainer />}/>
-                        <Route path="/login" element={<UsersContainer />}/>
+                        {/*<Route path="/login" element={<Login />}/>*/}
                     </Routes>
                 </div>
             </div>
