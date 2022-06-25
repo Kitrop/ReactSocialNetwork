@@ -4,8 +4,8 @@ import Profile from "./Profile";
 import {useEffect} from "react";
 import {connect} from "react-redux";
 import {getProfileThunk, setUserProfile} from "../../redux/profileReducer";
-import {useParams} from "react-router-dom";
-
+import {Navigate, useParams} from "react-router-dom";
+import {RedirectToAuth} from "../hoc/RedirectToAuth";
 
 const ProfileContainer = (props) => {
     let {userId} = useParams()
@@ -13,18 +13,17 @@ const ProfileContainer = (props) => {
         props.getProfileThunk(userId)
     }, []);
 
-
     return (
         <div className={myPosts.content}>
-            <Profile {...props} profile={props.profile} params={useParams()}/>
+            <Profile {...props} profile={props.profile} params={useParams()} isAuth={props.isAuth}/>
         </div>
     );
 
 }
-    let mapStateToProps = (state) => ({
-        profile: state.profilePage.profile
+
+let mapStateToProps = (state) => ({
+        profile: state.profilePage.profile,
+        isAuth: state.auth.isAuth
     });
 
-
-
-export default connect(mapStateToProps, {setUserProfile, getProfileThunk})(ProfileContainer);
+export default connect(mapStateToProps, {setUserProfile, getProfileThunk})(RedirectToAuth(ProfileContainer));

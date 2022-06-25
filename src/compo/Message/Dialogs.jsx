@@ -2,7 +2,7 @@ import message from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogsItem';
 import Message from "./MessagesItem/Message";
 import {createRef} from "react";
-
+import {Navigate} from "react-router-dom"
 
 function Dialogs(props) {
 
@@ -25,6 +25,10 @@ function Dialogs(props) {
         props.UpdateNewMessageActionCreater(body);
     }
 
+/*    if (props.isAuth === false) {
+        return <Navigate to={'/login'} />
+    }*/
+
     return (
         <div className={message.dialogs}>
             <div className={message.notify}>
@@ -38,7 +42,7 @@ function Dialogs(props) {
                           placeholder={"Enter your message"}/>
             </div>
             <div>
-                <button onClick={OnClickSendMessage}>Send Message</button>
+                <button className={message.mybutton} onClick={OnClickSendMessage}>Send Message</button>
             </div>
         </div>
     );

@@ -9,7 +9,9 @@ import {
 import {connect} from "react-redux";
 import {useEffect} from "react";
 import Users from "./Users";
-import Preloader from "../preloader/Preloader";
+import Preloader from "../Preloader/Preloader";
+import {Navigate} from "react-router-dom";
+import {RedirectToAuth} from "../hoc/RedirectToAuth";
 
 function UsersContainer(props) {
 
@@ -33,7 +35,8 @@ function UsersContainer(props) {
                                                   switchIsFollowing={props.switchIsFollowing}
                                                   isFollowing={props.isFollowing}
                                                   unfollowThunk={props.unfollowThunk}
-                                                  followThunk={props.followThunk}/>}
+                                                  followThunk={props.followThunk}
+                                                  isAuth={props.isAuth}/>}
     </>
 }
 
@@ -44,10 +47,11 @@ const mapStateToProps = (state) => {
         totalUsersCount: state.usersPage.totalUsersCount,
         currentPage: state.usersPage.currentPage,
         ifFetching: state.usersPage.ifFetching,
-        isFollowing: state.usersPage.isFollowing
+        isFollowing: state.usersPage.isFollowing,
+        isAuth: state.auth.isAuth
     }
 }
 
 export default connect(mapStateToProps,
-    {follow, unfollow, setCurrentPage, switchIsFollowing, getUserThunk, unfollowThunk, followThunk})(UsersContainer)
+    {follow, unfollow, setCurrentPage, switchIsFollowing, getUserThunk, unfollowThunk, followThunk})(RedirectToAuth(UsersContainer))
 

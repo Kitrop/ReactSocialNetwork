@@ -36,3 +36,38 @@
 .selected {
     font-weight: bolder;
 }
+
+.btn_follow {
+    background: #50d665;
+    background: -webkit-linear-gradient(322deg, #50d665 0%, #3dc673 100%);
+    background: linear-gradient(322deg, #50d665 0%, #3dc673 100%);
+    padding: 3px 7px;
+    color: #333;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid #3a3737;
+}
+
+.btn_follow:active {
+    position: relative;
+    top: 1px;
+}
+
+
+.btn_unfollow {
+    background: #727070;
+    background: -webkit-linear-gradient(133deg, #b7b3b7 0%, #c3c1c3 100%);
+    background: linear-gradient(133deg, #9b969b 0%, #c3c1c3 100%);
+    padding: 3px 7px;
+    color: #333;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid #3a3737;
+}
+
+.btn_unfollow:active {
+    position: relative;
+    top: 1px;
+}

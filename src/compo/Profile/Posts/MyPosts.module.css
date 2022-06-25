@@ -16,3 +16,36 @@
 .wallPost {
     margin-top: 20px;
 }
+
+.mybutton {
+    box-shadow:inset 0px -3px 7px 0px #29bbff;
+    background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+    background-color:#2dabf9;
+    border-radius:3px;
+    border:1px solid #0b0e07;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    padding:9px 23px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #263666;
+}
+.mybutton:hover {
+    background: #0688fa linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+}
+.mybutton:active {
+    position:relative;
+    top:1px;
+}
+
+.textarea {
+    overflow: auto;
+    resize: none;
+    width: 300px;
+    height: 50px;
+    border:1px solid #0b0e07;
+    border-radius: 3px;
+    padding: 8px 0 8px 10px;
+}

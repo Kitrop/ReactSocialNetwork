@@ -23,10 +23,10 @@ function MyPosts(props) {
                 <h3>MyPosts</h3>
             </div>
             <div>
-                <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText}/>
+                <textarea className={posts.textarea} onChange={onPostChange} ref={newPostElement} value={props.newPostText}/>
             </div>
             <div>
-                <button onClick={onAddPost}>Add post</button>
+                <button className={posts.mybutton} onClick={onAddPost}>Add post</button>
             </div>
             <div className={posts.wallPost}>
                 {postsElements}
