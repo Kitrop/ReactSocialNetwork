@@ -42,7 +42,7 @@ function Dialogs(props) {
                           placeholder={"Enter your message"}/>
             </div>
             <div>
-                <button onClick={OnClickSendMessage}>Send Message</button>
+                <button className={message.mybutton} onClick={OnClickSendMessage}>Send Message</button>
             </div>
         </div>
     );

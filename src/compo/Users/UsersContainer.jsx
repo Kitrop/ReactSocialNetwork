@@ -11,6 +11,7 @@ import {useEffect} from "react";
 import Users from "./Users";
 import Preloader from "../Preloader/Preloader";
 import {Navigate} from "react-router-dom";
+import {RedirectToAuth} from "../hoc/RedirectToAuth";
 
 function UsersContainer(props) {
 
@@ -39,12 +40,6 @@ function UsersContainer(props) {
     </>
 }
 
-const RedirectComponent = (props) => {
-    if (props.isAuth === false) {
-        return <Navigate to={'/login'} />
-    }
-    return <UsersContainer {...props} />
-}
 const mapStateToProps = (state) => {
     return {
         users: state.usersPage.users,
@@ -58,5 +53,5 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps,
-    {follow, unfollow, setCurrentPage, switchIsFollowing, getUserThunk, unfollowThunk, followThunk})(RedirectComponent)
+    {follow, unfollow, setCurrentPage, switchIsFollowing, getUserThunk, unfollowThunk, followThunk})(RedirectToAuth(UsersContainer))
 

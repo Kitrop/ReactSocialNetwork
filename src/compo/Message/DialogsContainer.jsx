@@ -2,13 +2,14 @@ import {SendMessageActionCreater, UpdateNewMessageActionCreater} from "../../red
 import Dialogs from "./Dialogs";
 import {connect} from "react-redux";
 import {Navigate} from "react-router-dom";
+import {RedirectToAuth} from "../hoc/RedirectToAuth";
 
-const RedirectComponent = (props) => {
-    if (props.isAuth === false) {
-        return <Navigate to={'/login'} />
-    }
-    return <Dialogs {...props} />
-}
+// const RedirectComponent = (props) => {
+//     if (props.isAuth === false) {
+//         return <Navigate to={'/login'} />
+//     }
+//     return <Dialogs {...props} />
+// }
 
 const mapStateToProps = (state) => {
     return {
@@ -17,6 +18,6 @@ const mapStateToProps = (state) => {
     }
 }
 
-const DialogsContainer = connect(mapStateToProps, {SendMessageActionCreater, UpdateNewMessageActionCreater})(RedirectComponent);
+const DialogsContainer = connect(mapStateToProps, {SendMessageActionCreater, UpdateNewMessageActionCreater})(RedirectToAuth(Dialogs));
 
 export default DialogsContainer;
