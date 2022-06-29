@@ -2,7 +2,7 @@ import ums from "./Users.module.css";
 import userPhoto from "../../img/avatar.jpg";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom"
-import {Navigate} from "react-router-dom"
+
 
 const BorderPageUsers = styled.div`
   border: 0.5px solid rgba(0, 0, 0, 0.68);

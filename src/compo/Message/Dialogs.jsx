@@ -2,17 +2,21 @@ import message from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogsItem';
 import Message from "./MessagesItem/Message";
 import {createRef} from "react";
-import {Navigate} from "react-router-dom"
+import {useDispatch, useSelector} from "react-redux";
+import {getMessage} from "../../redux/dialogSelectors";
 
 function Dialogs(props) {
 
-    let state = props.dialogsPage;
+    const dialogsPage = useSelector(getMessage)
+    const dispatch = useDispatch()
+
+    // let state = props.dialogsPage;
 
     let dialogsElements =
-        state.dialogsData.map(d => <DialogItem name={d.name} key={d.id} id={d.id} />)
+        dialogsPage.dialogsData.map(d => <DialogItem name={d.name} key={d.id} id={d.id} />)
     let messagesElements =
-        state.messagesData.map(m => <Message ava={m.ava} key={m.id} id={m.id} content={m.message}/>)
-    let newMessageText = state.newMessageText;
+        dialogsPage.messagesData.map(m => <Message ava={m.ava} key={m.id} id={m.id} content={m.message}/>)
+    let newMessageText = dialogsPage.newMessageText;
 
     let newMessageElement = createRef();
 
@@ -24,10 +28,6 @@ function Dialogs(props) {
         let body = e.target.value;
         props.UpdateNewMessageActionCreater(body);
     }
-
-/*    if (props.isAuth === false) {
-        return <Navigate to={'/login'} />
-    }*/
 
     return (
         <div className={message.dialogs}>

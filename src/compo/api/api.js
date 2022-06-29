@@ -37,3 +37,45 @@ export const getLoginApi = () => {
             return r.data
         })
 }
+
+export const userApi = {
+    getUserApi(currentPage, pageSize) {
+        return instance.get(`users?page=${currentPage}&count=${pageSize}`)
+            .then(r => {
+                return r.data
+            })
+    },
+    postUserApi(id){
+        return instance.post(`follow/${id}`, {})
+            .then(r => {
+                return r.data
+            })
+    },
+    deleteUserApi(id){
+        return instance.delete(`follow/${id}`)
+            .then(r => {
+                return r.data
+            })
+    }
+}
+
+export const profileApi = {
+    getProfileAPI(userId){
+        return instance.get(`profile/` + userId)
+            .then(r => {
+                return r.data
+            })
+    },
+    getLoginApi() {
+        return instance.get(`auth/me`)
+            .then(r => {
+                return r.data
+            })
+    },
+    getProfileStatus(userId){
+        return instance.get(`profile/status/` + userId);
+    },
+    putProfileStatus(status) {
+        return instance.put(`profile/status`, { status: status });
+    }
+}

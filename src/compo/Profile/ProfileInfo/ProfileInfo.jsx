@@ -2,6 +2,7 @@ import i from './ProfileInfo.module.css';
 import Preloader from "../../Preloader/Preloader";
 import userPhoto from "../../../img/avatar.jpg";
 import ProfileStatus from "./ProfileStatus";
+import {putProfileStatus} from "../../../redux/profileReducer";
 
 
 function ProfileInfo(props) {
@@ -18,7 +19,7 @@ function ProfileInfo(props) {
                 <div className={i.info_profile}>{props.profile.fullName}</div>
                 <img className={i.profile_avatar} src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto} alt={'avatar'} />
                 {/*<div className={i.info_profile}>About me: <span className={i.desc_txt}>{props.profile.aboutMe}</span> </div>*/}
-                <ProfileStatus profile={props.profile}/>
+                <ProfileStatus status={props.status} putProfileStatus={props.putProfileStatus}/>
                 <div className={i.info_profile}>Job: <span className={i.desc_txt}>{props.profile.lookingForAJobDescription}</span> </div>
                 <div className={i.info_profile}>My contacts: <span className={i.desc_txt}>{props.profile.contacts.vk}</span> </div>
                 <div className={i.info_profile}>looking for a job: {props.profile.lookingForAJob

@@ -7,7 +7,7 @@ import {loginThunk, setAuthUserData} from "../../redux/authReducer";
 const HeaderContainer = (props) => {
     useEffect( () => {
         props.loginThunk()
-    }, []);
+    }, [props]);
 
     return <Header {...props}/>
 }

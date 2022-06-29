@@ -1,4 +1,4 @@
-import {getLoginApi} from "../compo/api/api";
+import {getLoginApi, profileApi} from "../compo/api/api";
 
 const SET_USER_DATA = 'SET_USER_DATA'
 
@@ -28,7 +28,7 @@ export const setAuthUserData = (id, email, login) => ({type: SET_USER_DATA, data
 // thunkCreator
 export const loginThunk = () => {
     return (dispatch) => {
-        getLoginApi()
+        profileApi.getLoginApi()
             .then(data => {
                 if (data.resultCode === 0) {
                     let {id, login, email} = data.data;

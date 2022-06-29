@@ -12,6 +12,15 @@ import Users from "./Users";
 import Preloader from "../Preloader/Preloader";
 import {Navigate} from "react-router-dom";
 import {RedirectToAuth} from "../hoc/RedirectToAuth";
+import {
+    currentPage,
+    ifFetching,
+    isAuth,
+    isFollowing,
+    pageSize,
+    totalUsersCount,
+    users
+} from "../../redux/usersSelector";
 
 function UsersContainer(props) {
 
@@ -42,13 +51,13 @@ function UsersContainer(props) {
 
 const mapStateToProps = (state) => {
     return {
-        users: state.usersPage.users,
-        pageSize: state.usersPage.pageSize,
-        totalUsersCount: state.usersPage.totalUsersCount,
-        currentPage: state.usersPage.currentPage,
-        ifFetching: state.usersPage.ifFetching,
-        isFollowing: state.usersPage.isFollowing,
-        isAuth: state.auth.isAuth
+        users: users(state),
+        pageSize: pageSize(state),
+        totalUsersCount: totalUsersCount(state),
+        currentPage: currentPage(state),
+        ifFetching: ifFetching(state),
+        isFollowing: isFollowing(state),
+        isAuth: isAuth(state)
     }
 }
 
