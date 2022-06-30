@@ -10,8 +10,7 @@ import {connect} from "react-redux";
 import {useEffect} from "react";
 import Users from "./Users";
 import Preloader from "../Preloader/Preloader";
-import {Navigate} from "react-router-dom";
-import {RedirectToAuth} from "../hoc/RedirectToAuth";
+import {useNavigate} from "react-router-dom";
 import {
     currentPage,
     ifFetching,
@@ -23,6 +22,13 @@ import {
 } from "../../redux/usersSelector";
 
 function UsersContainer(props) {
+
+    let navigator = useNavigate()
+    useEffect(() => {
+        if (props.isAuth === false) {
+            return navigator('/login')
+        }
+    }, [navigator, props.isAuth])
 
     useEffect(() => {
         props.getUserThunk()
@@ -62,5 +68,5 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps,
-    {follow, unfollow, setCurrentPage, switchIsFollowing, getUserThunk, unfollowThunk, followThunk})(RedirectToAuth(UsersContainer))
+    {follow, unfollow, setCurrentPage, switchIsFollowing, getUserThunk, unfollowThunk, followThunk})(UsersContainer)
 

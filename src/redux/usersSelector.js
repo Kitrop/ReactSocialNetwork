@@ -23,5 +23,5 @@ export const isFollowing = (state) => {
 }
 
 export const isAuth = (state) => {
-    return state.usersPage.isAuth
+    return state.auth.isAuth
 }

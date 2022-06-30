@@ -5,9 +5,20 @@ import {useEffect} from "react";
 import {connect} from "react-redux";
 import {getProfileStatus, getProfileThunk, putProfileStatus, setUserProfile} from "../../redux/profileReducer";
 import {useParams} from "react-router-dom";
-import {RedirectToAuth} from "../hoc/RedirectToAuth";
+import { useNavigate } from "react-router-dom"
 
 const ProfileContainer = (props) => {
+
+
+
+    let navigate = useNavigate()
+    useEffect(()=>{
+        if(props.isAuth === false){
+            return navigate("/login")
+        }
+    }, [props.isAuth])
+
+
     let {userId} = useParams()
     useEffect(() => {
         props.getProfileThunk(userId)
@@ -28,4 +39,4 @@ let mapStateToProps = (state) => ({
     isAuth: state.auth.isAuth
 });
 
-export default connect(mapStateToProps,{setUserProfile, getProfileThunk, getProfileStatus, putProfileStatus})(RedirectToAuth(ProfileContainer));
+export default connect(mapStateToProps,{setUserProfile, getProfileThunk, getProfileStatus, putProfileStatus})(ProfileContainer);

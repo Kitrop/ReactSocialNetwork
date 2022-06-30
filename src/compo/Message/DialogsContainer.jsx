@@ -1,8 +1,10 @@
+/*
 import {SendMessageActionCreater, UpdateNewMessageActionCreater} from "../../redux/dialogsReducer";
 import Dialogs from "./Dialogs";
 import {connect, useDispatch, useSelector} from "react-redux";
 import {RedirectToAuth} from "../hoc/RedirectToAuth";
 import {createSelector} from "reselect";
+*/
 
 
 
