@@ -1,8 +1,7 @@
 // actions
-import {getProfileAPI, profileApi} from "../compo/api/api";
+import {profileApi} from "../compo/api/api";
 
 const ADD_POST  = 'ADD-POST';
-const NEW_TEXT_UPDATE  = 'NEW-TEXT-UPDATE';
 const SET_USER_PROFILE = 'SET_USER_PROFILE'
 const SET_PROFILE_STATUS = 'GET_PROFILE_STATUS'
 const UPDATE_PROFILE_STATUS = 'UPDATE_PROFILE_STATUS'
@@ -24,20 +23,12 @@ const profileReducer = (state = initialState, action) => {
         case ADD_POST: {
             let newPost = {
             name: 'Oleg',
-            text: state.newPostText,
+            text: action.newPostText,
             like: '56',
         };
-
             return {
                 ...state,
                 postsData: [...state.postsData, newPost],
-                newPostText: ''
-            }
-        }
-        case NEW_TEXT_UPDATE: {
-            return {
-                ...state,
-                newPostText: action.newText
             }
         }
         case SET_USER_PROFILE: {
@@ -55,8 +46,7 @@ const profileReducer = (state = initialState, action) => {
     }
 }
 // actionCreater
-export const addPostActionCreater = () =>({type: ADD_POST})
-export const updPostActionCreater = (textPost) => ({type: NEW_TEXT_UPDATE, newText: textPost})
+export const addPostActionCreater = (newPostText) =>({type: ADD_POST, newPostText})
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 export const setProfileStatus = (status) => ({type: SET_PROFILE_STATUS, status})
 

@@ -30,8 +30,8 @@ const ProfileContainer = (props) => {
             <Profile {...props} profile={props.profile} params={useParams()} isAuth={props.isAuth} status = {props.status} putProfileStatus={props.putProfileStatus} />
         </div>
     );
-
 }
+
 
 let mapStateToProps = (state) => ({
     profile: state.profilePage.profile,

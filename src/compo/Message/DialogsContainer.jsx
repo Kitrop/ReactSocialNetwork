@@ -1,11 +1,9 @@
-/*
 import {SendMessageActionCreater, UpdateNewMessageActionCreater} from "../../redux/dialogsReducer";
 import Dialogs from "./Dialogs";
-import {connect, useDispatch, useSelector} from "react-redux";
-import {RedirectToAuth} from "../hoc/RedirectToAuth";
-import {createSelector} from "reselect";
-*/
-
+import {connect} from "react-redux";
+import {getMessage} from "../../redux/dialogSelectors";
+import {useNavigate} from "react-router-dom";
+import {useEffect} from "react";
 
 
 
@@ -21,22 +19,36 @@ import {createSelector} from "reselect";
 //         RedirectToAuth(Dialogs)
 //     )
 // }
-//
+
+
+const DialogsContainer = (props) => {
+    let navigator = useNavigate()
+    useEffect(() => {
+        if (props.isAuth === false) {
+            return navigator('/login')
+        }
+    }, [navigator, props.isAuth]);
+
+    return (
+        <Dialogs SendMessageActionCreater={props.SendMessageActionCreater}
+                 UpdateNewMessageActionCreater={props.UpdateNewMessageActionCreater}
+                 dialogsPage={props.dialogsPage}
+                 isAuth={props.isAuth}/>
+    )
+
+}
 
 
 
 
 
-//
-//
-//
-// const mapStateToProps = (state) => {
-//     return {
-//         dialogsPage: getMessage(state),
-//         isAuth: state.auth.isAuth
-//     }
-// }
-//
-// const DialogsContainer = connect(mapStateToProps, {SendMessageActionCreater, UpdateNewMessageActionCreater})(RedirectToAuth(Dialogs));
-//
-// export default DialogsContainer;
+const mapStateToProps = (state) => {
+    return {
+        dialogsPage: getMessage(state),
+        isAuth: state.auth.isAuth
+    }
+}
+
+connect(mapStateToProps, {SendMessageActionCreater, UpdateNewMessageActionCreater})(DialogsContainer);
+
+export default DialogsContainer;
