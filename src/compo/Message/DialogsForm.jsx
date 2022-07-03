@@ -1,5 +1,6 @@
 import {Field, Formik} from "formik";
 import message from "./Dialogs.module.css";
+import * as Yup from "yup";
 
 
 const DialogForm = (props) => {
@@ -14,11 +15,16 @@ const DialogForm = (props) => {
             setSubmitting(false);
         }, 400);
     }
-
+    let SignupSchema = Yup.object().shape({
+        messageText: Yup.string()
+            .min(0, 'Too Short!')
+            .max(350, 'Too Long!')
+    });
     return (
         <Formik
             initialValues={initialValues}
-            onSubmit={onSubmit}>
+            onSubmit={onSubmit}
+            validationSchema = {SignupSchema}>
             {({
                   values,
                   errors,

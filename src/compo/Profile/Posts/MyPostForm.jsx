@@ -1,19 +1,30 @@
 import posts from "./MyPosts.module.css";
 import {Formik, Field} from "formik";
+import * as Yup from "yup";
+import styled from "styled-components";
+
+const Error = styled.div`
+  color: red;
+  font-size: 18px;
+  font-style: italic;
+`
 
 const MyPostForm = (props) => {
 
     let initialValues = {
         postText: ''
     }
-
+    let SignupSchema = Yup.object().shape({
+        postText: Yup.string()
+            .min(2, 'Too Short!')
+            .max(250, 'Too Long!')
+    });
     let submitCallback =  (values, { setSubmitting }) => {
         setTimeout(() => {
             props.onAddPost(values.postText)
             setSubmitting(false);
         }, 400);
     }
-
     let validateValues = values => {
         const errors = {};
         if (!values.postText) {
@@ -28,9 +39,10 @@ const MyPostForm = (props) => {
 
     return (
         <Formik
-            initialValues={initialValues}
-            validateValues={validateValues}
-            onSubmit={submitCallback}>
+            initialValues = {initialValues}
+            validationSchema = {SignupSchema}
+            validateValues = {validateValues}
+            onSubmit = {submitCallback}>
             {({
                   values,
                   errors,
@@ -45,7 +57,7 @@ const MyPostForm = (props) => {
                     <div>
                         <Field type={'text'} name={'postText'} placeholder={'Your post text'} className={posts.textarea} onChange={handleChange} onBlur={handleBlur} value={values.postText}/>
                     </div>
-                    {errors.postText && touched.postText && errors.postText}
+                    <Error>{errors.postText && touched.postText && errors.postText}</Error>
                     <div>
                         <button type="submit" className={posts.mybutton} disabled={isSubmitting}>Add post</button>
                     </div>

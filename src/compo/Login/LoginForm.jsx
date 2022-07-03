@@ -1,11 +1,27 @@
 import { Formik } from 'formik';
+import styled from 'styled-components';
+import * as Yup from 'yup';
+
+const Error = styled.div`
+  color: red;
+  font-size: 18px;
+  font-style: italic;
+`
 
 export const LoginForm = (props) => {
 
     let initialValues = {
         email: '',
-        password: ''
+        password: '',
+        remember: ''
     }
+    let SignupSchema = Yup.object().shape({
+        password: Yup.string()
+            .min(5, 'Too Short!')
+            .max(50, 'Too Long!')
+            .required('Required'),
+        email: Yup.string().email('Invalid email').required('Required'),
+    });
     let validateValues = values => {
         const errors = {};
         if (!values.email) {
@@ -19,7 +35,7 @@ export const LoginForm = (props) => {
     }
     let submitCallback =  (values, { setSubmitting }) => {
         setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
+            props.loginThunk(values.email, values.password, values.rememberMe)
             setSubmitting(false);
         }, 400);
     }
@@ -27,6 +43,7 @@ export const LoginForm = (props) => {
     return (
         <Formik
             initialValues={ initialValues }
+            validationSchema={SignupSchema}
             validate={ validateValues }
             onSubmit={ submitCallback } >
             {({
@@ -44,21 +61,18 @@ export const LoginForm = (props) => {
                         <label htmlFor={'email'}>Login / Email</label>
                         <input type="email" name="email" onChange={handleChange} onBlur={handleBlur} value={values.email}/>
                     </div>
-                    {errors.email && touched.email && errors.email}
-
+                    <Error> {errors.email && touched.email && errors.email} </Error>
                     <div>
                         <label htmlFor={'password'}>Password</label>
                         <input type="password" name="password" onChange={handleChange} onBlur={handleBlur}  value={values.password}/>
                     </div>
-                    {errors.password && touched.password && errors.password}
+                    <Error>{errors.password && touched.password && errors.password}</Error>
                     <div>
                         <label htmlFor={'rememberMe'}> Remember me</label>
                         <input type="checkbox" name={"rememberMe"} onChange={handleChange}  value={values.rememberMe}/>
                     </div>
                     <div>
-                        <button type="submit" disabled={isSubmitting}>
-                            Submit
-                        </button>
+                        <button type="submit" disabled={isSubmitting}> Submit< /button>
                     </div>
                 </form>
             )}
