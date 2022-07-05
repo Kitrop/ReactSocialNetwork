@@ -1,8 +1,7 @@
 import './App.module.css';
 import s from './App.module.css'
 import Nav from "./compo/Nav/Nav";
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import DialogsContainer from "./compo/Message/DialogsContainer";
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import ScrollToTop from "react-scroll-to-top";
 import UsersContainer from "./compo/Users/UsersContainer";
 import ProfileContainer from "./compo/Profile/ProfileContainer";
@@ -11,8 +10,9 @@ import Dialogs from "./compo/Message/Dialogs";
 import Login from "./compo/Login/Login";
 
 
-
 function App(props) {
+
+
 
     return (
         <BrowserRouter>

@@ -1,4 +1,4 @@
-import {getLoginMeApi, loginApi, profileApi} from "../compo/api/api";
+import {loginApi, profileApi} from "../compo/api/api";
 
 const SET_USER_DATA = 'SET_USER_DATA'
 
@@ -34,7 +34,7 @@ export const loginMeThunk = () => {
                     let {id, login, email} = data.data;
                     dispatch(setAuthUserData(id, email, login, true));
                 }
-            });
+            })
     }
 }
 export const loginThunk = (email, password, rememberMe) => {

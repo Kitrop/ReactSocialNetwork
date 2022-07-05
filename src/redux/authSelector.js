@@ -1,5 +1,5 @@
-export const getMessage = (state) => {
-    return state.dialogsPage
+export const getLogin = (state) => {
+    return state.auth.login
 }
 
 export const getIsAuth = (state) => {

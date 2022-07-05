@@ -1,4 +1,4 @@
-import { Formik } from 'formik';
+import {Formik} from 'formik';
 import styled from 'styled-components';
 import * as Yup from 'yup';
 
@@ -35,7 +35,7 @@ export const LoginForm = (props) => {
     }
     let submitCallback =  (values, { setSubmitting }) => {
         setTimeout(() => {
-            props.loginThunk(values.email, values.password, values.rememberMe)
+            props.loginThunk(values.email, values.password, values.rememberMe);
             setSubmitting(false);
         }, 400);
     }
@@ -45,7 +45,8 @@ export const LoginForm = (props) => {
             initialValues={ initialValues }
             validationSchema={SignupSchema}
             validate={ validateValues }
-            onSubmit={ submitCallback } >
+            onSubmit={ submitCallback }
+        >
             {({
                   values,
                   errors,

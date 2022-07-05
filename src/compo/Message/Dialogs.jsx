@@ -1,31 +1,35 @@
 import message from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogsItem';
 import Message from "./MessagesItem/Message";
-import {createRef} from "react";
+import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {getMessage} from "../../redux/dialogSelectors";
-import {Formik, Field} from "formik";
+import {getIsAuth, getMessage} from "../../redux/dialogSelectors";
 import DialogsForm from "./DialogsForm";
-import {SendMessageActionCreater} from "../../redux/dialogsReducer";
+import {useNavigate} from "react-router-dom";
 
 function Dialogs(props) {
 
-    const dialogsPage = useSelector(getMessage)
-    const dispatch = useDispatch()
+
+    const isAuth = useSelector( state => getIsAuth(state))
+    let navigator = useNavigate()
+    useEffect(() => {
+        if (isAuth === false) {
+            return navigator('/login')
+        }
+    }, [isAuth, navigator]);
 
 
+
+    const dialogsPage = useSelector( state => getMessage(state))
     let dialogsElements = dialogsPage.dialogsData.map(d => <DialogItem name={d.name} key={d.id} id={d.id} />)
     let messagesElements = dialogsPage.messagesData.map(m => <Message ava={m.ava} key={m.id} id={m.id} content={m.message}/>)
 
-    let newMessageText = dialogsPage.newMessageText;
-    let newMessageElement = createRef();
-    let OnClickSendMessage = () => {
-        props.SendMessageActionCreater();
-    }
-    let OnNewMessageSend = (e) => {
-        let body = e.target.value;
-        props.UpdateNewMessageActionCreater(body);
-    }
+
+
+    const dispatch = useDispatch()
+    // const sendMsgAC = (newMessageText) => dispatch(SendMessageActionCreator());
+    const sendMsgAC = (newMessageText) => dispatch({type:'SEND_MESSAGE', newMessageText})
+
 
     return (
         <div className={message.dialogs}>
@@ -35,7 +39,7 @@ function Dialogs(props) {
             <div className={message.paper_dial}>
                 {messagesElements}
             </div>
-            <DialogsForm SendMessageActionCreater={props.SendMessageActionCreater}/>
+            <DialogsForm SendMessageActionCreater={sendMsgAC}/>
         </div>
     );
 }
