@@ -2,7 +2,7 @@ import ums from "./Users.module.css";
 import userPhoto from "../../img/avatar.jpg";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom"
-import {Navigate} from "react-router-dom"
+
 
 const BorderPageUsers = styled.div`
   border: 0.5px solid rgba(0, 0, 0, 0.68);
@@ -36,11 +36,11 @@ function Users(props) {
                     <div> <NavLink to={'/profile/' + u.id}><img src={u.photos.small != null ? u.photos.small : userPhoto} className={ums.ava_photo} alt={"profile avatar"}/></NavLink> </div>
                     <div>
                         {u.followed
-                            ? <button className={ums.btn_follow} disabled = { props.isFollowing.some(id => id === u.id) }
-                                      onClick={() => { props.unfollowThunk(u.id)} }> Follow
+                            ? <button className={ums.btn_unfollow} disabled = { props.isFollowing.some(id => id === u.id) }
+                                      onClick={() => { props.unfollowThunk(u.id)} }> Unfollow
                             </button>
-                            : <button className={ums.btn_unfollow}  disabled = { props.isFollowing.some(id => id === u.id) }
-                                      onClick={() => { props.followThunk(u.id)} }> Unfollow
+                            : <button className={ums.btn_follow}  disabled = { props.isFollowing.some(id => id === u.id) }
+                                      onClick={() => { props.followThunk(u.id)} }> Follow
                             </button>
                         }
                     </div>

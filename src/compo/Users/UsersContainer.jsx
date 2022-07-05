@@ -10,10 +10,25 @@ import {connect} from "react-redux";
 import {useEffect} from "react";
 import Users from "./Users";
 import Preloader from "../Preloader/Preloader";
-import {Navigate} from "react-router-dom";
-import {RedirectToAuth} from "../hoc/RedirectToAuth";
+import {useNavigate} from "react-router-dom";
+import {
+    currentPage,
+    ifFetching,
+    isAuth,
+    isFollowing,
+    pageSize,
+    totalUsersCount,
+    users
+} from "../../redux/usersSelector";
 
 function UsersContainer(props) {
+
+    let navigator = useNavigate()
+    useEffect(() => {
+        if (props.isAuth === false) {
+            return navigator('/login')
+        }
+    }, [navigator, props.isAuth])
 
     useEffect(() => {
         props.getUserThunk()
@@ -42,16 +57,15 @@ function UsersContainer(props) {
 
 const mapStateToProps = (state) => {
     return {
-        users: state.usersPage.users,
-        pageSize: state.usersPage.pageSize,
-        totalUsersCount: state.usersPage.totalUsersCount,
-        currentPage: state.usersPage.currentPage,
-        ifFetching: state.usersPage.ifFetching,
-        isFollowing: state.usersPage.isFollowing,
-        isAuth: state.auth.isAuth
+        users: users(state),
+        pageSize: pageSize(state),
+        totalUsersCount: totalUsersCount(state),
+        currentPage: currentPage(state),
+        ifFetching: ifFetching(state),
+        isFollowing: isFollowing(state),
+        isAuth: isAuth(state)
     }
 }
 
-export default connect(mapStateToProps,
-    {follow, unfollow, setCurrentPage, switchIsFollowing, getUserThunk, unfollowThunk, followThunk})(RedirectToAuth(UsersContainer))
+export default connect(mapStateToProps, {follow, unfollow, setCurrentPage, switchIsFollowing, getUserThunk, unfollowThunk, followThunk})(UsersContainer)
 

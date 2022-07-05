@@ -4,8 +4,9 @@ const Header = (props) => {
     return <header className={head.header}>
             {/*<img className={head.logo} src={logo} alt={"logo"}/>*/}
             <div className={head.login_btn}>
-                { props.isAuth ? props.login
-                : <NavLink to={'/Login'}> Login </NavLink> }
+                { props.isAuth
+                    ? <div> {props.login} - <button onClick={props.logoutThunk}>logout</button></div>
+                    : <NavLink to={'/Login'}> Login </NavLink> }
             </div>
         </header>
 }

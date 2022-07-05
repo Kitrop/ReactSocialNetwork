@@ -1,5 +1,5 @@
 // actions
-import {deleteUserApi, getUserApi, postUserApi} from "../compo/api/api";
+import {deleteUserApi, getUserApi, postUserApi, userApi} from "../compo/api/api";
 
 const FOLLOW_USER = 'FOLLOW_USER';
 const UNFOLLOW_USER = 'UNFOLLOW_USER';
@@ -80,7 +80,7 @@ export const switchIsFollowing= (ifFetching, userId) => ({type: SWITCH_IS_FOLLOW
 export const getUserThunk = (currentPage, pageSize) => {
     return (dispatch) => {
        dispatch( switchIsFetching(true));
-        getUserApi(currentPage, pageSize)
+        userApi.getUserApi(currentPage, pageSize)
             .then(data => {
                 dispatch( switchIsFetching(false));
                 dispatch( setUsers(data.items));
@@ -91,7 +91,7 @@ export const getUserThunk = (currentPage, pageSize) => {
 export const unfollowThunk = (id) => {
     return (dispatch) => {
         dispatch(switchIsFollowing(true, id));
-        deleteUserApi(id)
+        userApi.deleteUserApi(id)
             .then((data) => {
                 if (data.resultCode === 0) {
                     dispatch(unfollow(id));
@@ -103,7 +103,7 @@ export const unfollowThunk = (id) => {
 export const followThunk = (id) => {
     return (dispatch) => {
         dispatch( switchIsFollowing(true, id));
-        postUserApi(id)
+        userApi.postUserApi(id)
             .then((data) => {
                 if (data.resultCode === 0) {
                     dispatch( follow(id));
