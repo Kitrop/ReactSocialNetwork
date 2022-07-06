@@ -8,30 +8,57 @@ import ProfileContainer from "./compo/Profile/ProfileContainer";
 import HeaderContainer from "./compo/Header/HeaderComponent";
 import Dialogs from "./compo/Message/Dialogs";
 import Login from "./compo/Login/Login";
+import {connect} from "react-redux";
+import {useEffect} from "react";
+import {initializeApp} from "./redux/appReducer";
+import {getInitialized} from "./redux/appSelector";
+import Preloader from "./compo/Preloader/Preloader";
 
 
 function App(props) {
+    // let initialize = useSelector(state => getInitialized(state))
+
+    // const dispatch = useDispatch()
+    // let userData = () => dispatch(initializeApp)
+    // useEffect(() => {
+    //     userData()
+    // }, [dispatch])
 
 
 
-    return (
-        <BrowserRouter>
+    useEffect(() => {
+        props.initializeApp()
+        console.log(initializeApp)
+        console.log(initializeApp())
+    })
+
+
+    if ( !props.initialized ) {
+        return <Preloader />
+    }
+
+    return (<BrowserRouter>
             <div className={s.grid}>
                 <HeaderContainer/>
-                <Nav />
+                <Nav/>
                 <ScrollToTop smooth/>
                 <div className={s.content}>
                     <Routes>
                         <Route path="/dialogs/*" element={<Dialogs/>}/>
-                        <Route path="/profile/:userId" element={<ProfileContainer />}/>
-                        <Route path='/profile/24394' element={<ProfileContainer />} />
-                        <Route path="/users" element={<UsersContainer />}/>
-                        <Route path="/login" element={<Login/>} />
+                        <Route path="/profile/:userId" element={<ProfileContainer/>}/>
+                        <Route path='/profile/24394' element={<ProfileContainer/>}/>
+                        <Route path="/users" element={<UsersContainer/>}/>
+                        <Route path="/login" element={<Login/>}/>
                     </Routes>
                 </div>
             </div>
-        </BrowserRouter>
-    );
+        </BrowserRouter>);
 }
 
-export default App;
+const mapStateToProps = (state) => {
+    return {
+        initialized: getInitialized(state)
+    }
+}
+
+export default connect(mapStateToProps, {initializeApp})(App);
