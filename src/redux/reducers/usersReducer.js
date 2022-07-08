@@ -1,5 +1,5 @@
 // actions
-import {deleteUserApi, getUserApi, postUserApi, userApi} from "../compo/api/api";
+import {deleteUserApi, getUserApi, postUserApi, userApi} from "../../compo/api/api";
 
 const FOLLOW_USER = 'FOLLOW_USER';
 const UNFOLLOW_USER = 'UNFOLLOW_USER';

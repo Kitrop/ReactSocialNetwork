@@ -3,9 +3,10 @@ import '../Profile/Posts/MyPosts'
 import Profile from "./Profile";
 import {useEffect} from "react";
 import {connect} from "react-redux";
-import {getProfileStatus, getProfileThunk, putProfileStatus, setUserProfile} from "../../redux/profileReducer";
-import {useParams} from "react-router-dom";
-import { useNavigate } from "react-router-dom"
+import {getProfileStatus, getProfileThunk, putProfileStatus, setUserProfile} from "../../redux/reducers/profileReducer";
+import {useNavigate, useParams} from "react-router-dom";
+import {getIsAuth} from "../../redux/selectors/authSelector";
+import {profilePageState, profileStatusState} from "../../redux/selectors/profileSelector";
 
 const ProfileContainer = (props) => {
 
@@ -34,9 +35,9 @@ const ProfileContainer = (props) => {
 
 
 let mapStateToProps = (state) => ({
-    profile: state.profilePage.profile,
-    status: state.profilePage.status,
-    isAuth: state.auth.isAuth
+    profile: profilePageState(state),
+    status: profileStatusState(state),
+    isAuth: getIsAuth(state)
 });
 
 export default connect(mapStateToProps,{setUserProfile, getProfileThunk, getProfileStatus, putProfileStatus})(ProfileContainer);

@@ -1,4 +1,4 @@
-import {loginApi, profileApi} from "../compo/api/api";
+import {loginApi, profileApi} from "../../compo/api/api";
 
 const SET_USER_DATA = 'SET_USER_DATA'
 

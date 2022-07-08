@@ -1,9 +1,9 @@
 import {LoginForm} from "./LoginForm";
-import {loginThunk, logoutThunk} from "../../redux/authReducer";
-import {isAuth} from "../../redux/usersSelector";
+import {loginThunk} from "../../redux/reducers/authReducer";
 import {connect} from "react-redux";
 import {useNavigate} from "react-router-dom";
 import {useEffect} from "react";
+import {getIsAuth} from "../../redux/selectors/authSelector";
 
 const Login = (props) => {
 
@@ -24,7 +24,7 @@ const Login = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        isAuth: isAuth(state)
+        isAuth: getIsAuth(state)
     }
 }
 

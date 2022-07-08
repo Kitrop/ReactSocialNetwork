@@ -1,5 +1,5 @@
 // actions
-import {profileApi} from "../compo/api/api";
+import {profileApi} from "../../compo/api/api";
 
 const ADD_POST  = 'ADD-POST';
 const SET_USER_PROFILE = 'SET_USER_PROFILE'
