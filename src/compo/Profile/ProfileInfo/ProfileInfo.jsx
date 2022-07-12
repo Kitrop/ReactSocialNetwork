@@ -2,7 +2,7 @@ import i from './ProfileInfo.module.css';
 import Preloader from "../../Preloader/Preloader";
 import userPhoto from "../../../img/avatar.jpg";
 import ProfileStatus from "./ProfileStatus";
-import {putProfileStatus} from "../../../redux/profileReducer";
+import {putProfileStatus} from "../../../redux/reducers/profileReducer";
 
 
 function ProfileInfo(props) {

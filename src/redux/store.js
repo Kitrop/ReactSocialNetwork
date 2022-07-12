@@ -9,9 +9,9 @@
         this._state.profilePage.newPostText = '';
         this._rerenderEntireTree();
     },*/
-import profileReducer from "./profileReducer";
-import dialogsReducer from "./dialogsReducer";
-import friendsReducer from "./friendsReducer";
+import profileReducer from "./reducers/profileReducer";
+import dialogsReducer from "./reducers/dialogsReducer";
+import friendsReducer from "./reducers/friendsReducer";
 
 let store= {
     _state: {

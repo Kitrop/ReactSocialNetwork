@@ -1,7 +1,7 @@
 import './App.module.css';
 import s from './App.module.css'
 import Nav from "./compo/Nav/Nav";
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from '../node_modules/react-router-dom/index';
 import ScrollToTop from "react-scroll-to-top";
 import UsersContainer from "./compo/Users/UsersContainer";
 import ProfileContainer from "./compo/Profile/ProfileContainer";
@@ -10,8 +10,8 @@ import Dialogs from "./compo/Message/Dialogs";
 import Login from "./compo/Login/Login";
 import {connect} from "react-redux";
 import {useEffect} from "react";
-import {initializeApp} from "./redux/appReducer";
-import {getInitialized} from "./redux/appSelector";
+import {initializeApp} from "./redux/reducers/appReducer";
+import {getInitialized} from "./redux/selectors/appSelector";
 import Preloader from "./compo/Preloader/Preloader";
 
 
@@ -28,8 +28,6 @@ function App(props) {
 
     useEffect(() => {
         props.initializeApp()
-        console.log(initializeApp)
-        console.log(initializeApp())
     })
 
 

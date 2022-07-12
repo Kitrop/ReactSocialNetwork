@@ -3,7 +3,7 @@ import DialogItem from './DialogItem/DialogsItem';
 import Message from "./MessagesItem/Message";
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {getIsAuth, getMessage} from "../../redux/dialogSelectors";
+import {getIsAuth, getMessage} from "../../redux/selectors/dialogSelectors";
 import DialogsForm from "./DialogsForm";
 import {useNavigate} from "react-router-dom";
 
