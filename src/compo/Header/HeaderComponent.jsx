@@ -1,8 +1,8 @@
-import {connect} from "react-redux";
-import Header from "./Header";
-import {useEffect} from "react";
-import {loginMeThunk, logoutThunk, setAuthUserData} from "../../redux/reducers/authReducer";
-import {getIsAuth, getLogin} from "../../redux/selectors/authSelector";
+import {connect} from 'react-redux'
+import Header from './Header'
+import {useEffect} from 'react'
+import {loginMeThunk, logoutThunk} from '../../redux/reducers/authReducer'
+import {getIsAuth, getLogin} from '../../redux/selectors/authSelector'
 
 
 const HeaderContainer = (props) => {

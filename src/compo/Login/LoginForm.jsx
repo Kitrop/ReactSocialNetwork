@@ -8,7 +8,7 @@ const Error = styled.div`
   font-style: italic;
 `
 
-export const LoginForm = (props) => {
+export const LoginForm = ({loginThunk}) => {
 
     let initialValues = {
         email: '',
@@ -35,7 +35,7 @@ export const LoginForm = (props) => {
     }
     let submitCallback =  (values, { setSubmitting }) => {
         setTimeout(() => {
-            props.loginThunk(values.email, values.password, values.rememberMe);
+            loginThunk(values.email, values.password, values.rememberMe);
             setSubmitting(false);
         }, 400);
     }
