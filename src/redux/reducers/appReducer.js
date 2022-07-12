@@ -24,12 +24,10 @@ const initializingAC = () => ({type:SET_INITIALIZED})
 
 // thunkCreator
 
-export const initializeApp = () => (dispatch) => {
+export const initializeApp = () => async (dispatch) => {
     let promise = dispatch(loginMeThunk());
-    Promise.all([promise])
-        .then(() => {
-            dispatch(initializingAC());
-        });
+    await Promise.all([promise])
+    dispatch(initializingAC());
 }
 
 export default appReducer

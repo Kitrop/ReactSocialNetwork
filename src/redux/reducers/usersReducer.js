@@ -1,9 +1,10 @@
 // actions
 import {userApi} from '../../compo/api/api'
 
-const FOLLOW_USER = 'follow/FOLLOW_USER';
-const UNFOLLOW_USER = 'unfollow/UNFOLLOW_USER';
-const SET_USERS = 'setUsers/SET_USERS';
+// name action
+const FOLLOW_USER = 'follow/FOLLOW_USER'
+const UNFOLLOW_USER = 'unfollow/UNFOLLOW_USER'
+const SET_USERS = 'setUsers/SET_USERS'
 const SET_CURRENT_PAGE = 'setCurrentPage/SET_CURRENT_PAGE'
 const SET_TOTAL_USERS_COUNT = 'setTotalUsersCount/SET_TOTAL_USERS_COUNT'
 const SWITCH_IS_FETCHING = 'switchIsFetching/SWITCH_IS_FETCHING'
@@ -74,45 +75,32 @@ export const setUsers = (users) => ({type: SET_USERS, users})
 export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage})
 export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, totalUsersCount})
 export const switchIsFetching = (ifFetching) => ({type: SWITCH_IS_FETCHING, ifFetching})
-export const switchIsFollowing= (ifFetching, userId) => ({type: SWITCH_IS_FOLLOWING, ifFetching, userId})
+export const switchIsFollowing = (ifFetching, userId) => ({type: SWITCH_IS_FOLLOWING, ifFetching, userId})
 
 // thunkCreator
-export const getUserThunk = (currentPage, pageSize) => {
-    return (dispatch) => {
-       dispatch( switchIsFetching(true));
-        userApi.getUserApi(currentPage, pageSize)
-            .then(data => {
-                dispatch( switchIsFetching(false));
-                dispatch( setUsers(data.items));
-                dispatch( setTotalUsersCount(data.totalCount));
-            });
-    }
+export const getUserThunk = (currentPage, pageSize) => async (dispatch) => {
+    dispatch(switchIsFetching(true))
+    let data = await userApi.getUserApi(currentPage, pageSize)
+        dispatch(switchIsFetching(false))
+        dispatch(setUsers(data.items))
+        dispatch(setTotalUsersCount(data.totalCount))
 }
-export const unfollowThunk = (id) => {
-    return async(dispatch) => {
-        dispatch(switchIsFollowing(true, id))
-        await userApi.deleteUserApi(id)
-            .then((data) => {
-                if (data.resultCode === 0) {
-                    dispatch(unfollow(id));
-                }
-                dispatch( switchIsFollowing(false, id));
-            })
-    }
+export const unfollowThunk = (id) => async (dispatch) => {
+    dispatch(switchIsFollowing(true, id))
+    let data = await userApi.deleteUserApi(id)
+        if (data.resultCode === 0) {
+            dispatch(unfollow(id))
+        }
+    dispatch(switchIsFollowing(false, id))
 }
-export const followThunk = (id) => {
-    return async (dispatch) => {
-        dispatch( switchIsFollowing(true, id));
-        await userApi.postUserApi(id)
-            .then ((data) => {
-                if (data.resultCode === 0) {
-                    dispatch( follow(id));
-                }
-                dispatch( switchIsFollowing(false, id));
-            })
-    }
+export const followThunk = (id) => async (dispatch) => {
+    dispatch(switchIsFollowing(true, id))
+    let data = await userApi.postUserApi(id)
+        if (data.resultCode === 0) {
+            dispatch(follow(id))
+        }
+    dispatch(switchIsFollowing(false, id))
 }
-
 
 
 export default usersReducer
