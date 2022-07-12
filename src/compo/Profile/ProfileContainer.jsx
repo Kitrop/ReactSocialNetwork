@@ -10,8 +10,6 @@ import {profilePageState, profileStatusState} from "../../redux/selectors/profil
 
 const ProfileContainer = (props) => {
 
-
-
     let navigate = useNavigate()
     useEffect(()=>{
         if(props.isAuth === false){

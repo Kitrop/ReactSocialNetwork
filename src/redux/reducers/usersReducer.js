@@ -1,13 +1,13 @@
 // actions
-import {deleteUserApi, getUserApi, postUserApi, userApi} from "../../compo/api/api";
+import {userApi} from '../../compo/api/api'
 
-const FOLLOW_USER = 'FOLLOW_USER';
-const UNFOLLOW_USER = 'UNFOLLOW_USER';
-const SET_USERS = 'SET_USERS';
-const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE'
-const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT'
-const SWITCH_IS_FETCHING = 'SWITCH_IS_FETCHING'
-const SWITCH_IS_FOLLOWING = 'SWITCH_IS_FOLLOWING'
+const FOLLOW_USER = 'follow/FOLLOW_USER';
+const UNFOLLOW_USER = 'unfollow/UNFOLLOW_USER';
+const SET_USERS = 'setUsers/SET_USERS';
+const SET_CURRENT_PAGE = 'setCurrentPage/SET_CURRENT_PAGE'
+const SET_TOTAL_USERS_COUNT = 'setTotalUsersCount/SET_TOTAL_USERS_COUNT'
+const SWITCH_IS_FETCHING = 'switchIsFetching/SWITCH_IS_FETCHING'
+const SWITCH_IS_FOLLOWING = 'switchIsFollowing/SWITCH_IS_FOLLOWING'
 
 // state
 let initialState = {
@@ -89,9 +89,9 @@ export const getUserThunk = (currentPage, pageSize) => {
     }
 }
 export const unfollowThunk = (id) => {
-    return (dispatch) => {
-        dispatch(switchIsFollowing(true, id));
-        userApi.deleteUserApi(id)
+    return async(dispatch) => {
+        dispatch(switchIsFollowing(true, id))
+        await userApi.deleteUserApi(id)
             .then((data) => {
                 if (data.resultCode === 0) {
                     dispatch(unfollow(id));
@@ -101,10 +101,10 @@ export const unfollowThunk = (id) => {
     }
 }
 export const followThunk = (id) => {
-    return (dispatch) => {
+    return async (dispatch) => {
         dispatch( switchIsFollowing(true, id));
-        userApi.postUserApi(id)
-            .then((data) => {
+        await userApi.postUserApi(id)
+            .then ((data) => {
                 if (data.resultCode === 0) {
                     dispatch( follow(id));
                 }

@@ -1,7 +1,7 @@
 import './App.module.css';
 import s from './App.module.css'
 import Nav from "./compo/Nav/Nav";
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from '../node_modules/react-router-dom/index';
 import ScrollToTop from "react-scroll-to-top";
 import UsersContainer from "./compo/Users/UsersContainer";
 import ProfileContainer from "./compo/Profile/ProfileContainer";
