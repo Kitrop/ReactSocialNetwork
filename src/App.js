@@ -6,24 +6,17 @@ import ScrollToTop from 'react-scroll-to-top'
 import UsersContainer from './compo/Users/UsersContainer'
 import ProfileContainer from './compo/Profile/ProfileContainer'
 import HeaderContainer from './compo/Header/HeaderComponent'
-import Dialogs from './compo/Message/Dialogs'
+// import Dialogs from './compo/Message/Dialogs'
 import Login from './compo/Login/Login'
 import {connect} from 'react-redux'
-import {useEffect} from 'react'
+import {lazy, useEffect, Suspense} from 'react'
 import {initializeApp} from './redux/reducers/appReducer'
 import {getInitialized} from './redux/selectors/appSelector'
 import Preloader from './compo/Preloader/Preloader'
 
+const Dialogs = lazy(() => import('./compo/Message/Dialogs'))
 
-function App(props) {
-    // let initialize = useSelector(state => getInitialized(state))
-
-    // const dispatch = useDispatch()
-    // let userData = () => dispatch(initializeApp)
-    // useEffect(() => {
-    //     userData()
-    // }, [dispatch])
-
+const App = (props) => {
 
     useEffect(() => {
         props.initializeApp()
@@ -39,7 +32,7 @@ function App(props) {
             <ScrollToTop smooth/>
             <div className={s.content}>
                 <Routes>
-                    <Route path="/dialogs/*" element={<Dialogs/>}/>
+                    <Route path="/dialogs/*" element={<Suspense fallback={<Preloader/>}> <Dialogs/> </Suspense>}/>
                     <Route path="/profile/:userId" element={<ProfileContainer/>}/>
                     <Route path="/profile/24394" element={<ProfileContainer/>}/>
                     <Route path="/users" element={<UsersContainer/>}/>
