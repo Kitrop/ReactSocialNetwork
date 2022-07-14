@@ -1,0 +1,33 @@
+.bg_image {
+    width: 99%;
+}
+.descriptionBlock {
+    margin-top: 15px;
+}
+
+
+.profile_avatar {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.info_profile{
+    font-size: 20px;
+}
+
+.desc_txt {
+    font-family: Roboto;
+}
+
+.looking_for_job_true {
+    font-size: 20px;
+    color: #538A1B
+}
+
+.looking_for_job_false {
+    font-size: 20px;
+    color: #DD473B
+}
+
+
