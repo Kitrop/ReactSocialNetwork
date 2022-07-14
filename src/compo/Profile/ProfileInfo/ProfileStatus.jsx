@@ -32,13 +32,13 @@ const ProfileStatus = (props) => {
         <div>
             {toggleView ?
             <span onDoubleClick={ () => {setToggleView(false)} } className={i.info_profile}>Status:
-                <span className={i.desc_txt}>
+                <span className={i.desc_txt}  data-testid="status_span">
                     {status}
                 </span>
             </span>
                 :
             <div>
-                <input type={"text"} autoFocus={true} value={status} onBlur={ onBlur } onKeyPress={ keyPressStatus } onChange={ changeStatus }/>
+                <input data-testid="status_input" type={"text"} autoFocus={true} value={status} onBlur={ onBlur } onKeyPress={ keyPressStatus } onChange={ changeStatus }/>
             </div>
             }
         </div>

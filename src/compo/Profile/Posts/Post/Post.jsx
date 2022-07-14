@@ -1,13 +1,20 @@
 import post from './Post.module.css'
-function Wall(props) {
+import postImg from '../../../../img/postImg.jpg'
+
+const Wall = (props) => {
+
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
     return (
     <div>
         <div className={post.item}>
             {props.name}: {props.text}
         </div>
         <div className={post.item}>
-            <img src={"https://funik.ru/wp-content/uploads/2019/09/f48cfb0030457662a30d-700x467.jpg"} alt={"img_post"}/>
-            <div><span>Like: {props.likeCount}</span></div>
+            <img src={postImg} alt={"img_post"}/>
+            <div><span>Like: {getRndInteger(0, 100)}</span></div>
         </div>
     </div>
     );

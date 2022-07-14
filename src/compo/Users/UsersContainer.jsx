@@ -6,21 +6,24 @@ import {
     switchIsFollowing,
     unfollow,
     unfollowThunk
-} from "../../redux/reducers/usersReducer";
-import {connect} from "react-redux";
-import {useEffect} from "react";
-import Users from "./Users";
-import Preloader from "../Preloader/Preloader";
-import {useNavigate} from "react-router-dom";
+} from '../../redux/reducers/usersReducer'
+import {connect} from 'react-redux'
+import {useEffect} from 'react'
+import Users from './Users'
+import Preloader from '../Preloader/Preloader'
+import {useNavigate} from 'react-router-dom'
 import {
-    currentPage, currentPageSelector,
-    ifFetching, ifFetchingSelector,
-    isFollowing, isFollowingSelector,
-    pageSize, pageSizeSelector,
-    totalUsersCount, totalUsersCountSelector,
+    currentPage,
+    currentPageSelector,
+    ifFetchingSelector,
+    isFollowingSelector,
+    pageSize,
+    pageSizeSelector,
+    totalUsersCount,
+    totalUsersCountSelector,
     usersSelector
-} from "../../redux/selectors/usersSelector";
-import {getIsAuth} from "../../redux/selectors/authSelector";
+} from '../../redux/selectors/usersSelector'
+import {getIsAuth} from '../../redux/selectors/authSelector'
 
 function UsersContainer(props) {
 
