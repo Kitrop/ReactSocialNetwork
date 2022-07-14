@@ -6,12 +6,9 @@
     font-size: 18px;
 }
 
-.num_bar {
-    cursor: pointer;
-}
-
 .num {
     margin-right: 3px;
+    cursor: pointer;
 }
 
 .ava_photo {

@@ -1,8 +1,7 @@
-import i from './ProfileInfo.module.css';
-import Preloader from "../../Preloader/Preloader";
-import userPhoto from "../../../img/avatar.jpg";
-import ProfileStatus from "./ProfileStatus";
-import {putProfileStatus} from "../../../redux/reducers/profileReducer";
+import i from './ProfileInfo.module.css'
+import Preloader from '../../Preloader/Preloader'
+import userPhoto from '../../../img/avatar.jpg'
+import ProfileStatus from './ProfileStatus'
 
 
 function ProfileInfo(props) {
@@ -11,10 +10,6 @@ function ProfileInfo(props) {
     }
     return (
         <div>
-{/*            <div>
-                <img className={i.bg_image}
-                     src={"https://flytothesky.ru/wp-content/uploads/2012/10/midnight-sun-in-lofoten-norway.jpg"} alt={'img'}/>
-            </div>*/}
             <div className={i.descriptionBlock}>
                 <div className={i.info_profile}>{props.profile.fullName}</div>
                 <img className={i.profile_avatar} src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto} alt={'avatar'} />
