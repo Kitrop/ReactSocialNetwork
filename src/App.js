@@ -34,7 +34,7 @@ const App = (props) => {
                 <Routes>
                     <Route path="/dialogs/*" element={<Suspense fallback={<Preloader/>}> <Dialogs/> </Suspense>}/>
                     <Route path="/profile/:userId" element={<ProfileContainer/>}/>
-                    <Route path="/profile/24394" element={<ProfileContainer/>}/>
+                    <Route path="/profile" element={<ProfileContainer/>}/>
                     <Route path="/users" element={<UsersContainer/>}/>
                     <Route path="/login" element={<Login/>}/>
                 </Routes>

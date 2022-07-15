@@ -1,5 +1,5 @@
 import i from './ProfileInfo.module.css';
-import {useState} from "react";
+import {useEffect, useState} from 'react'
 
 
 const ProfileStatus = (props) => {
@@ -27,6 +27,10 @@ const ProfileStatus = (props) => {
         setToggleView(true);
         props.putProfileStatus(status)
     }
+
+    useEffect(() => {
+        props.putProfileStatus(status)
+    }, [props.putProfileStatus, status])
 
     return (
         <div>

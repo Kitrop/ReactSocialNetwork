@@ -15,6 +15,12 @@
 .info_profile{
     font-size: 20px;
 }
+.my_contacts {
+    cursor: pointer;
+}
+.contact {
+    margin-left: 15px;
+}
 
 .desc_txt {
     font-family: Roboto;

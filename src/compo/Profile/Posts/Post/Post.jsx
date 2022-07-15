@@ -1,5 +1,8 @@
 import post from './Post.module.css'
-import postImg from '../../../../img/postImg.jpg'
+import {lazy, Suspense} from 'react'
+import Preloader from '../../../Preloader/Preloader'
+
+const PhotoPost = lazy(() => import ('../PhotoPost/PhotoPost'))
 
 const Wall = (props) => {
 
@@ -13,7 +16,9 @@ const Wall = (props) => {
             {props.name}: {props.text}
         </div>
         <div className={post.item}>
-            <img src={postImg} alt={"img_post"}/>
+            <Suspense fallback={<Preloader/>}>
+               <PhotoPost />
+            </Suspense>
             <div><span>Like: {getRndInteger(0, 100)}</span></div>
         </div>
     </div>

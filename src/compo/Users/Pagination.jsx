@@ -26,7 +26,7 @@ const Pagination = ({totalUsersCount, pageSize, currentPage, onPageChanged, port
                 return <span className={ cn({[styles.selected]: currentPage === p}, styles.num) } key={p} onClick={(e) => onPageChanged(p) }>{p}</span>
             })}
         { portionCount > portionNumber && <button onClick={() =>  setPortionNumber(portionNumber + 1) }> NEXT </button> }
-        <button onClick={() => setPortionNumber(portionNumber = 0)}>Last</button>
+        <button onClick={() => setPortionNumber(portionCount)}>Last</button>
     </div>
 }
 

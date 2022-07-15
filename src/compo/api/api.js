@@ -6,7 +6,7 @@ const instance = axios.create({
     headers: {"API-KEY": "fbf5b600-2f44-40fb-bc63-1e40c8ffb8fc"}
 });
 
-// API
+// API OLD
 export const getUserApi = (currentPage, pageSize) => {
     return instance.get(`users?page=${currentPage}&count=${pageSize}`)
         .then(r => {
@@ -77,7 +77,20 @@ export const profileApi = {
         return instance.get(`profile/status/` + userId);
     },
     putProfileStatus(status) {
-        return instance.put(`profile/status`, { status: status });
+        return instance.put(`profile/status`, {status });
+    },
+    putProfilePhoto(photos) {
+        const formData = new FormData()
+        formData.append('image', photos)
+        return instance.put(`profile/photo`, formData, {headers: {
+            'Content-Type': 'multipart/form-data'}
+        })
+    },
+    putProfileContacts(contacts) {
+        return instance.put(`profile`, {contacts})
+    },
+    putProfileJob(job) {
+        return instance.put(`profile`, {job})
     }
 }
 export const loginApi = {
