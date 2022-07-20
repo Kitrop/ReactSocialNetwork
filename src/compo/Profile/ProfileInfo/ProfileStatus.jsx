@@ -28,14 +28,20 @@ const ProfileStatus = (props) => {
         props.putProfileStatus(status)
     }
 
+    const editMode = () => {
+        if (props.isOwner) {
+            setToggleView(false)
+        }
+    }
+
     useEffect(() => {
-        props.putProfileStatus(status)
+        props.putProfileStatus()
     }, [props.putProfileStatus, status])
 
     return (
         <div>
             {toggleView ?
-            <span onDoubleClick={ () => {setToggleView(false)} } className={i.info_profile}>Status:
+            <span onDoubleClick={editMode} className={i.info_profile}>Status:
                 <span className={i.desc_txt}  data-testid="status_span">
                     {status}
                 </span>

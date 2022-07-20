@@ -4,10 +4,9 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="fixed all v2">
-      <change afterPath="$PROJECT_DIR$/src/compo/Profile/Posts/PhotoPost/PhotoPost.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/Contacts.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/Job.jsx" afterDir="false" />
+    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="add MyContacts and job">
+      <change afterPath="$PROJECT_DIR$/src/compo/common/404/NotFound.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compo/common/404/notFound.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" afterDir="false" />
@@ -17,9 +16,15 @@
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/14.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/14.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/15.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/15.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/16.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/16.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/17.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/17.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/18.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/18.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/19.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/19.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/20.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/20.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/21.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/21.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" afterDir="false" />
@@ -28,16 +33,31 @@
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Header/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Header/HeaderComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Login/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Login/LoginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Message/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Message/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Message/DialogsContainer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Nav/Friends/Friend.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Nav/Friends/Friend.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Nav/Friends/FriendContainer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Nav/Nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Nav/Nav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Preloader/Preloader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/common/Preloader/Preloader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Profile/Posts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Posts/MyPosts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Profile/Posts/MyPostsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Posts/MyPostsContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compo/Profile/Posts/Post/Post.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Posts/Post/Post.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compo/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/Contacts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/Contacts.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileStatus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileStatus.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Users/Pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Users/Pagination.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Users/UsersContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compo/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/postImg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Posts/PhotoPost/postImg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/authReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/profileReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/usersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/usersReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/selectors/authSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/authSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/selectors/usersSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/usersSelector.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,13 +69,15 @@
       <list>
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="React jsx" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="duck_refactoring_" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,6 +100,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="EditMode_for_MyContacts_and_Job" />
+                    <option name="lastUsedInstant" value="1657874273" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="master" />
                     <option name="lastUsedInstant" value="1657783665" />
                   </RecentBranch>
@@ -92,10 +118,6 @@
                   <RecentBranch>
                     <option name="branchName" value="initialisation" />
                     <option name="lastUsedInstant" value="1657019013" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="useSelector_useDispatch" />
-                    <option name="lastUsedInstant" value="1657013907" />
                   </RecentBranch>
                 </list>
               </option>
@@ -123,11 +145,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux/reducers" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -136,11 +159,11 @@
       <recent name="C:\Users\artem\my-app\src\redux\reducers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\artem\my-app\src\compo\common" />
       <recent name="C:\Users\artem\my-app\src\compo\Profile\Posts\PhotoPost" />
       <recent name="C:\Users\artem\my-app\src\compo\Profile\Posts" />
       <recent name="C:\Users\artem\my-app\src\compo\Profile\Posts\Post" />
       <recent name="C:\Users\artem\my-app\src\redux\reducers" />
-      <recent name="C:\Users\artem\my-app\src\redux\selectors" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="C:\Users\artem\my-app\src\compo\Login\LoginForm.jsx" />
@@ -286,7 +309,17 @@
       <workItem from="1657786316146" duration="974000" />
       <workItem from="1657792496976" duration="7013000" />
       <workItem from="1657805908076" duration="1133000" />
-      <workItem from="1657862544370" duration="9987000" />
+      <workItem from="1657862544370" duration="11789000" />
+      <workItem from="1657945693207" duration="3877000" />
+      <workItem from="1658054469586" duration="4560000" />
+      <workItem from="1658064550752" duration="558000" />
+      <workItem from="1658117216892" duration="9317000" />
+      <workItem from="1658129909723" duration="3266000" />
+      <workItem from="1658203795032" duration="10752000" />
+      <workItem from="1658222217877" duration="5262000" />
+      <workItem from="1658229576531" duration="314000" />
+      <workItem from="1658291443697" duration="5899000" />
+      <workItem from="1658297546076" duration="356000" />
     </task>
     <task id="LOCAL-00001" summary="FIX ALL!">
       <created>1655120009106</created>
@@ -442,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657787073414</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add MyContacts and job">
+      <created>1657874204854</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1657874204854</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +531,8 @@
     <MESSAGE value="add lazy and suspense" />
     <MESSAGE value="fixed all" />
     <MESSAGE value="fixed all v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed all v2" />
+    <MESSAGE value="add MyContacts and job" />
+    <option name="LAST_COMMIT_MESSAGE" value="add MyContacts and job" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

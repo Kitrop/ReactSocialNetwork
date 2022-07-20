@@ -1,20 +1,20 @@
 import i from './ProfileInfo.module.css'
-import Preloader from '../../Preloader/Preloader'
+import Preloader from '../../common/Preloader/Preloader'
 import userPhoto from '../../../img/avatar.jpg'
 import ProfileStatus from './ProfileStatus'
 import Job from './ProfileInfoAbout/Job'
 import Contacts from './ProfileInfoAbout/Contacts'
-import {putProfileJob} from '../../../redux/reducers/profileReducer'
 
 
-function ProfileInfo(props) {
-    if(!props.profile) {
+
+function ProfileInfo({savePhoto, isOwner, profile, status, putProfileStatus, putProfileInfo}) {
+    if(!profile) {
         return <Preloader />
     }
 
     const onAvatarSelected = (e) => {
         if(e.target.files.length) {
-            props.savePhoto(e.target.files[0])
+            savePhoto(e.target.files[0])
         }
     }
 
@@ -22,16 +22,16 @@ function ProfileInfo(props) {
         <div>
             <div className={i.descriptionBlock}>
                 {/*FullName*/}
-                <div className={i.info_profile}>{props.profile.fullName}</div>
+                <div className={i.info_profile}>{profile.fullName}</div>
                 {/*Photos*/}
-                <img className={i.profile_avatar} src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto} alt={'avatar'}/>
-                {props.isOwner && <input type={'file'} onChange={onAvatarSelected}/>}
+                <img className={i.profile_avatar} src={profile.photos.large != null ? profile.photos.large : userPhoto} alt={'avatar'}/>
+                {isOwner && <span><input type={'file'} onChange={onAvatarSelected}/></span> }
                 {/*Status*/}
-                <ProfileStatus status={props.status} putProfileStatus={props.putProfileStatus}/>
+                <ProfileStatus isOwner={isOwner} status={status} putProfileStatus={putProfileStatus}/>
                 {/*MyContacts*/}
-                <Contacts putProfileContacts={props.putProfileContacts} github={props.profile.contacts.github} vk={props.profile.contacts.vk} facebook={props.profile.contacts.facebook} instagram={props.profile.contacts.instagram} twitter={props.profile.contacts.twitter} website={props.profile.contacts.website} youtube={props.profile.contacts.youtube} mainLink={props.profile.contacts.mainLink}/>
+                <Contacts  github={profile.contacts.github} vk={profile.contacts.vk} facebook={profile.contacts.facebook} instagram={profile.contacts.instagram} twitter={profile.contacts.twitter} website={profile.contacts.website} youtube={profile.contacts.youtube} mainLink={profile.contacts.mainLink}/>
                 {/*Job*/}
-                <Job putProfileJob={props.putProfileJob} lookingForAJob={props.profile.lookingForAJob} lookingForAJobDescription={props.profile.lookingForAJobDescription}/>
+                <Job lookingForAJob={profile.lookingForAJob} lookingForAJobDescription={profile.lookingForAJobDescription}/>
             </div>
         </div>
     );

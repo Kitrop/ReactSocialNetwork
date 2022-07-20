@@ -25,12 +25,6 @@ export const deleteUserApi = (id) => {
             return r.data
         });
 }
-export const getProfileAPI = (userId) => {
-    return instance.get(`profile/` + userId)
-        .then(r => {
-            return r.data
-        });
-};
 export const getLoginApi = () => {
     return instance.get(`auth/me`)
         .then(r => {
@@ -43,35 +37,25 @@ export const getLoginApi = () => {
 export const userApi = {
     getUserApi(currentPage, pageSize) {
         return instance.get(`users?page=${currentPage}&count=${pageSize}`)
-            .then(r => {
-                return r.data
-            });
+            .then(r => r.data);
     },
     postUserApi(id){
         return instance.post(`follow/${id}`, {})
-            .then(r => {
-                return r.data
-            });
+            .then(r => r.data);
     },
     deleteUserApi(id){
         return instance.delete(`follow/${id}`)
-            .then(r => {
-                return r.data
-            });
+            .then(r => r.data);
     }
 }
 export const profileApi = {
     getProfileAPI(userId){
         return instance.get(`profile/` + userId)
-            .then(r => {
-                return r.data
-            });
+            .then(r => r.data);
     },
     getLoginMeApi() {
         return instance.get(`auth/me`)
-            .then(r => {
-                return r.data
-            });
+            .then(r => r.data);
     },
     getProfileStatus(userId){
         return instance.get(`profile/status/` + userId);
@@ -86,24 +70,22 @@ export const profileApi = {
             'Content-Type': 'multipart/form-data'}
         })
     },
-    putProfileContacts(contacts) {
-        return instance.put(`profile`, {contacts})
-    },
-    putProfileJob(job) {
-        return instance.put(`profile`, {job})
+    putProfileInfo(profile) {
+        return instance.put(`profile`, profile)
     }
 }
 export const loginApi = {
-    loginApi(email, password, rememberMe = false) {
-        return instance.post('/auth/login',{email, password, rememberMe})
-            .then(r => {
-                return r.data
-            });
+    loginApi(email, password, rememberMe = false, captcha = null) {
+        return instance.post('/auth/login',{email, password, rememberMe, captcha})
+            .then(r => r.data);
     },
     logoutApi() {
-        return instance.delete('/auth/login')
-            .then(r => {
-                return r.data
-            });
+        return instance.delete('auth/login')
+            .then(r => r.data);
+    },
+}
+export const securityApi = {
+    getCaptcha() {
+        return instance.get(`/security/get-captcha-url`)
     }
 }

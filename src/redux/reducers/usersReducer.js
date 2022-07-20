@@ -1,4 +1,3 @@
-// actions
 import {userApi} from '../../compo/api/api'
 
 // name action
@@ -71,11 +70,11 @@ const usersReducer = (state = initialState, action) => {
 // actionCreator
 export const follow = (userId) => ({type: FOLLOW_USER, userId})
 export const unfollow = (userId) => ({type: UNFOLLOW_USER, userId})
-export const setUsers = (users) => ({type: SET_USERS, users})
 export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage})
+export const switchIsFollowing = (ifFetching, userId) => ({type: SWITCH_IS_FOLLOWING, ifFetching, userId})
+export const setUsers = (users) => ({type: SET_USERS, users})
 export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, totalUsersCount})
 export const switchIsFetching = (ifFetching) => ({type: SWITCH_IS_FETCHING, ifFetching})
-export const switchIsFollowing = (ifFetching, userId) => ({type: SWITCH_IS_FOLLOWING, ifFetching, userId})
 
 // thunkCreator
 export const getUserThunk = (currentPage, pageSize) => async (dispatch) => {

@@ -1,6 +1,6 @@
 import post from './Post.module.css'
 import {lazy, Suspense} from 'react'
-import Preloader from '../../../Preloader/Preloader'
+import Preloader from '../../../common/Preloader/Preloader'
 
 const PhotoPost = lazy(() => import ('../PhotoPost/PhotoPost'))
 

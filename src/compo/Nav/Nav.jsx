@@ -1,6 +1,6 @@
-import navbar from './Nav.module.css';
-import {NavLink} from 'react-router-dom';
-import FriendContainer from "./Friends/FriendContainer";
+import navbar from './Nav.module.css'
+import {NavLink} from 'react-router-dom'
+import Friend from './Friends/Friend'
 
 const Nav = (props) => {
 
@@ -9,12 +9,7 @@ const Nav = (props) => {
             <div> <NavLink to="/profile/24394">Profile</NavLink> </div>
             <div> <NavLink to="/dialogs">Dialogs</NavLink> </div>
             <div> <NavLink to="/users">Find user</NavLink> </div>
-            <div> <NavLink to="/">Post</NavLink> </div>
-            <div> <NavLink className={navbar.sidebar_setting} to="#" >Setting</NavLink> </div>
-            <div> <NavLink to="/">Friends</NavLink> </div>
-
-            <FriendContainer />
-
+            <Friend/>
         </nav>
     );
 }

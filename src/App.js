@@ -2,26 +2,34 @@ import './App.module.css'
 import s from './App.module.css'
 import Nav from './compo/Nav/Nav'
 import {Route, Routes} from '../node_modules/react-router-dom/index'
+import { Navigate } from "react-router-dom";
 import ScrollToTop from 'react-scroll-to-top'
 import UsersContainer from './compo/Users/UsersContainer'
 import ProfileContainer from './compo/Profile/ProfileContainer'
 import HeaderContainer from './compo/Header/HeaderComponent'
-// import Dialogs from './compo/Message/Dialogs'
 import Login from './compo/Login/Login'
-import {connect} from 'react-redux'
-import {lazy, useEffect, Suspense} from 'react'
+import {useDispatch, useSelector} from 'react-redux'
+import {lazy, Suspense, useEffect} from 'react'
 import {initializeApp} from './redux/reducers/appReducer'
 import {getInitialized} from './redux/selectors/appSelector'
-import Preloader from './compo/Preloader/Preloader'
+import Preloader from './compo/common/Preloader/Preloader'
+import NotFound from './compo/common/404/NotFound'
 
 const Dialogs = lazy(() => import('./compo/Message/Dialogs'))
 
 const App = (props) => {
 
+    // STATE
+    const initialized = useSelector( state => getInitialized(state))
+
+    // DISPATCH
+    const dispatch = useDispatch()
+    const initialize = () => dispatch(initializeApp())
+
     useEffect(() => {
-        props.initializeApp()
+        initialize()
     })
-    if (!props.initialized) {
+    if (!initialized) {
         return <Preloader/>
     }
 
@@ -37,16 +45,14 @@ const App = (props) => {
                     <Route path="/profile" element={<ProfileContainer/>}/>
                     <Route path="/users" element={<UsersContainer/>}/>
                     <Route path="/login" element={<Login/>}/>
+                    <Route path="*" element={<NotFound/>}/>
+                    <Route path="/" element={<Navigate to="/users"/>}/>
                 </Routes>
             </div>
         </div>
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        initialized: getInitialized(state)
-    }
-}
 
-export default connect(mapStateToProps, {initializeApp})(App)
+
+export default App

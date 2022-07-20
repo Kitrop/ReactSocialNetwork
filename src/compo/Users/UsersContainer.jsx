@@ -1,16 +1,8 @@
-import {
-    follow,
-    followThunk,
-    getUserThunk,
-    setCurrentPage,
-    switchIsFollowing,
-    unfollow,
-    unfollowThunk
-} from '../../redux/reducers/usersReducer'
-import {connect} from 'react-redux'
+import {followThunk, getUserThunk, setCurrentPage, unfollowThunk} from '../../redux/reducers/usersReducer'
+import {useDispatch, useSelector} from 'react-redux'
 import {useEffect} from 'react'
 import Users from './Users'
-import Preloader from '../Preloader/Preloader'
+import Preloader from '../common/Preloader/Preloader'
 import {useNavigate} from 'react-router-dom'
 import {
     currentPage,
@@ -25,51 +17,60 @@ import {
 } from '../../redux/selectors/usersSelector'
 import {getIsAuth} from '../../redux/selectors/authSelector'
 
-function UsersContainer(props) {
+const UsersContainer = (props) => {
 
+    // STATE
+    const ifFetching = useSelector(state => ifFetchingSelector(state))
+    const isFollowing = useSelector(state => isFollowingSelector(state))
+    const isAuth = useSelector(state => getIsAuth(state))
+    const currentPage = useSelector( state => currentPageSelector(state))
+    const totalUsersCount = useSelector( state => totalUsersCountSelector(state))
+    const pageSize = useSelector( state => pageSizeSelector(state))
+    const users = useSelector( state => usersSelector(state))
+
+    // DISPATCH AC
+    const dispatch = useDispatch()
+    const follow = (userId) => dispatch(follow(userId))
+    const unfollow = (userId) => dispatch(unfollow(userId))
+    const switchIsFollowing = (ifFetching, userId) => dispatch(switchIsFollowing(ifFetching, userId))
+    const setCurrentPageAC = (currentPage) => dispatch(setCurrentPage(currentPage))
+
+    // DISPATCH THUNK
+    const unfollowThunk_ = (id) => dispatch(unfollowThunk(id))
+    const followThunk_= (id) => dispatch(followThunk(id))
+    const getUserThunk_ = (currentPage, pageSize) => dispatch(getUserThunk(currentPage, pageSize))
+
+    // if user not login, redirect to /login
+    // get users
     let navigator = useNavigate()
     useEffect(() => {
-        if (props.isAuth === false) {
-            return navigator('/login')
+        if (isAuth === false) {
+            navigator('/login')
         }
-    }, [navigator, props.isAuth])
+        getUserThunk_()
+    }, [navigator, isAuth])
 
-    useEffect(() => {
-        props.getUserThunk()
-    }, [])
-
+    // if page change
     let onPageChanged = (pageNumber) => {
-        props.setCurrentPage(pageNumber);
-        props.getUserThunk(pageNumber)
+        setCurrentPageAC(pageNumber)
+        getUserThunk_(pageNumber)
     }
 
+
     return <>
-        {props.ifFetching ? <Preloader/> : <Users totalUsersCount={props.totalUsersCount}
-                                                  pageSize={props.pageSize}
-                                                  currentPage={props.currentPage}
-                                                  onPageChanged={onPageChanged}
-                                                  users={props.users}
-                                                  follow={props.follow}
-                                                  unfollow={props.unfollow}
-                                                  switchIsFollowing={props.switchIsFollowing}
-                                                  isFollowing={props.isFollowing}
-                                                  unfollowThunk={props.unfollowThunk}
-                                                  followThunk={props.followThunk}
-                                                  isAuth={props.isAuth}/>}
+        {ifFetching ? <Preloader/> : <Users onPageChanged={onPageChanged}
+                                            follow={follow}
+                                            unfollow={unfollow}
+                                            switchIsFollowing={switchIsFollowing}
+                                            unfollowThunk={unfollowThunk_}
+                                            followThunk={followThunk_}
+                                            users={users}
+                                            pageSize={pageSize}
+                                            totalUsersCount={totalUsersCount}
+                                            currentPage={currentPage}
+                                            isFollowing={isFollowing}
+                                            isAuth={isAuth}/>}
     </>
 }
 
-const mapStateToProps = (state) => {
-    return {
-        users: usersSelector(state),
-        pageSize: pageSizeSelector(state),
-        totalUsersCount: totalUsersCountSelector(state),
-        currentPage: currentPageSelector(state),
-        ifFetching: ifFetchingSelector(state),
-        isFollowing: isFollowingSelector(state),
-        isAuth: getIsAuth(state)
-    }
-}
-
-export default connect(mapStateToProps, {follow, unfollow, setCurrentPage, switchIsFollowing, getUserThunk, unfollowThunk, followThunk})(UsersContainer)
-
+export default UsersContainer

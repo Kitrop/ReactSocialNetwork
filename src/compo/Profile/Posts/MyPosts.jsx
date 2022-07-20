@@ -4,11 +4,11 @@ import MyPostForm from "./MyPostForm";
 
 
 
-const MyPosts = (props) => {
+const MyPosts = ({postsData, addPostAC}) => {
 
-    let postsElements = props.postsData.map(p => <Wall name={p.name} key={p.id} text={p.text} likeCount={p.like}/>)
+    let postsElements = postsData.map(p => <Wall name={p.name} key={p.id} text={p.text} likeCount={p.like}/>)
     let onAddPost = (newPostText) => {
-        props.addPostActionCreater(newPostText);
+        addPostAC(newPostText);
     };
 
     return (
