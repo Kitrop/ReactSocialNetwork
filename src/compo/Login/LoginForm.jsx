@@ -8,12 +8,13 @@ const Error = styled.div`
   font-style: italic;
 `
 
-export const LoginForm = ({loginThunk}) => {
+export const LoginForm = ({loginThunk, captchaUrl}) => {
 
     let initialValues = {
         email: '',
         password: '',
-        remember: ''
+        remember: '',
+        captcha: ''
     }
     let SignupSchema = Yup.object().shape({
         password: Yup.string()
@@ -35,7 +36,7 @@ export const LoginForm = ({loginThunk}) => {
     }
     let submitCallback =  (values, { setSubmitting }) => {
         setTimeout(() => {
-            loginThunk(values.email, values.password, values.rememberMe);
+            loginThunk(values.email, values.password, values.rememberMe, values.captcha);
             setSubmitting(false);
         }, 400);
     }
@@ -72,6 +73,8 @@ export const LoginForm = ({loginThunk}) => {
                         <label htmlFor={'rememberMe'}> Remember me</label>
                         <input type="checkbox" name={"rememberMe"} onChange={handleChange}  value={values.rememberMe}/>
                     </div>
+                    {captchaUrl && <div> <img src={captchaUrl} alt={'captcha security'}/> </div>}
+                    {captchaUrl && <div> <input name={'captcha'} value={values.captcha} onBlur={handleBlur} type={'text'} onChange={handleChange}/> </div>}
                     <div>
                         <button type="submit" disabled={isSubmitting}> Submit< /button>
                     </div>

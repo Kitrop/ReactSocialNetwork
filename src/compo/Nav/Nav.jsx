@@ -1,20 +1,16 @@
-import navbar from './Nav.module.css';
-import {NavLink} from 'react-router-dom';
-import FriendContainer from "./Friends/FriendContainer";
+import style from './Nav.module.css'
+import friends from '../../icon/people_white_24dp.svg'
+import profile from '../../icon/person_white_24dp.svg'
+import dialogs from '../../icon/send_white_24dp.svg'
+import {NavLink} from 'react-router-dom'
 
 const Nav = (props) => {
 
     return (
-        <nav className={navbar.sidebar}>
-            <div> <NavLink to="/profile/24394">Profile</NavLink> </div>
-            <div> <NavLink to="/dialogs">Dialogs</NavLink> </div>
-            <div> <NavLink to="/users">Find user</NavLink> </div>
-            <div> <NavLink to="/">Post</NavLink> </div>
-            <div> <NavLink className={navbar.sidebar_setting} to="#" >Setting</NavLink> </div>
-            <div> <NavLink to="/">Friends</NavLink> </div>
-
-            <FriendContainer />
-
+        <nav className={style.sidebar}>
+            <div className={style.link}> <NavLink to="/profile/24394"> <img src={profile} alt={'icon'}/> Profile</NavLink> </div>
+            <div className={style.link}> <NavLink to="/dialogs"> <img src={dialogs} alt={'icon'}/> Dialogs</NavLink> </div>
+            <div className={style.link}> <NavLink to="/users"> <img src={friends} alt={'icon'}/> Find user</NavLink> </div>
         </nav>
     );
 }

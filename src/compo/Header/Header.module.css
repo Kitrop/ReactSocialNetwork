@@ -1,6 +1,6 @@
 .logo {
-    height: 100px;
-    width: 120px;
+    height: 55px;
+    width: 60px;
     max-width: 100%;
     justify-content: center;
     vertical-align: center;
@@ -10,6 +10,19 @@
     width: 100%;
     grid-area: header;
     background-color: #42cd6a;
+}
+
+.logout_icon {
+    width: 20px;
+    height: 20px;
+}
+
+.logout_btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
 }
 
 .login_btn {

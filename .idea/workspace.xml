@@ -4,22 +4,34 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="fixed all v2">
-      <change afterPath="$PROJECT_DIR$/src/compo/Profile/Posts/PhotoPost/PhotoPost.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/Contacts.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/Job.jsx" afterDir="false" />
+    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="add TypeScript">
+      <change afterPath="$PROJECT_DIR$/src/icon/logout_black_24dp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/ava1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/ava2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/ava3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/dialogReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/gh-pages" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/gh-pages-clean" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/gh-pages-clean.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/gh-pages-clean.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/gh-pages.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/gh-pages.ps1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/10.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/14.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/14.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/15.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/15.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/16.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/16.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/17.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/17.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/18.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/18.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/19.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/19.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/20.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/20.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" afterDir="false" />
@@ -27,17 +39,258 @@
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jest/schemas/build/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@jest/schemas/build/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jest/schemas/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@jest/schemas/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@sinclair/typebox/license" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@sinclair/typebox/license" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@sinclair/typebox/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@sinclair/typebox/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@sinclair/typebox/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@sinclair/typebox/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@sinclair/typebox/typebox.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@sinclair/typebox/typebox.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@sinclair/typebox/typebox.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@sinclair/typebox/typebox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/jest/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/jest/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/jest/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/jest/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/jest/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/jest/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/assert.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/assert.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/async_hooks.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/async_hooks.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/buffer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/buffer.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/child_process.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/child_process.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/cluster.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/cluster.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/console.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/console.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/crypto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/crypto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/dgram.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/dgram.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/diagnostics_channel.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/diagnostics_channel.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/dns.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/dns.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/dns/promises.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/dns/promises.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/domain.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/domain.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/events.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/events.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/fs.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/fs.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/fs/promises.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/fs/promises.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/globals.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/globals.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/http.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/http.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/http2.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/http2.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/https.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/https.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/inspector.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/inspector.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/net.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/net.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/os.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/os.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/path.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/path.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/perf_hooks.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/perf_hooks.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/process.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/process.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/punycode.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/punycode.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/querystring.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/querystring.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/readline.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/readline.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/repl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/repl.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/stream.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/stream.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/string_decoder.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/string_decoder.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/timers.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/timers.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/tls.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/tls.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/trace_events.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/trace_events.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/tty.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/tty.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/url.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/url.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/util.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/util.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/v8.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/v8.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/vm.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/vm.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/wasi.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/wasi.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/worker_threads.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/worker_threads.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/zlib.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/zlib.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/react-dom/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/react-dom/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/react-dom/client.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/react-dom/client.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/react-dom/experimental.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/react-dom/experimental.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/react-dom/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/react-dom/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/react-dom/next.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/react-dom/next.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/react-dom/node-stream/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/react-dom/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/react-dom/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/react-dom/server.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/react-dom/server.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/react-dom/test-utils/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/react-dom/test-utils/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/react/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/react/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/react/experimental.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/react/experimental.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/react/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/react/global.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/react/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/react/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/react/next.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/react/next.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/react/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/array-uniq/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/array-uniq/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/array-uniq/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/array-uniq/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/email-addresses/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/email-addresses/Changes.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/email-addresses/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/email-addresses/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/email-addresses/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/email-addresses/lib/email-addresses.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/email-addresses/lib/email-addresses.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/email-addresses/lib/email-addresses.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/email-addresses/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/email-addresses/test/email-addresses.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/email-addresses/test/is_email.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/email-addresses/test/tests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/filename-reserved-regex/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/filename-reserved-regex/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/filename-reserved-regex/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/filename-reserved-regex/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/filenamify/filenamify-path.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/filenamify/filenamify-path.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/filenamify/filenamify.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/filenamify/filenamify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/filenamify/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/filenamify/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/filenamify/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/filenamify/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/filenamify/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/bin/gh-pages-clean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/bin/gh-pages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/lib/git.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/lib/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/array-union/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/array-union/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/array-union/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/array-union/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/commander/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/commander/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/commander/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/commander/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/commander/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/commander/typings/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/copy-sync/copy-sync.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/copy-sync/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/copy/copy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/copy/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/empty/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/ensure/file.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/ensure/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/ensure/link.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/ensure/symlink-paths.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/ensure/symlink-type.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/ensure/symlink.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/fs/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/json/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/json/jsonfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/json/output-json-sync.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/json/output-json.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/mkdirs/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/mkdirs/mkdirs-sync.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/mkdirs/mkdirs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/mkdirs/win32.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/move-sync/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/move-sync/move-sync.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/move/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/move/move.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/output/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/path-exists/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/remove/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/remove/rimraf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/util/buffer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/util/stat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/lib/util/utimes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/fs-extra/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/globby/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/globby/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/globby/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/globby/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/jsonfile/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/jsonfile/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/jsonfile/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/jsonfile/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/jsonfile/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/universalify/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/universalify/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/universalify/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/node_modules/universalify/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gh-pages/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pify/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pify/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pify/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pify/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pinkie-promise/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pinkie-promise/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pinkie-promise/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pinkie-promise/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pinkie/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pinkie/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pinkie/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pinkie/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/strip-outer/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/strip-outer/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/strip-outer/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/strip-outer/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/trim-repeated/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/trim-repeated/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/trim-repeated/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/trim-repeated/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/AUTHORS.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/AUTHORS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/cs/diagnosticMessages.generated.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/cs/diagnosticMessages.generated.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/de/diagnosticMessages.generated.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/de/diagnosticMessages.generated.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/es/diagnosticMessages.generated.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/es/diagnosticMessages.generated.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/fr/diagnosticMessages.generated.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/fr/diagnosticMessages.generated.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/it/diagnosticMessages.generated.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/it/diagnosticMessages.generated.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/ja/diagnosticMessages.generated.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/ja/diagnosticMessages.generated.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/ko/diagnosticMessages.generated.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/ko/diagnosticMessages.generated.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.iterable.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.iterable.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.core.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.core.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.reflect.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.reflect.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.bigint.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.bigint.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.intl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.intl.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2021.intl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2021.intl.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2022.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2022.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2022.object.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2022.object.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es5.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es5.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.esnext.intl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.esnext.intl.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.webworker.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.webworker.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.webworker.iterable.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.webworker.iterable.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/pl/diagnosticMessages.generated.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/pl/diagnosticMessages.generated.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/protocol.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/protocol.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/pt-br/diagnosticMessages.generated.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/pt-br/diagnosticMessages.generated.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/ru/diagnosticMessages.generated.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/ru/diagnosticMessages.generated.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/tr/diagnosticMessages.generated.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/tr/diagnosticMessages.generated.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/tsc.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/tsc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/tsserver.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/tsserver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/tsserverlibrary.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/tsserverlibrary.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/tsserverlibrary.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/tsserverlibrary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/typescript.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/typescript.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/typescript.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/typescript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/typescriptServices.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/typescriptServices.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/typescriptServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/typescriptServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/typingsInstaller.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/typingsInstaller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/zh-cn/diagnosticMessages.generated.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/zh-cn/diagnosticMessages.generated.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/zh-tw/diagnosticMessages.generated.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/zh-tw/diagnosticMessages.generated.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Message/DialogItem/DialogsItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Message/DialogUsersItem/DialogsItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Message/DialogItem/DialogsItem.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Message/DialogUsersItem/DialogsItem.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Message/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Message/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Message/DialogsForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Message/DialogsForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Nav/Friends/Friend.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Nav/Friends/Friend.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Nav/Friends/FriendListElement/FriendListElement.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Nav/Nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Nav/Nav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Nav/Nav.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Nav/Nav.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Profile/Posts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Posts/MyPosts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Profile/Posts/MyPosts.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Posts/MyPosts.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compo/Profile/Posts/Post/Post.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Posts/Post/Post.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileStatus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileStatus.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compo/Users/Pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Users/Pagination.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Users/Users.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compo/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/postImg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Posts/PhotoPost/postImg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/dialogsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/dialogsReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/friendsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/friendsReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/profileReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/selectors/profileSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/profileSelector.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,13 +302,15 @@
       <list>
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="React jsx" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="duck_refactoring_" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,6 +333,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="EditMode_for_MyContacts_and_Job" />
+                    <option name="lastUsedInstant" value="1657874273" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="master" />
                     <option name="lastUsedInstant" value="1657783665" />
                   </RecentBranch>
@@ -92,10 +351,6 @@
                   <RecentBranch>
                     <option name="branchName" value="initialisation" />
                     <option name="lastUsedInstant" value="1657019013" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="useSelector_useDispatch" />
-                    <option name="lastUsedInstant" value="1657013907" />
                   </RecentBranch>
                 </list>
               </option>
@@ -122,25 +377,28 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux/reducers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/img" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Users\artem\my-app\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\artem\my-app\src\img" />
+      <recent name="C:\Users\artem\my-app\src\icon" />
       <recent name="C:\Users\artem\my-app\src\redux\reducers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\artem\my-app\src\icon" />
+      <recent name="C:\Users\artem\my-app\src\compo\common" />
       <recent name="C:\Users\artem\my-app\src\compo\Profile\Posts\PhotoPost" />
       <recent name="C:\Users\artem\my-app\src\compo\Profile\Posts" />
       <recent name="C:\Users\artem\my-app\src\compo\Profile\Posts\Post" />
-      <recent name="C:\Users\artem\my-app\src\redux\reducers" />
-      <recent name="C:\Users\artem\my-app\src\redux\selectors" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="C:\Users\artem\my-app\src\compo\Login\LoginForm.jsx" />
@@ -286,7 +544,22 @@
       <workItem from="1657786316146" duration="974000" />
       <workItem from="1657792496976" duration="7013000" />
       <workItem from="1657805908076" duration="1133000" />
-      <workItem from="1657862544370" duration="9987000" />
+      <workItem from="1657862544370" duration="11789000" />
+      <workItem from="1657945693207" duration="3877000" />
+      <workItem from="1658054469586" duration="4560000" />
+      <workItem from="1658064550752" duration="558000" />
+      <workItem from="1658117216892" duration="9317000" />
+      <workItem from="1658129909723" duration="3266000" />
+      <workItem from="1658203795032" duration="10752000" />
+      <workItem from="1658222217877" duration="5262000" />
+      <workItem from="1658229576531" duration="314000" />
+      <workItem from="1658291443697" duration="5899000" />
+      <workItem from="1658297546076" duration="5546000" />
+      <workItem from="1658325251651" duration="5068000" />
+      <workItem from="1658379881210" duration="6997000" />
+      <workItem from="1658655071960" duration="934000" />
+      <workItem from="1658722939783" duration="994000" />
+      <workItem from="1658726512432" duration="5010000" />
     </task>
     <task id="LOCAL-00001" summary="FIX ALL!">
       <created>1655120009106</created>
@@ -442,7 +715,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657787073414</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add MyContacts and job">
+      <created>1657874204854</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1657874204854</updated>
+    </task>
+    <task id="LOCAL-00024" summary="refactoring">
+      <created>1658298080654</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1658298080654</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +778,10 @@
     <MESSAGE value="add lazy and suspense" />
     <MESSAGE value="fixed all" />
     <MESSAGE value="fixed all v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed all v2" />
+    <MESSAGE value="add MyContacts and job" />
+    <MESSAGE value="refactoring" />
+    <MESSAGE value="add TypeScript" />
+    <option name="LAST_COMMIT_MESSAGE" value="add TypeScript" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

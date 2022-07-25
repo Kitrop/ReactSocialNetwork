@@ -18,15 +18,17 @@ const Pagination = ({totalUsersCount, pageSize, currentPage, onPageChanged, port
     useEffect(()=>setPortionNumber(Math.ceil(currentPage/portionSize)), [currentPage, portionSize])
     
     return <div>
-        <button onClick={() => setPortionNumber(portionNumber = 1)}>First</button>
-        { portionNumber > 1 && <button onClick={() =>  setPortionNumber(portionNumber - 1) }> PREV </button> }
+        <button className={styles.btn_pagination} onClick={() => setPortionNumber(portionNumber = 1)}>First</button>
+        { portionNumber > 1 && <button className={styles.btn_pagination} onClick={() =>  setPortionNumber(portionNumber - 1) }> PREV </button> }
+        <span className={styles.pagination_span}>
         {pages
             .filter(p => p >= leftBorder && p <= rightBorder)
             .map((p) => {
-                return <span className={ cn({[styles.selected]: currentPage === p}, styles.num) } key={p} onClick={(e) => onPageChanged(p) }>{p}</span>
-            })}
-        { portionCount > portionNumber && <button onClick={() =>  setPortionNumber(portionNumber + 1) }> NEXT </button> }
-        <button onClick={() => setPortionNumber(portionCount)}>Last</button>
+                return <span className={cn({[styles.selected]: currentPage === p}, styles.num)} key={p}
+                             onClick={(e) => onPageChanged(p)}>{p}</span> })
+        }
+            </span>
+        { portionCount > portionNumber && <button className={styles.btn_pagination} onClick={() =>  setPortionNumber(portionNumber + 1) }> NEXT </button> }
     </div>
 }
 

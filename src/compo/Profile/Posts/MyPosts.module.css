@@ -1,5 +1,7 @@
 .postsBlock {
-    padding: 10px;
+    padding: 7px;
+    border: 2px solid #54a75a;
+    margin-top: 35px;
 }
 
 .myP {

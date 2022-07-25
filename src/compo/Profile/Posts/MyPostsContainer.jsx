@@ -1,19 +1,23 @@
-import {addPostActionCreater} from "../../../redux/reducers/profileReducer";
-import MyPosts from "./MyPosts";
-import {connect} from "react-redux";
-import {newPostTextState, postsDataState, profileState} from "../../../redux/selectors/profileSelector";
+import {addPostActionCreater} from '../../../redux/reducers/profileReducer'
+import MyPosts from './MyPosts'
+import {useDispatch, useSelector} from 'react-redux'
+import {postsDataState} from '../../../redux/selectors/profileSelector'
 
 
-const mapStateToProps = (state) => {
-    return {
-        profilePage: profileState(state),
-        postsData: postsDataState(state),
-        newPostText: newPostTextState(state)
-    }
+const MyPostContainer = () => {
+
+    // STATE
+    const postsData = useSelector(state => postsDataState(state))
+
+    // DISPATCH
+    const dispatch = useDispatch()
+    const addPostActionCreater_ = (newPostText) => dispatch(addPostActionCreater(newPostText))
+
+    return <MyPosts postsData={postsData}  addPostAC={addPostActionCreater_}/>
 }
 
 
-const MyPostsContainer = connect(mapStateToProps, {addPostActionCreater})(MyPosts)
 
-export default MyPostsContainer;
+export default MyPostContainer
+
 

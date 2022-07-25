@@ -1,6 +1,13 @@
 import {Field, Formik} from "formik";
 import message from "./Dialogs.module.css";
 import * as Yup from "yup";
+import styled from 'styled-components'
+
+const Error = styled.div`
+  color: red;
+  font-size: 18px;
+  font-style: italic;
+`
 
 
 const DialogForm = (props) => {
@@ -16,8 +23,9 @@ const DialogForm = (props) => {
     }
     let SignupSchema = Yup.object().shape({
         messageText: Yup.string()
-            .min(1, 'Too Short!')
+            .min(3, 'Too Short!')
             .max(105, 'Too Long!')
+            .required('Required'),
     });
     return (
         <Formik
@@ -36,6 +44,7 @@ const DialogForm = (props) => {
                 <form onSubmit={handleSubmit}>
                     <div>
                         <Field type="text" name={'messageText'} placeholder={'type your message'}  onChange={handleChange} onBlur={handleBlur} value={values.messageText}/>
+                        <Error>{errors.messageText && touched.messageText && errors.messageText}</Error>
                     </div>
                     <div>
                         <button type="submit" disabled={isSubmitting} className={message.mybutton} >Send Message</button>

@@ -1,15 +1,14 @@
 import myPosts from './Profile.module.css'
 import '../Profile/Posts/MyPosts'
-import ProfileInfo from "./ProfileInfo/ProfileInfo";
-import MyPostsContainer from "./Posts/MyPostsContainer";
-import {putProfileJob} from '../../redux/reducers/profileReducer'
+import ProfileInfo from './ProfileInfo/ProfileInfo'
+import MyPostsContainer from './Posts/MyPostsContainer'
 
-const Profile = (props) => {
+const Profile = ({savePhoto, isOwner, profile, status, putProfileStatus, putProfileInfo}) => {
 
     return (
         <div className={myPosts.content}>
-            <ProfileInfo savePhoto={props.savePhoto} isOwner={props.isOwner} profile={props.profile}
-                         status={props.status} putProfileStatus={props.putProfileStatus} putProfileContacts={props.putProfileContacts} putProfileJob={props.putProfileJob}/>
+            <ProfileInfo savePhoto={savePhoto} isOwner={isOwner} profile={profile}
+                         status={status} putProfileStatus={putProfileStatus} putProfileInfo={putProfileInfo}/>
             <MyPostsContainer />
         </div>
     );

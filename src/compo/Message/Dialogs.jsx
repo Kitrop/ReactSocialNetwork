@@ -1,16 +1,20 @@
 import message from './Dialogs.module.css';
-import DialogItem from './DialogItem/DialogsItem';
+import DialogUsersItem from './DialogUsersItem/DialogsItem';
 import Message from "./MessagesItem/Message";
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {getIsAuth, getMessage} from "../../redux/selectors/dialogSelectors";
 import DialogsForm from "./DialogsForm";
 import {useNavigate} from "react-router-dom";
+import {SendMessageActionCreater} from '../../redux/reducers/dialogsReducer'
 
 function Dialogs(props) {
 
-
+    // STATE
+    const dialogsPage = useSelector( state => getMessage(state))
     const isAuth = useSelector( state => getIsAuth(state))
+
+    // if user not login redirect to /login
     let navigator = useNavigate()
     useEffect(() => {
         if (isAuth === false) {
@@ -19,17 +23,13 @@ function Dialogs(props) {
     }, [isAuth, navigator]);
 
 
-
-    const dialogsPage = useSelector( state => getMessage(state))
-    let dialogsElements = dialogsPage.dialogsData.map(d => <DialogItem name={d.name} key={d.id} id={d.id} />)
+    let dialogsElements = dialogsPage.dialogsData.map(d => <DialogUsersItem name={d.name} key={d.id} id={d.id} />)
     let messagesElements = dialogsPage.messagesData.map(m => <Message ava={m.ava} key={m.id} id={m.id} content={m.message}/>)
 
 
 
     const dispatch = useDispatch()
-    // const sendMsgAC = (newMessageText) => dispatch(SendMessageActionCreator());
-    const sendMsgAC = (newMessageText) => dispatch({type:'SEND_MESSAGE', newMessageText})
-
+    const sendMsgAC = (newMessageText) => {dispatch(SendMessageActionCreater(newMessageText))}
 
     return (
         <div className={message.dialogs}>
