@@ -1,7 +1,7 @@
 const SEND_MESSAGE = 'SEND_MESSAGE';
 
 let initialState = {
-    dialogsData: [
+    UsersDialogData: [
         {id: 1, name: "Dimych",},
         {
             id: 2,
@@ -14,18 +14,14 @@ let initialState = {
     ],
     messagesData: [
         {
-            id: 1,
-            message: "Hello",
+            id: 1, message: 'Hello'
         }, {
-            id: 2,
-            message: "How are you?",
+            id: 2, message: 'How are you?'
         }, {
-            id: 3,
-            message: "Chel",
+            id: 3, message: 'Chel'
         }, {
-            id: 4,
-            message: "REACT REACT AND REDUX",
-        },],
+            id: 4, message: 'REACT REACT AND REDUX'
+        }],
     newMessageText: ''
 };
 
@@ -35,7 +31,7 @@ const dialogsReducer = (state = initialState, action) => {
             let body = action.newMessageText
             return {
                 ...state,
-                messagesData: [...state.messagesData, {id: 6, message: body}],
+                messagesData: [...state.messagesData, {message: body}],
                 newMessageText: ''
             }
         }

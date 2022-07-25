@@ -1,5 +1,5 @@
 import message from './Dialogs.module.css';
-import DialogItem from './DialogItem/DialogsItem';
+import DialogUsersItem from './DialogUsersItem/DialogsItem';
 import Message from "./MessagesItem/Message";
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
@@ -23,7 +23,7 @@ function Dialogs(props) {
     }, [isAuth, navigator]);
 
 
-    let dialogsElements = dialogsPage.dialogsData.map(d => <DialogItem name={d.name} key={d.id} id={d.id} />)
+    let dialogsElements = dialogsPage.dialogsData.map(d => <DialogUsersItem name={d.name} key={d.id} id={d.id} />)
     let messagesElements = dialogsPage.messagesData.map(m => <Message ava={m.ava} key={m.id} id={m.id} content={m.message}/>)
 
 

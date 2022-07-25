@@ -1,12 +1,12 @@
 import posts from '../Posts/MyPosts.module.css';
-import Wall from './Post/Post.jsx';
+import Post from './Post/Post.jsx';
 import MyPostForm from "./MyPostForm";
 
 
 
 const MyPosts = ({postsData, addPostAC}) => {
 
-    let postsElements = postsData.map(p => <Wall name={p.name} key={p.id} text={p.text} likeCount={p.like}/>)
+    let postsElements = postsData.map(p => <Post name={p.name} key={p.id} text={p.text} likeCount={p.like}/>)
     let onAddPost = (newPostText) => {
         addPostAC(newPostText);
     };

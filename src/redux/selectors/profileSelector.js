@@ -13,7 +13,3 @@ export const profileState = (state) => {
 export const postsDataState = (state) => {
     return state.profilePage.postsData
 }
-
-export const newPostTextState = (state) => {
-    return state.profilePage.newPostText
-}

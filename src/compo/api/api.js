@@ -61,7 +61,7 @@ export const profileApi = {
         return instance.get(`profile/status/` + userId);
     },
     putProfileStatus(status) {
-        return instance.put(`profile/status`, {status });
+        return instance.put(`profile/status/`, {status });
     },
     putProfilePhoto(photos) {
         const formData = new FormData()

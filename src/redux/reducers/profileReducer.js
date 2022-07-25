@@ -14,7 +14,7 @@ const SET_PROFILE_PHOTO = 'SET_PROFILE_PHOTO'
 let initialState = {
     postsData: [
         {id: 1, name: 'Evgeniy', text: 'I need more React', like: '16'},
-        {id: 2, text: 'I love REACT!!!', like: '45'}
+        {id: 2, name: 'Evgeniy', text: 'I love REACT!!!', like: '45'}
     ],
     newPostText: 'it-sphere',
     profile: null,
@@ -28,7 +28,7 @@ const profileReducer = (state = initialState, action) => {
             let newPost = {
                 name: 'Oleg',
                 text: action.newPostText,
-                like: '56'
+                like: '56',
             }
             return {
                 ...state,
@@ -58,7 +58,6 @@ const profileReducer = (state = initialState, action) => {
 
 // actionCreater
 export const addPostActionCreater = (newPostText) => ({type: ADD_POST, newPostText})
-export const deletePostAC = (id) => ({type: DELETE_POST, id})
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 export const setProfileStatus = (status) => ({type: SET_PROFILE_STATUS, status})
 export const setProfilePhoto = (photos) => ({type: SET_PROFILE_PHOTO, photos})

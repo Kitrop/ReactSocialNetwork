@@ -17,7 +17,7 @@ import NotFound from './compo/common/404/NotFound'
 
 const Dialogs = lazy(() => import('./compo/Message/Dialogs'))
 
-const App = (props) => {
+const App = () => {
 
     // STATE
     const initialized = useSelector( state => getInitialized(state))

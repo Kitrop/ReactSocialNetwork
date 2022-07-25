@@ -4,7 +4,7 @@ import Preloader from '../../../common/Preloader/Preloader'
 
 const PhotoPost = lazy(() => import ('../PhotoPost/PhotoPost'))
 
-const Wall = (props) => {
+const Post = (props) => {
 
     function getRndInteger(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -25,4 +25,4 @@ const Wall = (props) => {
     );
 }
 
-export default Wall;
+export default Post;

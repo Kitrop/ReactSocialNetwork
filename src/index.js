@@ -8,11 +8,13 @@ import {Provider} from 'react-redux'
 import {createGlobalStyle} from 'styled-components'
 import {BrowserRouter} from 'react-router-dom'
 
+
 const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Monaco, sans-serif;
   }`
 
 ReactDOM.render(
