@@ -10,7 +10,7 @@
         this._rerenderEntireTree();
     },*/
 import profileReducer from "./reducers/profileReducer";
-import dialogsReducer from "./reducers/dialogsReducer";
+import dialogsReducer from "./reducers/dialogsReducer.ts";
 import friendsReducer from "./reducers/friendsReducer";
 
 let store= {

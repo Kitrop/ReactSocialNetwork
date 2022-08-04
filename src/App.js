@@ -10,10 +10,10 @@ import HeaderContainer from './compo/Header/HeaderComponent'
 import Login from './compo/Login/Login'
 import {useDispatch, useSelector} from 'react-redux'
 import {lazy, Suspense, useEffect} from 'react'
-import {initializeApp} from './redux/reducers/appReducer'
 import {getInitialized} from './redux/selectors/appSelector'
 import Preloader from './compo/common/Preloader/Preloader'
 import NotFound from './compo/common/404/NotFound'
+import {initializeApp} from './redux/reducers/appReducer'
 
 const Dialogs = lazy(() => import('./compo/Message/Dialogs'))
 
@@ -28,7 +28,7 @@ const App = () => {
 
     useEffect(() => {
         initialize()
-    })
+    }, [initialize])
     if (!initialized) {
         return <Preloader/>
     }

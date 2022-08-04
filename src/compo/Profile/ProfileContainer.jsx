@@ -44,7 +44,7 @@ const ProfileContainer = (props) => {
     useEffect(() => {
         getProfileThunk_(userId)
         getProfileStatus_(userId)
-    }, [userId, getProfileThunk_, getProfileStatus_]);
+    }, [userId]);
 
 
     return (

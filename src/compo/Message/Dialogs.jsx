@@ -6,7 +6,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {getIsAuth, getMessage} from "../../redux/selectors/dialogSelectors";
 import DialogsForm from "./DialogsForm";
 import {useNavigate} from "react-router-dom";
-import {SendMessageActionCreater} from '../../redux/reducers/dialogsReducer'
+import {SendMessageActionCreater} from '../../redux/reducers/dialogsReducer.ts'
 
 function Dialogs(props) {
 
@@ -23,7 +23,7 @@ function Dialogs(props) {
     }, [isAuth, navigator]);
 
 
-    let dialogsElements = dialogsPage.dialogsData.map(d => <DialogUsersItem name={d.name} key={d.id} id={d.id} />)
+    let dialogsElements = dialogsPage.usersDialogData.map(d => <DialogUsersItem name={d.name} key={d.id} id={d.id} />)
     let messagesElements = dialogsPage.messagesData.map(m => <Message ava={m.ava} key={m.id} id={m.id} content={m.message}/>)
 
 
