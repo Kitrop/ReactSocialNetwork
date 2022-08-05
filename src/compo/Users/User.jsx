@@ -2,14 +2,13 @@ import ums from './Users.module.css'
 import {NavLink} from 'react-router-dom'
 import userPhoto from '../../img/avatar.jpg'
 
+
 const User = ({users, unfollowThunk, followThunk}) => {
     return (
         users.map(u =>
             <div className={ums.profile} key={u.id}>
             <span>
-                    <div> <NavLink to={'/profile/' + u.id}><img
-                        src={u.photos.small != null ? u.photos.small : userPhoto} className={ums.ava_photo}
-                        alt={'profile avatar'}/></NavLink> </div>
+                    <div> <NavLink to={'/profile/' + u.id}> <img src={u.photos.small != null ? u.photos.small : userPhoto} className={ums.ava_photo} alt={'profile avatar'}/> </NavLink> </div>
                     <div>
                         {u.followed
                             ? <button className={ums.btn_unfollow} onClick={() => unfollowThunk(u.id)}>

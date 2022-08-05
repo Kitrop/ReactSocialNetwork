@@ -3,9 +3,9 @@ import {createSelector} from "reselect";
 
 // state
 const users = (state) => state.usersPage.users
-const pageSize = (state) => state.usersPage.pageSize
-const totalUsersCount = (state) => state.usersPage.totalUsersCount
-const currentPage = (state) => state.usersPage.currentPage
+export const pageSize = (state) => state.usersPage.pageSize
+export const totalUsersCount = (state) => state.usersPage.totalUsersCount
+export const currentPage = (state) => state.usersPage.currentPage
 const ifFetching = (state) => state.usersPage.ifFetching
 const isFollowing = (state) => state.usersPage.isFollowing
 

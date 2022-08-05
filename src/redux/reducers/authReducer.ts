@@ -1,5 +1,7 @@
 import {loginApi, profileApi, securityApi} from '../../compo/api/api'
+import {Dispatch} from 'redux';
 
+// Name action
 const SET_USER_DATA = 'SET_USER_DATA'
 const GET_CAPTCHA = 'GET_CAPTCHA'
 
@@ -88,7 +90,7 @@ export const logoutThunk = () => async (dispatch: any) => {
         dispatch(setAuthUserData(null, null, null, false))
     }
 }
-export const captchaSecurity = () => async (dispatch: any) => {
+export const captchaSecurity = () => async (dispatch: Dispatch) => {
     const response = await securityApi.getCaptcha()
     const captchaUrl = response.data.url
     dispatch(setCaptcha(captchaUrl))

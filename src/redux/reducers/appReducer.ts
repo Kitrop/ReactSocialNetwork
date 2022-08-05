@@ -1,11 +1,14 @@
 import {loginMeThunk} from "./authReducer";
+import {Dispatch} from 'redux';
 
+// Name action
 const SET_INITIALIZED = 'SET_INITIALIZED'
 
 interface InitialStateInterface {
     initialized: boolean
 }
 
+// Reducer
 const initialState: InitialStateInterface = {
     initialized: false
 }
@@ -32,9 +35,9 @@ const initializingAC = ():initializingACInterface => ({type:SET_INITIALIZED})
 
 // thunkCreator
 export const initializeApp = () => async (dispatch: any) => {
-    let promise = dispatch(loginMeThunk());
+    let promise = dispatch(loginMeThunk())
     await Promise.all([promise])
-    dispatch(initializingAC());
+    dispatch(initializingAC())
 }
 
 export default appReducer

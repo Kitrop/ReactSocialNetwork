@@ -4,11 +4,9 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="add TypeScript">
-      <change afterPath="$PROJECT_DIR$/src/redux/types/type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utility/updateObjectArray.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="type for Reducers">
+      <change afterPath="$PROJECT_DIR$/src/compo/Users/Users.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utility/declaration.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" afterDir="false" />
@@ -17,6 +15,8 @@
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/14.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/14.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/15.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/15.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" afterDir="false" />
@@ -30,18 +30,15 @@
       <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Message/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Message/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/appReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/appReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/authReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/dialogReducer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/dialogsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/dialogsReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/friendsReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/profileReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/usersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/usersReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Users/Pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Users/Pagination.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Users/User.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Users/User.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Users/Users.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Users/Users.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Users/Users.test.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Users/UsersContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/appReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/appReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/authReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/authReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/selectors/usersSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/usersSelector.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +57,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="duck_refactoring_" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,6 +80,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="typescript" />
+                    <option name="lastUsedInstant" value="1659599531" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="master" />
                     <option name="lastUsedInstant" value="1657783665" />
                   </RecentBranch>
@@ -97,10 +98,6 @@
                   <RecentBranch>
                     <option name="branchName" value="initialisation" />
                     <option name="lastUsedInstant" value="1657019013" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="useSelector_useDispatch" />
-                    <option name="lastUsedInstant" value="1657013907" />
                   </RecentBranch>
                 </list>
               </option>
@@ -301,7 +298,12 @@
       <workItem from="1659515070603" duration="4293000" />
       <workItem from="1659529363230" duration="1036000" />
       <workItem from="1659535626884" duration="1345000" />
-      <workItem from="1659592740202" duration="2557000" />
+      <workItem from="1659592740202" duration="11305000" />
+      <workItem from="1659621165510" duration="1988000" />
+      <workItem from="1659623170676" duration="174000" />
+      <workItem from="1659623363575" duration="38000" />
+      <workItem from="1659623418493" duration="1537000" />
+      <workItem from="1659680223611" duration="1822000" />
     </task>
     <task id="LOCAL-00001" summary="FIX ALL!">
       <created>1655120009106</created>
@@ -457,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657787073414</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="type for Reducers">
+      <created>1659599388685</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1659599388685</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +515,8 @@
     <MESSAGE value="add lazy and suspense" />
     <MESSAGE value="fixed all" />
     <MESSAGE value="fixed all v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed all v2" />
+    <MESSAGE value="type for Reducers" />
+    <option name="LAST_COMMIT_MESSAGE" value="type for Reducers" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
