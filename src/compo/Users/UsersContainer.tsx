@@ -1,6 +1,6 @@
 import {followThunk, getUserThunk, setCurrentPage, unfollowThunk} from '../../redux/reducers/usersReducer'
 import {useDispatch, useSelector} from 'react-redux'
-import {useEffect} from 'react'
+import {useCallback, useEffect} from 'react'
 import Users from './Users'
 import Preloader from '../common/Preloader/Preloader'
 import {useNavigate} from 'react-router-dom'
@@ -8,12 +8,13 @@ import {
     currentPageSelector,
     ifFetchingSelector,
     isFollowingSelector,
-    pageSizeSelector,
+    pageSizeSelector, portionSizeSelector,
     totalUsersCountSelector,
     usersSelector
 } from '../../redux/selectors/usersSelector'
 import {getIsAuth} from '../../redux/selectors/authSelector'
 import {StateType} from "../../redux/redux-store";
+import {ThunkDispatch} from "redux-thunk";
 
 const UsersContainer = () => {
 
@@ -24,29 +25,31 @@ const UsersContainer = () => {
     const currentPage = useSelector( (state: StateType) => currentPageSelector(state))
     const totalUsersCount = useSelector( (state: StateType) => totalUsersCountSelector(state))
     const pageSize = useSelector( (state: StateType) => pageSizeSelector(state))
+    const portionSize = useSelector( (state: StateType) => portionSizeSelector(state))
     const users = useSelector( (state: StateType) => usersSelector(state))
 
 
 
     // Dispatch Action Creator
-    const dispatch = useDispatch()
-    const follow = (userId: number) => dispatch(follow(userId))
-    const unfollow = (userId: number) => dispatch(unfollow(userId))
-    const switchIsFollowing = (ifFetching: boolean, userId: number) => dispatch(switchIsFollowing(ifFetching, userId))
+    const dispatch: ThunkDispatch<any, any, any> = useDispatch()
+    const unfollow: any = (userId: number) => dispatch(unfollow(userId))
+    const follow: any = (userId: number) => dispatch(follow(userId))
+    const switchIsFollowing: any = (ifFetching: boolean, userId: number) => dispatch(switchIsFollowing(ifFetching, userId))
     const setCurrentPageAC = (currentPage: number) => dispatch(setCurrentPage(currentPage))
 
     // Dispatch Thunk
     const unfollowThunk_ = (id: number) => dispatch(unfollowThunk(id))
     const followThunk_= (id: number) => dispatch(followThunk(id))
-    const getUserThunk_ = (currentPage: number, pageSize: number) => dispatch(getUserThunk(currentPage, pageSize))
+    const getUserThunk_ = useCallback((currentPage: number) => dispatch(getUserThunk(currentPage)), [dispatch])
 
 
-    // if user not login, redirect to /login
+    // if user not login, redirect to /loginФ
     let navigator = useNavigate()
     useEffect(() => {
         if (isAuth === false) { navigator('/login') }
-        getUserThunk_()
-    }, [navigator, isAuth])
+        getUserThunk_(currentPage)
+    }, [navigator, isAuth, getUserThunk_, currentPage])
+
 
     // if page change
     const onPageChanged = (pageNumber: number) => {
@@ -57,8 +60,8 @@ const UsersContainer = () => {
 
     return <>
         {ifFetching ? <Preloader/> : <Users onPageChanged={onPageChanged}
-                                            follow={follow}
                                             unfollow={unfollow}
+                                            follow={follow}
                                             switchIsFollowing={switchIsFollowing}
                                             unfollowThunk={unfollowThunk_}
                                             followThunk={followThunk_}
@@ -67,9 +70,7 @@ const UsersContainer = () => {
                                             totalUsersCount={totalUsersCount}
                                             currentPage={currentPage}
                                             isFollowing={isFollowing}
-                                            isAuth={isAuth}
-                                        />
-        }
+                                            portionSize={portionSize}/>}
     </>
 }
 

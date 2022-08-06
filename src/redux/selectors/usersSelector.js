@@ -4,6 +4,7 @@ import {createSelector} from "reselect";
 // state
 const users = (state) => state.usersPage.users
 export const pageSize = (state) => state.usersPage.pageSize
+export const portionSize = (state) => state.usersPage.portionSize
 export const totalUsersCount = (state) => state.usersPage.totalUsersCount
 export const currentPage = (state) => state.usersPage.currentPage
 const ifFetching = (state) => state.usersPage.ifFetching
@@ -16,6 +17,10 @@ export const usersSelector = createSelector(users, (users) => {
 
 export const pageSizeSelector = createSelector(pageSize ,(pageSize) => {
     return pageSize
+})
+
+export const portionSizeSelector = createSelector(portionSize, (portionSize) => {
+    return portionSize
 })
 
 export const totalUsersCountSelector = createSelector( totalUsersCount,(totalUsersCount) => {

@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom'
 import userPhoto from '../../img/avatar.jpg'
 
 
-const User = ({users, unfollowThunk, followThunk}) => {
+const User = ({users, unfollowThunk, followThunk, follow}) => {
     return (
         users.map(u =>
             <div className={ums.profile} key={u.id}>

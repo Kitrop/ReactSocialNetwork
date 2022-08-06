@@ -1,6 +1,6 @@
-import loader from "../../../img/loader.svg";
+import loader from '../../../img/loader.svg';
 
-function Preloader (props) {
+function Preloader () {
     return <img src={loader} alt={'load...'}/>
 }
 
