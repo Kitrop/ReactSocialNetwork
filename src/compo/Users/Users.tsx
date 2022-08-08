@@ -1,8 +1,22 @@
 import styled from 'styled-components'
 import Pagination from './Pagination'
-import User from './User'
-import {UsersInterface} from "../../redux/types/type";
-import { FC } from 'react';
+import {FC, useCallback, useEffect} from 'react';
+import {useDispatch, useSelector} from "react-redux";
+import {AppStateType} from "../../redux/redux-store";
+import {
+    currentPageSelector,
+    ifFetchingSelector,
+    pageSizeSelector,
+    portionSizeSelector,
+    totalUsersCountSelector,
+    usersSelector
+} from "../../redux/selectors/usersSelector";
+import {getIsAuth} from "../../redux/selectors/authSelector";
+import {ThunkDispatch} from "redux-thunk";
+import {followThunk, getUserThunk, setCurrentPage, unfollowThunk} from "../../redux/reducers/usersReducer";
+import {useNavigate} from "react-router-dom";
+import Preloader from "../common/Preloader/Preloader";
+import User from "./User";
 
 
 // style
@@ -11,32 +25,56 @@ const BorderPageUsers = styled.div`
   padding: 10px;
 `
 
-
-
-// type Props for component
 type Props = {
-    totalUsersCount: number
-    pageSize: number
-    currentPage: number
-    onPageChanged: (currentPage: number, pageSize?: number) => void
-    portionSize: number
-    isFollowing: []
-    unfollowThunk: Function
-    followThunk: Function
-    users: UsersInterface
-    unfollow: (userId: number) => void
-    follow: (userId: number) => void
-    switchIsFollowing: (ifFetching: boolean, userId: number) => void
+    titleText: string
 }
 
-const Users: FC<Props> =  ({totalUsersCount, pageSize, currentPage, onPageChanged, portionSize, unfollowThunk, followThunk, users, follow}) => {
+const Users: FC<Props> = ({titleText = 'Users'}) => {
+
+    // STATE
+    const ifFetching = useSelector((state: AppStateType) => ifFetchingSelector(state))
+    const isAuth = useSelector((state: AppStateType) => getIsAuth(state))
+    const currentPage = useSelector((state: AppStateType) => currentPageSelector(state))
+    const totalUsersCount = useSelector((state: AppStateType) => totalUsersCountSelector(state))
+    const pageSize = useSelector((state: AppStateType) => pageSizeSelector(state))
+    const portionSize = useSelector((state: AppStateType) => portionSizeSelector(state))
+    const users = useSelector((state: AppStateType) => usersSelector(state))
 
 
+    // Dispatch Action Creator
+    const dispatch: ThunkDispatch<AppStateType, any, any> = useDispatch()
+
+    const switchIsFollowing: any = (ifFetching: boolean, userId: number) => dispatch(switchIsFollowing(ifFetching, userId))
+    const setCurrentPageAC = (currentPage: number) => dispatch(setCurrentPage(currentPage))
+
+    // Dispatch Thunk
+    const unfollowThunk_ = (id: number) => dispatch(unfollowThunk(id))
+    const followThunk_ = (id: number) => dispatch(followThunk(id))
+    const getUserThunk_ = useCallback((currentPage: number) => dispatch(getUserThunk(currentPage)), [dispatch])
+
+
+    // if user not login, redirect to /loginФ
+    let navigator = useNavigate()
+    useEffect(() => {
+        if (!isAuth) {
+            navigator('/login')
+        }
+        getUserThunk_(currentPage)
+    }, [navigator, isAuth, getUserThunk_, currentPage])
+
+
+    // if page change
+    const onPageChanged = (pageNumber: number) => {
+        setCurrentPageAC(pageNumber)
+        getUserThunk_(pageNumber)
+    }
 
     return (
         <BorderPageUsers>
-            <Pagination totalUsersCount={totalUsersCount} pageSize={pageSize} currentPage={currentPage} onPageChanged={onPageChanged} portionSize={portionSize} />
-            <User unfollowThunk={unfollowThunk} followThunk={followThunk} users={users} follow={follow} />
+            {ifFetching ? <Preloader/> : null}
+            <Pagination totalUsersCount={totalUsersCount} pageSize={pageSize} currentPage={currentPage} onPageChanged={onPageChanged} portionSize={portionSize}/>
+            <h2>{titleText}</h2>
+            <User unfollowThunk={unfollowThunk_} followThunk={followThunk_} users={users}/>
         </BorderPageUsers>
     )
 }

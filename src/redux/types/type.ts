@@ -33,4 +33,5 @@ export type UsersInterface = {
     id: number
     photos: PhotosType
     status: string
+    followed: boolean
 }

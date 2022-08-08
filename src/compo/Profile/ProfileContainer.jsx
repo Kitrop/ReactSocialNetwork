@@ -34,7 +34,7 @@ const ProfileContainer = (props) => {
 
     let navigate = useNavigate()
     useEffect(()=>{
-        if(isAuth === false){
+        if( !isAuth ) {
             return navigate("/login")
         }
     }, [navigate, isAuth])

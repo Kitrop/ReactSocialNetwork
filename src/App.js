@@ -14,6 +14,7 @@ import {getInitialized} from './redux/selectors/appSelector'
 import Preloader from './compo/common/Preloader/Preloader'
 import NotFound from './compo/common/404/NotFound'
 import {initializeApp} from './redux/reducers/appReducer'
+import Users from './compo/Users/Users'
 
 const Dialogs = lazy(() => import('./compo/Message/Dialogs'))
 
@@ -43,7 +44,7 @@ const App = () => {
                     <Route path="/dialogs/*" element={<Suspense fallback={<Preloader/>}> <Dialogs/> </Suspense>}/>
                     <Route path="/profile/:userId" element={<ProfileContainer/>}/>
                     <Route path="/profile" element={<ProfileContainer/>}/>
-                    <Route path="/users" element={<UsersContainer/>}/>
+                    <Route path="/users" element={<Users titleText={'Samurais'}/>}/>
                     <Route path="/login" element={<Login/>}/>
                     <Route path="*" element={<NotFound/>}/>
                     <Route path="/" element={<Navigate to="/users"/>}/>
