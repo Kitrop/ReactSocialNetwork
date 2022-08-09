@@ -75,7 +75,7 @@ export const loginMeThunk = () => async (dispatch: any) => {
         dispatch(setAuthUserData(id, email, login, true))
     }
 }
-export const loginThunk = (email: string, password: number, rememberMe: boolean, captcha:null) => async (dispatch: any) => {
+export const loginThunk = (email: string | null, password: number | null, rememberMe: boolean, captcha: any) => async (dispatch: any) => {
     let data = await loginApi.loginApi(email, password, rememberMe, captcha)
     if (data.data.resultCode === 0) {
         dispatch(loginMeThunk())

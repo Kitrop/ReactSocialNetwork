@@ -24,7 +24,7 @@ function Dialogs(props) {
 
 
     let dialogsElements = dialogsPage.usersDialogData.map(d => <DialogUsersItem name={d.name} key={d.id} id={d.id} />)
-    let messagesElements = dialogsPage.messagesData.map(m => <Message ava={m.ava} key={m.id} id={m.id} content={m.message}/>)
+    let messagesElements = dialogsPage.messagesData.map(m => <Message ava={m.ava} key={m.id} id={m.id} messageContent={m.message}/>)
 
 
 
