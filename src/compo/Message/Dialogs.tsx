@@ -6,30 +6,33 @@ import {useDispatch, useSelector} from "react-redux";
 import {getIsAuth, getMessage} from "../../redux/selectors/dialogSelectors";
 import DialogsForm from "./DialogsForm";
 import {useNavigate} from "react-router-dom";
-import {SendMessageActionCreater} from '../../redux/reducers/dialogsReducer.ts'
+import {SendMessageActionCreater} from '../../redux/reducers/dialogsReducer'
+import {AppStateType} from "../../redux/redux-store";
+import {ThunkDispatch} from "redux-thunk";
+import App from "../../App";
 
-function Dialogs(props) {
+function Dialogs() {
 
     // STATE
-    const dialogsPage = useSelector( state => getMessage(state))
-    const isAuth = useSelector( state => getIsAuth(state))
+    const dialogsPage = useSelector( (state: AppStateType) => getMessage(state))
+    const isAuth = useSelector( (state: AppStateType) => getIsAuth(state))
 
     // if user not login redirect to /login
     let navigator = useNavigate()
     useEffect(() => {
-        if (isAuth === false) {
+        if ( !isAuth ) {
             return navigator('/login')
         }
     }, [isAuth, navigator]);
 
 
     let dialogsElements = dialogsPage.usersDialogData.map(d => <DialogUsersItem name={d.name} key={d.id} id={d.id} />)
-    let messagesElements = dialogsPage.messagesData.map(m => <Message ava={m.ava} key={m.id} id={m.id} messageContent={m.message}/>)
+    let messagesElements = dialogsPage.messagesData.map(m => <Message key={m.id}  messageContent={m.message}/>)
 
 
 
-    const dispatch = useDispatch()
-    const sendMsgAC = (newMessageText) => {dispatch(SendMessageActionCreater(newMessageText))}
+    const dispatch: ThunkDispatch<AppStateType, any, any> = useDispatch()
+    const sendMsgAC = (newMessageText: string) => {dispatch(SendMessageActionCreater(newMessageText))}
 
     return (
         <div className={message.dialogs}>

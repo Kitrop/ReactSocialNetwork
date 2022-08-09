@@ -2,6 +2,8 @@ import {Field, Formik} from "formik";
 import message from "./Dialogs.module.css";
 import * as Yup from "yup";
 import styled from 'styled-components'
+import {FC} from "react";
+import {FormikValues} from "formik/dist/types";
 
 const Error = styled.div`
   color: red;
@@ -10,14 +12,21 @@ const Error = styled.div`
 `
 
 
-const DialogForm = (props) => {
-    const initialValues = {
+type Props = {
+    SendMessageActionCreater: (messageText: string) => void
+}
+type InitialValuesType = {
+    messageText: string
+}
+
+const DialogForm: FC<Props> = ({SendMessageActionCreater}) => {
+    const initialValues: InitialValuesType = {
         messageText: ''
     }
-    let onSubmit =  (values, { setSubmitting }) => {
+    let onSubmit =  (values: FormikValues, setSubmitting: any ) => {
         setTimeout(() => {
             console.log(values.messageText)
-            props.SendMessageActionCreater(values.messageText)
+            SendMessageActionCreater(values.messageText)
             setSubmitting(false);
         }, 400);
     }
