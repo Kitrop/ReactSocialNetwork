@@ -2,7 +2,7 @@
 export type PostDataType = {
     name: string
     text: string
-    like: string
+    like: string | number
 }
 export type ContactsType = {
     github: string

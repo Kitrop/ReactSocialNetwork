@@ -88,11 +88,11 @@ export const setProfilePhoto = (photos: PhotosType):ProfilePhotoInterface => ({t
 
 
 // thunkCreator
-export const getProfileThunk = (userId: number) => async (dispatch:any) => {
+export const getProfileThunk = (userId: number | string) => async (dispatch:any) => {
     let data = await profileApi.getProfileAPI(userId)
     dispatch(setUserProfile(data))
 }
-export const getProfileStatus = (userId: number) => async (dispatch:any) => {
+export const getProfileStatus = (userId: number | string) => async (dispatch:any) => {
     let data = await profileApi.getProfileStatus(userId)
     dispatch(setProfileStatus(data.data))
 }
@@ -121,3 +121,8 @@ export const putProfileInfo = (profile: ProfileType) => async (dispatch:any, get
 
 
 export default profileReducer
+
+// type actions
+export type actionType = {
+    type: typeof ADD_POST
+}
