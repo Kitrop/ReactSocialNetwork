@@ -4,6 +4,7 @@ import {UsersInterface} from "../types/type";
 import {InferThunkActionCreatorType} from "react-redux";
 import { AnyAction } from 'redux';
 import {ThunkDispatch} from "redux-thunk";
+import {AppStateType} from "../redux-store";
 // name action
 const FOLLOW_USER = 'follow/FOLLOW_USER'
 const UNFOLLOW_USER = 'unfollow/UNFOLLOW_USER'
@@ -21,7 +22,7 @@ interface InitialStateInterface {
     ifFetching: boolean
     totalUsersCount: number
     currentPage: number
-    isFollowing: boolean[]
+    isFollowing: Array<boolean>
 }
 
 let initialState: InitialStateInterface = {
@@ -35,7 +36,7 @@ let initialState: InitialStateInterface = {
 }
 
 //reducer
-const usersReducer = (state = initialState, action: any): InitialStateInterface => {
+const usersReducer = (state = initialState, action: ActionsTypes): InitialStateInterface => {
     switch (action.type) {
         case FOLLOW_USER:
             return {
@@ -60,11 +61,13 @@ const usersReducer = (state = initialState, action: any): InitialStateInterface 
             return {...state, ifFetching: action.ifFetching}
         }
         case SWITCH_IS_FOLLOWING: {
-            return {
+            // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+            return <InitialStateInterface>{
                 ...state,
                 isFollowing: action.ifFetching
                     ? [...state.isFollowing, action.userId]
-                    : state.isFollowing.filter(id => id !== action.userId)
+                    // eslint-disable-next-line eqeqeq
+                    : state.isFollowing.filter(id => id != action.userId)
             }
         }
         default:
@@ -88,7 +91,7 @@ interface SetCurrentPage {
 interface SwitchIsFollowing {
     type: typeof SWITCH_IS_FOLLOWING
     ifFetching: boolean
-    userId: number
+    userId: number| boolean | null
 }
 interface SetUsers {
     type: typeof SET_USERS
@@ -104,6 +107,7 @@ interface SwitchIsFetching {
 }
 
 
+type ActionsTypes = Follow | UnFollow | SetCurrentPage | SwitchIsFollowing | SetUsers | SetTotalUsersCount | SwitchIsFetching
 
 // actionCreator
 export const follow = (userId: number):Follow => ({type: FOLLOW_USER, userId})
@@ -116,7 +120,7 @@ export const switchIsFetching = (ifFetching: boolean):SwitchIsFetching => ({type
 
 
 // thunkCreator
-export const getUserThunk = (currentPage: number) => async (dispatch: any) => {
+export const getUserThunk = (currentPage: number) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsTypes>) => {
     const apiMethod = userApi.getUserApi.bind(userApi)
     dispatch(switchIsFetching(true))
     let data = await apiMethod(currentPage)
@@ -124,13 +128,13 @@ export const getUserThunk = (currentPage: number) => async (dispatch: any) => {
     dispatch(setUsers(data.items))
     dispatch(setTotalUsersCount(data.totalCount))
 }
-export const unfollowThunk = (id: number) => async (dispatch: any)=> {
+export const unfollowThunk = (id: number) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsTypes>)=> {
     await followUnfollowFlowThunk(dispatch, id, userApi.deleteUserApi.bind(userApi), unfollow)
 }
-export const followThunk = (id: number) => async (dispatch: any) => {
+export const followThunk = (id: number) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsTypes>) => {
     await followUnfollowFlowThunk(dispatch, id, userApi.postUserApi.bind(userApi), follow)
 }
-const followUnfollowFlowThunk = async (dispatch: any, id: number, apiMethod: any, actionCreator:any) => {
+const followUnfollowFlowThunk = async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsTypes>, id: number, apiMethod: any, actionCreator:any) => {
     dispatch(switchIsFollowing(true, id))
     let data = await apiMethod(id)
     if (data.resultCode === 0) {

@@ -1,6 +1,11 @@
 const SEND_MESSAGE = 'SEND_MESSAGE';
 
-
+// interfaces and types
+interface SendMessageInterface {
+    type: typeof SEND_MESSAGE
+    newMessageText: string
+}
+type ActionsType = SendMessageInterface
 type DialogsDataType = {
     id: number,
     name: string,
@@ -9,6 +14,8 @@ type MessagesDataType = {
     id: number,
     message: string
 }
+
+// state
 let initialState = {
     usersDialogData: [
         { id: 1, name: "Dimych" },
@@ -25,7 +32,9 @@ let initialState = {
 };
 export type initialStateType = typeof initialState
 
-const dialogsReducer = (state = initialState, action: any):initialStateType => {
+
+// Reducer
+const dialogsReducer = (state = initialState, action: ActionsType):initialStateType => {
     switch (action.type) {
         case SEND_MESSAGE: {
             let body: string = action.newMessageText
@@ -43,10 +52,6 @@ const dialogsReducer = (state = initialState, action: any):initialStateType => {
 
 
 // actionCreator
-interface SendMessageInterface {
-    type: typeof SEND_MESSAGE
-    newMessageText: string
-}
 export const SendMessageActionCreater = (newMessageText: string): SendMessageInterface => ({type: SEND_MESSAGE, newMessageText})
 
 

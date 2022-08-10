@@ -1,5 +1,7 @@
 import {profileApi} from '../../compo/api/api'
 import {PhotosType, PostDataType, ProfileType } from '../types/type'
+import {ThunkDispatch} from "redux-thunk";
+import {AppStateType} from "../redux-store";
 
 
 // actions
@@ -29,7 +31,7 @@ interface NewPostInterface {
     like: string
 }
 
-const profileReducer = (state = initialState, action: any):initialStateType => {
+const profileReducer = (state = initialState, action: ActionsType):initialStateType => {
     switch (action.type) {
         case ADD_POST: {
             let newPost: NewPostInterface = {
@@ -49,9 +51,9 @@ const profileReducer = (state = initialState, action: any):initialStateType => {
         case SET_PROFILE_STATUS: {
             return {...state, status: action.status}
         }
-        case UPDATE_PROFILE_STATUS: {
-            return {...state, status: action.status}
-        }
+        // case UPDATE_PROFILE_STATUS: {
+        //     return {...state, status: action.status}
+        // }
         case SET_PROFILE_PHOTO: {
             return {...state, profile: {...state.profile, photos: action.photos} as ProfileType}
         }
@@ -80,6 +82,8 @@ interface ProfilePhotoInterface {
     photos: PhotosType
 }
 
+type ActionsType = AddPostInterface | SetUserProfileInterface | ProfileStatusInterface | ProfilePhotoInterface
+
 // actionCreator
 export const addPostActionCreater = (newPostText: string):AddPostInterface => ({type: ADD_POST, newPostText})
 export const setUserProfile = (profile: ProfileType):SetUserProfileInterface => ({type: SET_USER_PROFILE, profile})
@@ -88,28 +92,28 @@ export const setProfilePhoto = (photos: PhotosType):ProfilePhotoInterface => ({t
 
 
 // thunkCreator
-export const getProfileThunk = (userId: number | string) => async (dispatch:any) => {
+export const getProfileThunk = (userId: number | string) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>) => {
     let data = await profileApi.getProfileAPI(userId)
     dispatch(setUserProfile(data))
 }
-export const getProfileStatus = (userId: number | string) => async (dispatch:any) => {
+export const getProfileStatus = (userId: number | string) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>) => {
     let data = await profileApi.getProfileStatus(userId)
     dispatch(setProfileStatus(data.data))
 }
-export const putProfileStatus = (status: string) => async (dispatch:any) => {
+export const putProfileStatus = (status: string) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>) => {
     let data = await profileApi.putProfileStatus(status)
     if (data.data.resultCode === 0) {
         dispatch(setProfileStatus(status))
     }
 }
-export const savePhoto = (photos: PhotosType) => async (dispatch:any) => {
+export const savePhoto = (photos: PhotosType) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>) => {
     let data = await profileApi.putProfilePhoto(photos)
     if (data.data.resultCode === 0) {
         dispatch(setProfilePhoto(data.data.data.photos))
     }
 }
-export const putProfileInfo = (profile: ProfileType) => async (dispatch:any, getState:any) => {
-    const userId = getState().auth.userId
+export const putProfileInfo = (profile: ProfileType) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>, getState: any) => {
+    const userId = getState.auth.id
     const data = await profileApi.putProfileInfo(profile)
     if (data.data.resultCode === 0) {
         dispatch(getProfileThunk(userId))

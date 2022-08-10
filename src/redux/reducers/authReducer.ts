@@ -1,18 +1,13 @@
 import {loginApi, profileApi, securityApi} from '../../compo/api/api'
 import {Dispatch} from 'redux';
+import {ThunkDispatch} from "redux-thunk";
+import {AppStateType} from "../redux-store";
 
 // Name action
 const SET_USER_DATA = 'SET_USER_DATA'
 const GET_CAPTCHA = 'GET_CAPTCHA'
 
-export interface InitialStateInterface {
-    id: number | null
-    email: string | null
-    login: string | null
-    isAuth: boolean
-    rememberMe: boolean
-    captchaUrl: string | null
-}
+
 // State
 let initialState: InitialStateInterface = {
     id: null,
@@ -22,9 +17,18 @@ let initialState: InitialStateInterface = {
     rememberMe: false,
     captchaUrl: null
 }
+export interface InitialStateInterface {
+    id: number | null
+    email: string | null
+    login: string | null
+    isAuth: boolean
+    rememberMe: boolean
+    captchaUrl: string | null
+}
+
 
 // Reducer
-const authReducer = (state = initialState, action: any): InitialStateInterface => {
+const authReducer = (state = initialState, action: ActionsType): InitialStateInterface => {
     switch (action.type) {
         case SET_USER_DATA: {
             return {
@@ -55,12 +59,12 @@ interface SetAuthUserActionInterface {
     type: typeof SET_USER_DATA
     data: SetAuthUserDataInterface
 }
-
-
 interface SetCaptchaInterface {
     type: typeof GET_CAPTCHA
     payload: {captchaUrl: string}
 }
+
+type ActionsType = SetAuthUserActionInterface | SetCaptchaInterface
 
 // actionCreator
 export const setAuthUserData = (id: number | null, email: string | null, login: string | null, isAuth: boolean): SetAuthUserActionInterface => ({type: SET_USER_DATA, data: {id, email, login, isAuth}})
@@ -68,14 +72,14 @@ export const setCaptcha = (captchaUrl: string):SetCaptchaInterface => ({ type: G
 
 
 // thunkCreator
-export const loginMeThunk = () => async (dispatch: any) => {
+export const loginMeThunk = () => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>) => {
     let data = await profileApi.getLoginMeApi()
     if (data.resultCode === 0) {
         let {id, login, email} = data.data
         dispatch(setAuthUserData(id, email, login, true))
     }
 }
-export const loginThunk = (email: string | null, password: number | null, rememberMe: boolean, captcha: any) => async (dispatch: any) => {
+export const loginThunk = (email: string | null, password: number | null, rememberMe: boolean, captcha: any) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>) => {
     let data = await loginApi.loginApi(email, password, rememberMe, captcha)
     if (data.data.resultCode === 0) {
         dispatch(loginMeThunk())
@@ -84,13 +88,13 @@ export const loginThunk = (email: string | null, password: number | null, rememb
         dispatch(captchaSecurity())
     }
 }
-export const logoutThunk = () => async (dispatch: any) => {
+export const logoutThunk = () => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>) => {
     let data = await loginApi.logoutApi()
     if (data.resultCode === 0) {
         dispatch(setAuthUserData(null, null, null, false))
     }
 }
-export const captchaSecurity = () => async (dispatch: Dispatch) => {
+export const captchaSecurity = () => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>) => {
     const response = await securityApi.getCaptcha()
     const captchaUrl = response.data.url
     dispatch(setCaptcha(captchaUrl))
