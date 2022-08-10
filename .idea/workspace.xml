@@ -4,28 +4,14 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="add types for Login, Messages">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/10.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/14.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/14.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/8.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/8.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
+    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="add type for Reducers dispatch">
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/appReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/appReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/authReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/authReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/dialogsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/dialogsReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/profileReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/profileReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/usersReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/usersReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/types/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/types/type.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,7 +290,7 @@
       <workItem from="1660019373159" duration="9215000" />
       <workItem from="1660039224839" duration="6406000" />
       <workItem from="1660061038681" duration="2502000" />
-      <workItem from="1660100061340" duration="1671000" />
+      <workItem from="1660100061340" duration="2111000" />
     </task>
     <task id="LOCAL-00001" summary="FIX ALL!">
       <created>1655120009106</created>
@@ -509,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660044872931</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="add type for Reducers dispatch">
+      <created>1660101803883</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1660101803883</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,7 +530,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create thunkCreator for login and profile" />
     <MESSAGE value="upd redux-thunk" />
     <MESSAGE value="upd1 redux-thunk" />
     <MESSAGE value="add style and minor update" />
@@ -562,7 +554,8 @@
     <MESSAGE value="add types for Users, adddd types for redux, delete UsersContainer.tsx" />
     <MESSAGE value="add type for Header and Profile" />
     <MESSAGE value="add types for Login, Messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="add types for Login, Messages" />
+    <MESSAGE value="add type for Reducers dispatch" />
+    <option name="LAST_COMMIT_MESSAGE" value="add type for Reducers dispatch" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

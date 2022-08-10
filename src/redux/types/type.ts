@@ -35,3 +35,5 @@ export type UsersInterface = {
     status: string
     followed: boolean
 }
+
+// dispatch

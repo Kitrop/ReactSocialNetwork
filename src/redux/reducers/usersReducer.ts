@@ -36,7 +36,7 @@ let initialState: InitialStateInterface = {
 }
 
 //reducer
-const usersReducer = (state = initialState, action: ActionsTypes): InitialStateInterface => {
+const usersReducer = (state = initialState, action: ActionsType): InitialStateInterface => {
     switch (action.type) {
         case FOLLOW_USER:
             return {
@@ -107,7 +107,8 @@ interface SwitchIsFetching {
 }
 
 
-type ActionsTypes = Follow | UnFollow | SetCurrentPage | SwitchIsFollowing | SetUsers | SetTotalUsersCount | SwitchIsFetching
+type ActionsType = Follow | UnFollow | SetCurrentPage | SwitchIsFollowing | SetUsers | SetTotalUsersCount | SwitchIsFetching
+type DispatchThunkType = ThunkDispatch<AppStateType, unknown, ActionsType>
 
 // actionCreator
 export const follow = (userId: number):Follow => ({type: FOLLOW_USER, userId})
@@ -120,7 +121,7 @@ export const switchIsFetching = (ifFetching: boolean):SwitchIsFetching => ({type
 
 
 // thunkCreator
-export const getUserThunk = (currentPage: number) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsTypes>) => {
+export const getUserThunk = (currentPage: number) => async (dispatch: DispatchThunkType) => {
     const apiMethod = userApi.getUserApi.bind(userApi)
     dispatch(switchIsFetching(true))
     let data = await apiMethod(currentPage)
@@ -128,13 +129,13 @@ export const getUserThunk = (currentPage: number) => async (dispatch: ThunkDispa
     dispatch(setUsers(data.items))
     dispatch(setTotalUsersCount(data.totalCount))
 }
-export const unfollowThunk = (id: number) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsTypes>)=> {
+export const unfollowThunk = (id: number) => async (dispatch: DispatchThunkType)=> {
     await followUnfollowFlowThunk(dispatch, id, userApi.deleteUserApi.bind(userApi), unfollow)
 }
-export const followThunk = (id: number) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsTypes>) => {
+export const followThunk = (id: number) => async (dispatch: DispatchThunkType) => {
     await followUnfollowFlowThunk(dispatch, id, userApi.postUserApi.bind(userApi), follow)
 }
-const followUnfollowFlowThunk = async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsTypes>, id: number, apiMethod: any, actionCreator:any) => {
+const followUnfollowFlowThunk = async (dispatch: DispatchThunkType, id: number, apiMethod: any, actionCreator:any) => {
     dispatch(switchIsFollowing(true, id))
     let data = await apiMethod(id)
     if (data.resultCode === 0) {

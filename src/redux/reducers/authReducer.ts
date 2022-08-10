@@ -65,6 +65,8 @@ interface SetCaptchaInterface {
 }
 
 type ActionsType = SetAuthUserActionInterface | SetCaptchaInterface
+type DispatchThunkType = ThunkDispatch<AppStateType, unknown, ActionsType>
+
 
 // actionCreator
 export const setAuthUserData = (id: number | null, email: string | null, login: string | null, isAuth: boolean): SetAuthUserActionInterface => ({type: SET_USER_DATA, data: {id, email, login, isAuth}})
@@ -72,14 +74,14 @@ export const setCaptcha = (captchaUrl: string):SetCaptchaInterface => ({ type: G
 
 
 // thunkCreator
-export const loginMeThunk = () => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>) => {
+export const loginMeThunk = () => async (dispatch: DispatchThunkType) => {
     let data = await profileApi.getLoginMeApi()
     if (data.resultCode === 0) {
         let {id, login, email} = data.data
         dispatch(setAuthUserData(id, email, login, true))
     }
 }
-export const loginThunk = (email: string | null, password: number | null, rememberMe: boolean, captcha: any) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>) => {
+export const loginThunk = (email: string | null, password: number | null, rememberMe: boolean, captcha: any) => async (dispatch: DispatchThunkType) => {
     let data = await loginApi.loginApi(email, password, rememberMe, captcha)
     if (data.data.resultCode === 0) {
         dispatch(loginMeThunk())
@@ -88,13 +90,13 @@ export const loginThunk = (email: string | null, password: number | null, rememb
         dispatch(captchaSecurity())
     }
 }
-export const logoutThunk = () => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>) => {
+export const logoutThunk = () => async (dispatch: DispatchThunkType) => {
     let data = await loginApi.logoutApi()
     if (data.resultCode === 0) {
         dispatch(setAuthUserData(null, null, null, false))
     }
 }
-export const captchaSecurity = () => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>) => {
+export const captchaSecurity = () => async (dispatch: DispatchThunkType) => {
     const response = await securityApi.getCaptcha()
     const captchaUrl = response.data.url
     dispatch(setCaptcha(captchaUrl))

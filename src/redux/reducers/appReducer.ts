@@ -30,13 +30,15 @@ const appReducer = (state = initialState, action: ActionsType): InitialStateInte
 interface InitializingACInterface {
     type: typeof SET_INITIALIZED
 }
+
 type ActionsType = InitializingACInterface
+type DispatchThunkType = ThunkDispatch<AppStateType, unknown, ActionsType>
 
 // actionCreator
 const initializingAC = ():InitializingACInterface => ({type:SET_INITIALIZED})
 
 // thunkCreator
-export const initializeApp = () => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>) => {
+export const initializeApp = () => async (dispatch: DispatchThunkType) => {
     let promise = dispatch(loginMeThunk())
     await Promise.all([promise])
     dispatch(initializingAC())

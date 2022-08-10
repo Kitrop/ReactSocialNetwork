@@ -83,6 +83,7 @@ interface ProfilePhotoInterface {
 }
 
 type ActionsType = AddPostInterface | SetUserProfileInterface | ProfileStatusInterface | ProfilePhotoInterface
+type DispatchThunkType = ThunkDispatch<AppStateType, unknown, ActionsType>
 
 // actionCreator
 export const addPostActionCreater = (newPostText: string):AddPostInterface => ({type: ADD_POST, newPostText})
@@ -92,27 +93,27 @@ export const setProfilePhoto = (photos: PhotosType):ProfilePhotoInterface => ({t
 
 
 // thunkCreator
-export const getProfileThunk = (userId: number | string) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>) => {
+export const getProfileThunk = (userId: number | string) => async (dispatch: DispatchThunkType) => {
     let data = await profileApi.getProfileAPI(userId)
     dispatch(setUserProfile(data))
 }
-export const getProfileStatus = (userId: number | string) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>) => {
+export const getProfileStatus = (userId: number | string) => async (dispatch: DispatchThunkType) => {
     let data = await profileApi.getProfileStatus(userId)
     dispatch(setProfileStatus(data.data))
 }
-export const putProfileStatus = (status: string) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>) => {
+export const putProfileStatus = (status: string) => async (dispatch: DispatchThunkType) => {
     let data = await profileApi.putProfileStatus(status)
     if (data.data.resultCode === 0) {
         dispatch(setProfileStatus(status))
     }
 }
-export const savePhoto = (photos: PhotosType) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>) => {
+export const savePhoto = (photos: PhotosType) => async (dispatch: DispatchThunkType) => {
     let data = await profileApi.putProfilePhoto(photos)
     if (data.data.resultCode === 0) {
         dispatch(setProfilePhoto(data.data.data.photos))
     }
 }
-export const putProfileInfo = (profile: ProfileType) => async (dispatch: ThunkDispatch<AppStateType, unknown, ActionsType>, getState: any) => {
+export const putProfileInfo = (profile: ProfileType) => async (dispatch: DispatchThunkType, getState: any) => {
     const userId = getState.auth.id
     const data = await profileApi.putProfileInfo(profile)
     if (data.data.resultCode === 0) {
