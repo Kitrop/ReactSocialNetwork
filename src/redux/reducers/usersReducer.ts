@@ -1,4 +1,4 @@
-import {userApi} from '../../compo/api/api'
+import {ResultCodesEnum, userApi} from '../../compo/api/api'
 import {updateObj} from '../../utility/updateObjectArray'
 import {UsersInterface} from "../types/type";
 import {InferThunkActionCreatorType} from "react-redux";
@@ -138,7 +138,7 @@ export const followThunk = (id: number) => async (dispatch: DispatchThunkType) =
 const followUnfollowFlowThunk = async (dispatch: DispatchThunkType, id: number, apiMethod: any, actionCreator:any) => {
     dispatch(switchIsFollowing(true, id))
     let data = await apiMethod(id)
-    if (data.resultCode === 0) {
+    if (data.resultCode === ResultCodesEnum.Success) {
         dispatch(actionCreator(id))
     }
     dispatch(switchIsFollowing(false, id))

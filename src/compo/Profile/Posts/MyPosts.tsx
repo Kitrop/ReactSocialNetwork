@@ -3,7 +3,7 @@ import Post from './Post/Post';
 import MyPostForm from "./MyPostForm";
 import {useDispatch, useSelector} from "react-redux";
 import {postsDataState} from "../../../redux/selectors/profileSelector";
-import {actionType, addPostActionCreater} from "../../../redux/reducers/profileReducer";
+import {ActionsType, profileActions} from "../../../redux/reducers/profileReducer";
 import {AppStateType} from "../../../redux/redux-store";
 import {ThunkDispatch} from "redux-thunk";
 
@@ -15,8 +15,8 @@ const MyPosts = () => {
     const postsData = useSelector((state: AppStateType) => postsDataState(state))
 
     // DISPATCH
-    const dispatch: ThunkDispatch<AppStateType, any, actionType> = useDispatch()
-    const addPostActionCreator_ = (newPostText: string) => dispatch(addPostActionCreater(newPostText))
+    const dispatch: ThunkDispatch<AppStateType, any, ActionsType> = useDispatch()
+    const addPostActionCreator_ = (newPostText: string) => dispatch(profileActions.addPostActionCreater(newPostText))
 
 
     let postsElements = postsData.map(p => <Post name={p.name} text={p.text} />)

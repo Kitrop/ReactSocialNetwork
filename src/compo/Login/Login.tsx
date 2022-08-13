@@ -15,7 +15,7 @@ const Login = () => {
 
     // DISPATCH
     const dispatch: ThunkDispatch<AppStateType, any, any> = useDispatch()
-    const loginThunk_ =  (email: string | null, password: number | null, rememberMe: boolean, captcha: any) => dispatch(loginThunk(email, password, rememberMe, captcha))
+    const loginThunk_ =  (email: string, password: number, rememberMe: boolean, captcha: any) => dispatch(loginThunk(email, password, rememberMe, captcha))
 
 
     let navigator = useNavigate()

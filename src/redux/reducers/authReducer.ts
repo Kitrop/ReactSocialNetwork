@@ -1,4 +1,4 @@
-import {loginApi, profileApi, securityApi} from '../../compo/api/api'
+import {loginApi, profileApi, ResultCodesEnum, securityApi} from '../../compo/api/api'
 import {Dispatch} from 'redux';
 import {ThunkDispatch} from "redux-thunk";
 import {AppStateType} from "../redux-store";
@@ -76,23 +76,23 @@ export const setCaptcha = (captchaUrl: string):SetCaptchaInterface => ({ type: G
 // thunkCreator
 export const loginMeThunk = () => async (dispatch: DispatchThunkType) => {
     let data = await profileApi.getLoginMeApi()
-    if (data.resultCode === 0) {
+    if (data.resultCode === ResultCodesEnum.Success) {
         let {id, login, email} = data.data
         dispatch(setAuthUserData(id, email, login, true))
     }
 }
-export const loginThunk = (email: string | null, password: number | null, rememberMe: boolean, captcha: any) => async (dispatch: DispatchThunkType) => {
+export const loginThunk = (email: string, password: number, rememberMe: boolean, captcha: null | string) => async (dispatch: DispatchThunkType) => {
     let data = await loginApi.loginApi(email, password, rememberMe, captcha)
-    if (data.data.resultCode === 0) {
-        dispatch(loginMeThunk())
+    if (data.resultCode === ResultCodesEnum.Success) {
+        await dispatch(loginMeThunk())
     }
-    if (data.data.resultCode !== 0) {
-        dispatch(captchaSecurity())
+    if (data.resultCode !== 0) {
+        await dispatch(captchaSecurity())
     }
 }
 export const logoutThunk = () => async (dispatch: DispatchThunkType) => {
     let data = await loginApi.logoutApi()
-    if (data.resultCode === 0) {
+    if (data.resultCode === ResultCodesEnum.Success) {
         dispatch(setAuthUserData(null, null, null, false))
     }
 }

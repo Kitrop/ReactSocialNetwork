@@ -7,10 +7,10 @@ import {getAuthId, getIsAuth} from '../../redux/selectors/authSelector'
 import {
     getProfileStatus,
     getProfileThunk,
+    profileActions,
     putProfileInfo,
     putProfileStatus,
-    savePhoto,
-    setUserProfile
+    savePhoto
 } from '../../redux/reducers/profileReducer'
 import {useNavigate, useParams} from 'react-router-dom'
 import {useCallback, useEffect} from 'react'
@@ -29,7 +29,7 @@ const Profile = () => {
 
     // DISPATCH
     const dispatch:ThunkDispatch<AppStateType, any, any> = useDispatch()
-    const setUserProfile_ = (profile: ProfileType) => dispatch(setUserProfile(profile))
+    const setUserProfile_ = (profile: ProfileType) => dispatch(profileActions.setUserProfile(profile))
     const getProfileThunk_ = useCallback((userId: number) => dispatch(getProfileThunk(userId)), [dispatch])
     const getProfileStatus_ = useCallback((userId: number) => dispatch(getProfileStatus(userId)), [dispatch])
     const putProfileStatus_ = (status: string) => dispatch(putProfileStatus(status))

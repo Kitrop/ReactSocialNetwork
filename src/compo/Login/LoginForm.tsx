@@ -11,7 +11,7 @@ const Error = styled.div`
 `
 
 type Props = {
-    loginThunk: (email: string | null, password: number | null, rememberMe: boolean, captcha: any) => void
+    loginThunk: (email: string, password: number, rememberMe: boolean, captcha: any) => void
     captchaUrl: string | null
 }
 
