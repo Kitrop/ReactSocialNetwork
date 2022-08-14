@@ -13,7 +13,7 @@ import {
 } from "../../redux/selectors/usersSelector";
 import {getIsAuth} from "../../redux/selectors/authSelector";
 import {ThunkDispatch} from "redux-thunk";
-import {followThunk, getUserThunk, setCurrentPage, unfollowThunk} from "../../redux/reducers/usersReducer";
+import {followThunk, getUserThunk, unfollowThunk, userActions} from "../../redux/reducers/usersReducer";
 import {useNavigate} from "react-router-dom";
 import Preloader from "../common/Preloader/Preloader";
 import User from "./User";
@@ -44,8 +44,8 @@ const Users: FC<Props> = ({titleText = 'Users'}) => {
     // Dispatch Action Creator
     const dispatch: ThunkDispatch<AppStateType, any, any> = useDispatch()
 
-    const switchIsFollowing: any = (ifFetching: boolean, userId: number) => dispatch(switchIsFollowing(ifFetching, userId))
-    const setCurrentPageAC = (currentPage: number) => dispatch(setCurrentPage(currentPage))
+    const switchIsFollowing: any = (ifFetching: boolean, userId: number) => dispatch(userActions.switchIsFollowing(ifFetching, userId))
+    const setCurrentPageAC = (currentPage: number) => dispatch(userActions.setCurrentPage(currentPage))
 
     // Dispatch Thunk
     const unfollowThunk_ = (id: number) => dispatch(unfollowThunk(id))

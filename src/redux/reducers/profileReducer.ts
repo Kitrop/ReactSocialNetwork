@@ -1,7 +1,8 @@
 import {PhotosType, PostDataType, ProfileType } from '../types/type'
 import {ThunkDispatch} from "redux-thunk";
 import {AppStateType, InferActionsTypes} from "../redux-store";
-import { profileApi } from "../../compo/api/api";
+import {  } from "../../compo/api/api";
+import { profileApi } from '../../compo/api/profileApi';
 
 
 // actions
@@ -65,24 +66,6 @@ const profileReducer = (state = initialState, action: ActionsType):initialStateT
 
 
 // interfaces
-/*
-interface AddPostInterface {
-    type: typeof ADD_POST
-    newPostText: string
-}
-interface SetUserProfileInterface {
-    type: typeof SET_USER_PROFILE
-    profile: ProfileType
-}
-interface ProfileStatusInterface {
-    type: typeof SET_PROFILE_STATUS
-    status: string
-}
-interface ProfilePhotoInterface {
-    type: typeof SET_PROFILE_PHOTO
-    photos: PhotosType
-}
-*/
 
 export type ActionsType = InferActionsTypes<typeof profileActions>
 type DispatchThunkType = ThunkDispatch<AppStateType, unknown, ActionsType>
@@ -94,10 +77,6 @@ export const profileActions = {
     setProfileStatus: (status: string) => ({type: SET_PROFILE_STATUS, status} as const),
     setProfilePhoto: (photos: PhotosType) => ({type: SET_PROFILE_PHOTO, photos} as const)
 }
-// export const addPostActionCreater = (newPostText: string):AddPostInterface => ({type: ADD_POST, newPostText})
-// export const setUserProfile = (profile: ProfileType):SetUserProfileInterface => ({type: SET_USER_PROFILE, profile})
-// export const setProfileStatus = (status: string):ProfileStatusInterface => ({type: SET_PROFILE_STATUS, status})
-// export const setProfilePhoto = (photos: PhotosType):ProfilePhotoInterface => ({type: SET_PROFILE_PHOTO, photos})
 
 
 // thunkCreator
@@ -135,8 +114,3 @@ export const putProfileInfo = (profile: ProfileType) => async (dispatch: Dispatc
 
 
 export default profileReducer
-
-// type actions
-export type actionType = {
-    type: typeof ADD_POST
-}

@@ -6,10 +6,9 @@ import {useDispatch, useSelector} from "react-redux";
 import {getIsAuth, getMessage} from "../../redux/selectors/dialogSelectors";
 import DialogsForm from "./DialogsForm";
 import {useNavigate} from "react-router-dom";
-import {SendMessageActionCreater} from '../../redux/reducers/dialogsReducer'
 import {AppStateType} from "../../redux/redux-store";
 import {ThunkDispatch} from "redux-thunk";
-import App from "../../App";
+import { dialogsActions } from '../../redux/reducers/dialogsReducer';
 
 function Dialogs() {
 
@@ -32,7 +31,7 @@ function Dialogs() {
 
 
     const dispatch: ThunkDispatch<AppStateType, any, any> = useDispatch()
-    const sendMsgAC = (newMessageText: string) => {dispatch(SendMessageActionCreater(newMessageText))}
+    const sendMsgAC = (newMessageText: string) => {dispatch(dialogsActions.SendMessageActionCreater(newMessageText))}
 
     return (
         <div className={message.dialogs}>
