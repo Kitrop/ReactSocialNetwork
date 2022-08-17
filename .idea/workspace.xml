@@ -1,47 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="3" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="add TypeScript">
-      <change afterPath="$PROJECT_DIR$/src/redux/types/type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utility/updateObjectArray.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="refactoring for selectors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/10.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/8.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/8.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Message/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Message/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/appReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/appReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/authReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/dialogReducer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/dialogsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/dialogsReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/friendsReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/profileReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/usersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/usersReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/16.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/16.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/api/usersApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/api/usersApi.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,13 +17,14 @@
         <option value="HTML File" />
         <option value="tsconfig.json" />
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="duck_refactoring_" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,6 +47,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="typescript" />
+                    <option name="lastUsedInstant" value="1659599531" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="master" />
                     <option name="lastUsedInstant" value="1657783665" />
                   </RecentBranch>
@@ -98,10 +66,6 @@
                     <option name="branchName" value="initialisation" />
                     <option name="lastUsedInstant" value="1657019013" />
                   </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="useSelector_useDispatch" />
-                    <option name="lastUsedInstant" value="1657013907" />
-                  </RecentBranch>
                 </list>
               </option>
               <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
@@ -114,6 +78,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2AWJc9QZ7JYaKwgLoMVwBl3UpfK" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -125,11 +92,16 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Project.color&quot;: &quot;4a1b31&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;LET&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/artem/my-app/src/compo/api/usersApi.ts&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\artem\\my-app\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -139,13 +111,14 @@
       <recent name="C:\Users\artem\my-app\src\redux\reducers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\artem\my-app\src\compo\api" />
+      <recent name="C:\Users\artem\my-app\src\compo\Profile" />
       <recent name="C:\Users\artem\my-app\src\redux" />
       <recent name="C:\Users\artem\my-app\src\utility" />
       <recent name="C:\Users\artem\my-app" />
-      <recent name="C:\Users\artem\my-app\src\compo\Profile\Posts\PhotoPost" />
-      <recent name="C:\Users\artem\my-app\src\compo\Profile\Posts" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="C:\Users\artem\my-app\src\compo\api\usersApi.ts" />
       <recent name="C:\Users\artem\my-app\src\compo\Login\LoginForm.jsx" />
     </key>
   </component>
@@ -207,10 +180,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
-        <item itemvalue="npm.deploy" />
         <item itemvalue="npm.predeploy" />
+        <item itemvalue="npm.deploy" />
         <item itemvalue="npm.build" />
-        <item itemvalue="npm.start" />
+        <item itemvalue="Jest.some.span status null" />
       </list>
     </recent_temporary>
   </component>
@@ -301,7 +274,41 @@
       <workItem from="1659515070603" duration="4293000" />
       <workItem from="1659529363230" duration="1036000" />
       <workItem from="1659535626884" duration="1345000" />
-      <workItem from="1659592740202" duration="2557000" />
+      <workItem from="1659592740202" duration="11305000" />
+      <workItem from="1659621165510" duration="1988000" />
+      <workItem from="1659623170676" duration="174000" />
+      <workItem from="1659623363575" duration="38000" />
+      <workItem from="1659623418493" duration="1537000" />
+      <workItem from="1659680223611" duration="8869000" />
+      <workItem from="1659769073523" duration="4238000" />
+      <workItem from="1659877703082" duration="1713000" />
+      <workItem from="1659933383935" duration="9359000" />
+      <workItem from="1659953560683" duration="1920000" />
+      <workItem from="1659969803658" duration="286000" />
+      <workItem from="1659970166545" duration="50000" />
+      <workItem from="1659970317387" duration="47000" />
+      <workItem from="1659970435053" duration="48000" />
+      <workItem from="1659970510308" duration="2699000" />
+      <workItem from="1660019373159" duration="9215000" />
+      <workItem from="1660039224839" duration="6406000" />
+      <workItem from="1660061038681" duration="2502000" />
+      <workItem from="1660100061340" duration="2429000" />
+      <workItem from="1660102548663" duration="682000" />
+      <workItem from="1660114377270" duration="867000" />
+      <workItem from="1660116953595" duration="2929000" />
+      <workItem from="1660130064731" duration="2219000" />
+      <workItem from="1660137277405" duration="2891000" />
+      <workItem from="1660363865373" duration="2774000" />
+      <workItem from="1660390229138" duration="2440000" />
+      <workItem from="1660397170328" duration="4517000" />
+      <workItem from="1660449096138" duration="2139000" />
+      <workItem from="1660451381152" duration="212000" />
+      <workItem from="1660462014838" duration="6229000" />
+      <workItem from="1660473062643" duration="1814000" />
+      <workItem from="1660495105171" duration="1004000" />
+      <workItem from="1660537954859" duration="14000" />
+      <workItem from="1660543156314" duration="5732000" />
+      <workItem from="1660724562078" duration="4305000" />
     </task>
     <task id="LOCAL-00001" summary="FIX ALL!">
       <created>1655120009106</created>
@@ -457,7 +464,91 @@
       <option name="project" value="LOCAL" />
       <updated>1657787073414</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="type for Reducers">
+      <created>1659599388685</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1659599388685</updated>
+    </task>
+    <task id="LOCAL-00024" summary="minor">
+      <created>1659683815857</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1659683815857</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add types for UsersContainer.tsx">
+      <created>1659770879091</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1659770879091</updated>
+    </task>
+    <task id="LOCAL-00026" summary="add types for Users, adddd types for redux, delete UsersContainer.tsx">
+      <created>1659935079203</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1659935079203</updated>
+    </task>
+    <task id="LOCAL-00027" summary="add type for Header and Profile">
+      <created>1660028683932</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1660028683932</updated>
+    </task>
+    <task id="LOCAL-00028" summary="add types for Login, Messages">
+      <created>1660043278334</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1660043278334</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add types for Login, Messages">
+      <created>1660044872931</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1660044872931</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add type for Reducers dispatch">
+      <created>1660101803883</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1660101803883</updated>
+    </task>
+    <task id="LOCAL-00031" summary="add type for Reducers dispatch">
+      <created>1660102194228</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1660102194228</updated>
+    </task>
+    <task id="LOCAL-00032" summary="add infer, refactoring types for Action creators">
+      <created>1660401607692</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1660401607692</updated>
+    </task>
+    <task id="LOCAL-00033" summary="refactoring API">
+      <created>1660463889085</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1660463889085</updated>
+    </task>
+    <task id="LOCAL-00034" summary="refactoring for selectors">
+      <created>1660729296319</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1660729296319</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,13 +576,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="FIX ALL!" />
-    <MESSAGE value="create thunkCreator for Users and UsersContainer" />
-    <MESSAGE value="create thunkCreator for login and profile" />
-    <MESSAGE value="upd redux-thunk" />
-    <MESSAGE value="upd1 redux-thunk" />
-    <MESSAGE value="add style and minor update" />
-    <MESSAGE value="add edit profile status, add ProfileStatus.jsx and fix bugs" />
     <MESSAGE value="add userSelector, refactoring code&#10;update profileStatus" />
     <MESSAGE value="minor update" />
     <MESSAGE value="add form for Dialogs messages, Profile postsб &#10;add DialogsForm.jsx and MyPostForm.jsx" />
@@ -506,7 +590,18 @@
     <MESSAGE value="add lazy and suspense" />
     <MESSAGE value="fixed all" />
     <MESSAGE value="fixed all v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed all v2" />
+    <MESSAGE value="type for Reducers" />
+    <MESSAGE value="minor" />
+    <MESSAGE value="add types for UsersContainer.tsx" />
+    <MESSAGE value="add types for Users, adddd types for redux, delete UsersContainer.tsx" />
+    <MESSAGE value="add type for Header and Profile" />
+    <MESSAGE value="add types for Login, Messages" />
+    <MESSAGE value="add type for Reducers dispatch" />
+    <MESSAGE value="add infer" />
+    <MESSAGE value="add infer, refactoring types for Action creators" />
+    <MESSAGE value="refactoring API" />
+    <MESSAGE value="refactoring for selectors" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring for selectors" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

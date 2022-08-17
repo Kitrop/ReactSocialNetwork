@@ -9,7 +9,7 @@ let users = [
 ]
 
 describe('users test', () => {
-    it('Users.jsx render', () => {
+    it('Users.tsx render', () => {
         render(<Users users={users}/>)
     })
 })

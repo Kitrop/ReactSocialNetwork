@@ -2,7 +2,7 @@
 export type PostDataType = {
     name: string
     text: string
-    like: string
+    like: string | number
 }
 export type ContactsType = {
     github: string
@@ -33,4 +33,7 @@ export type UsersInterface = {
     id: number
     photos: PhotosType
     status: string
+    followed: boolean
 }
+
+// dispatch
