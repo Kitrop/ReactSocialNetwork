@@ -1,57 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="refactoring API">
+    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="refactoring for selectors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/10.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/14.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/14.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/15.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/15.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/17.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/17.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/18.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/18.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/19.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/19.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/20.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/20.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/8.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/8.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Login/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Message/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Message/Dialogs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/Posts/MyPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Posts/MyPosts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/Posts/MyPostsContainer.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileContainer.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/Contacts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/Contacts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Users/Users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Users/UsersContainer.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/api/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/api/loginApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/api/loginApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/api/profileApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/api/profileApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/16.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/16.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compo/api/usersApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/api/usersApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/common/404/NotFound.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/common/404/NotFound.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/appReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/appReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/authReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/authReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/dialogsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/dialogsReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/profileReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/profileReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/usersReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/usersReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/selectors/appSelector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/appSelector.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/selectors/authSelector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/authSelector.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/selectors/dialogSelectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/dialogSelectors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/selectors/profileSelector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/profileSelector.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/selectors/usersSelector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/usersSelector.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -355,7 +308,7 @@
       <workItem from="1660495105171" duration="1004000" />
       <workItem from="1660537954859" duration="14000" />
       <workItem from="1660543156314" duration="5732000" />
-      <workItem from="1660724562078" duration="3470000" />
+      <workItem from="1660724562078" duration="4305000" />
     </task>
     <task id="LOCAL-00001" summary="FIX ALL!">
       <created>1655120009106</created>
@@ -588,7 +541,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660463889085</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="refactoring for selectors">
+      <created>1660729296319</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1660729296319</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,7 +576,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add edit profile status, add ProfileStatus.jsx and fix bugs" />
     <MESSAGE value="add userSelector, refactoring code&#10;update profileStatus" />
     <MESSAGE value="minor update" />
     <MESSAGE value="add form for Dialogs messages, Profile postsб &#10;add DialogsForm.jsx and MyPostForm.jsx" />
@@ -641,7 +600,8 @@
     <MESSAGE value="add infer" />
     <MESSAGE value="add infer, refactoring types for Action creators" />
     <MESSAGE value="refactoring API" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring API" />
+    <MESSAGE value="refactoring for selectors" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring for selectors" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

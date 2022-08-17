@@ -24,6 +24,9 @@ export const userApi = {
         return instance.get<GetUsersType>(`users?page=${currentPage}&count=${pageSize}`)
             .then(r => r.data);
     },
+    getMyFriend() {
+        return instance.get<GetUsersType>(`users?friend=true`)
+    },
     postUserApi(id: number | string) {
         return instance.post<ResponseType>(`follow/${id}`, {})
             .then(r => r.data);
