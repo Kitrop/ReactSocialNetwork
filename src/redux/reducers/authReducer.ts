@@ -1,12 +1,8 @@
-import {securityApi} from '../../compo/api/api'
+import {ResultCodesEnum, securityApi} from '../../compo/api/api'
 import {ThunkDispatch} from "redux-thunk";
 import {AppStateType, InferActionsTypes} from "../redux-store";
-import {loginApi, ResultCodesEnum } from '../../compo/api/loginApi';
-import { profileApi } from '../../compo/api/profileApi';
+import {loginApi} from '../../compo/api/loginApi';
 
-// Name action
-const SET_USER_DATA = 'SET_USER_DATA'
-const GET_CAPTCHA = 'GET_CAPTCHA'
 
 
 // State
@@ -31,13 +27,13 @@ export interface InitialStateInterface {
 // Reducer
 const authReducer = (state = initialState, action: ActionsType): InitialStateInterface => {
     switch (action.type) {
-        case SET_USER_DATA: {
+        case 'SET_USER_DATA': {
             return {
                 ...state,
                 ...action.data,
             }
         }
-        case GET_CAPTCHA: {
+        case 'GET_CAPTCHA': {
             return {
                 ...state,
                 ...action.payload
@@ -57,15 +53,15 @@ type DispatchThunkType = ThunkDispatch<AppStateType, unknown, ActionsType>
 
 // actionCreator
 export const authActions = {
-    setAuthUserData: (id: number | null, email: string | null, login: string | null, isAuth: boolean) => ({type: SET_USER_DATA, data: {id, email, login, isAuth}} as const),
-    setCaptcha: (captchaUrl: string) => ({ type: GET_CAPTCHA, payload: {captchaUrl} } as const)
+    setAuthUserData: (id: number | null, email: string | null, login: string | null, isAuth: boolean) => ({type: 'SET_USER_DATA', data: {id, email, login, isAuth}} as const),
+    setCaptcha: (captchaUrl: string) => ({ type: 'GET_CAPTCHA', payload: {captchaUrl} } as const)
 }
 
 
 
 // thunkCreator
 export const loginMeThunk = () => async (dispatch: DispatchThunkType) => {
-    let data = await profileApi.getLoginMeApi()
+    let data = await loginApi.getLoginMeApi()
     if (data.resultCode === ResultCodesEnum.Success) {
         let {id, login, email} = data.data
         dispatch(authActions.setAuthUserData(id, email, login, true))

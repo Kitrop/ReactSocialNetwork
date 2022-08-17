@@ -1,5 +1,8 @@
 import {AppStateType} from '../redux-store'
+import {createSelector} from 'reselect'
 
-export const getMessage = (state: AppStateType) => state.dialogsPage
+// State
+const getMessage = (state: AppStateType) => state.dialogsPage
 
-export const getIsAuth = (state: AppStateType) => state.auth.isAuth
+// Selector
+export const getMessageSelector = createSelector(getMessage, (getMessage) => getMessage)

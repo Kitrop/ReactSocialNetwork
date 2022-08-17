@@ -11,7 +11,7 @@ import {
     totalUsersCountSelector,
     usersSelector
 } from "../../redux/selectors/usersSelector";
-import {getIsAuth} from "../../redux/selectors/authSelector";
+import {getIsAuth, getIsAuthSelector} from '../../redux/selectors/authSelector'
 import {ThunkDispatch} from "redux-thunk";
 import {followThunk, getUserThunk, unfollowThunk, userActions} from "../../redux/reducers/usersReducer";
 import {useNavigate} from "react-router-dom";
@@ -33,7 +33,7 @@ const Users: FC<Props> = ({titleText = 'Users'}) => {
 
     // STATE
     const ifFetching = useSelector((state: AppStateType) => ifFetchingSelector(state))
-    const isAuth = useSelector((state: AppStateType) => getIsAuth(state))
+    const isAuth = useSelector((state: AppStateType) => getIsAuthSelector(state))
     const currentPage = useSelector((state: AppStateType) => currentPageSelector(state))
     const totalUsersCount = useSelector((state: AppStateType) => totalUsersCountSelector(state))
     const pageSize = useSelector((state: AppStateType) => pageSizeSelector(state))
@@ -42,7 +42,7 @@ const Users: FC<Props> = ({titleText = 'Users'}) => {
 
 
     // Dispatch Action Creator
-    const dispatch: ThunkDispatch<AppStateType, any, any> = useDispatch()
+    const dispatch: ThunkDispatch<AppStateType, unknown, any> = useDispatch()
 
     const switchIsFollowing: any = (ifFetching: boolean, userId: number) => dispatch(userActions.switchIsFollowing(ifFetching, userId))
     const setCurrentPageAC = (currentPage: number) => dispatch(userActions.setCurrentPage(currentPage))

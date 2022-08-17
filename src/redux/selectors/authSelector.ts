@@ -12,15 +12,12 @@ export const getCaptcha = (state: AppStateType) => state.auth.captchaUrl
 export const getLoginSelector = createSelector(getLogin, (getLogin) => {
     return getLogin
 })
-
 export const getIsAuthSelector = createSelector(getIsAuth, (getIsAuth) => {
     return getIsAuth
 })
-
 export const getAuthIdSelector = createSelector(getAuthId, (getAuthId) => {
     return getAuthId
 })
-
 export const getCaptchaSelector = createSelector(getCaptcha, (getCaptcha) => {
     return getCaptcha
 })

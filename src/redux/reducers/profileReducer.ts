@@ -5,13 +5,6 @@ import {  } from "../../compo/api/api";
 import { profileApi } from '../../compo/api/profileApi';
 
 
-// actions
-const ADD_POST = 'ADD-POST'
-const SET_USER_PROFILE = 'SET_USER_PROFILE'
-const SET_PROFILE_STATUS = 'GET_PROFILE_STATUS'
-const UPDATE_PROFILE_STATUS = 'UPDATE_PROFILE_STATUS'
-const SET_PROFILE_PHOTO = 'SET_PROFILE_PHOTO'
-
 
 // state
 let initialState = {
@@ -34,7 +27,7 @@ interface NewPostInterface {
 
 const profileReducer = (state = initialState, action: ActionsType):initialStateType => {
     switch (action.type) {
-        case ADD_POST: {
+        case 'ADD_POST': {
             let newPost: NewPostInterface = {
                 name: 'Oleg',
                 text: action.newPostText,
@@ -46,16 +39,16 @@ const profileReducer = (state = initialState, action: ActionsType):initialStateT
                 newPostText: ''
             }
         }
-        case SET_USER_PROFILE: {
+        case 'SET_USER_PROFILE': {
             return {...state, profile: action.profile}
         }
-        case SET_PROFILE_STATUS: {
+        case 'SET_PROFILE_STATUS': {
             return {...state, status: action.status}
         }
         // case UPDATE_PROFILE_STATUS: {
         //     return {...state, status: action.status}
         // }
-        case SET_PROFILE_PHOTO: {
+        case 'SET_PROFILE_PHOTO': {
             return {...state, profile: {...state.profile, photos: action.photos} as ProfileType}
         }
         default: {
@@ -72,10 +65,10 @@ type DispatchThunkType = ThunkDispatch<AppStateType, unknown, ActionsType>
 
 // actionCreator
 export const profileActions = {
-    addPostActionCreater: (newPostText: string) => ({type: ADD_POST, newPostText} as const),
-    setUserProfile:  (profile: ProfileType) => ({type: SET_USER_PROFILE, profile} as const),
-    setProfileStatus: (status: string) => ({type: SET_PROFILE_STATUS, status} as const),
-    setProfilePhoto: (photos: PhotosType) => ({type: SET_PROFILE_PHOTO, photos} as const)
+    addPostActionCreater: (newPostText: string) => ({type: 'ADD_POST', newPostText} as const),
+    setUserProfile:  (profile: ProfileType) => ({type: 'SET_USER_PROFILE', profile} as const),
+    setProfileStatus: (status: string) => ({type: 'SET_PROFILE_STATUS', status} as const),
+    setProfilePhoto: (photos: PhotosType) => ({type: 'SET_PROFILE_PHOTO', photos} as const)
 }
 
 
@@ -94,7 +87,7 @@ export const putProfileStatus = (status: string) => async (dispatch: DispatchThu
         dispatch(profileActions.setProfileStatus(status))
     }
 }
-export const savePhoto = (photos: PhotosType) => async (dispatch: DispatchThunkType) => {
+export const savePhoto = (photos: File) => async (dispatch: DispatchThunkType) => {
     let data = await profileApi.putProfilePhoto(photos)
     if (data.data.resultCode === 0) {
         dispatch(profileActions.setProfilePhoto(data.data.data))

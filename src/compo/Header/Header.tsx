@@ -5,7 +5,7 @@ import logo from '../../img/logo.png'
 import {FC, useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {AppStateType} from "../../redux/redux-store";
-import {getIsAuth, getLogin} from "../../redux/selectors/authSelector";
+import {getIsAuth, getIsAuthSelector, getLogin, getLoginSelector} from '../../redux/selectors/authSelector'
 import {ThunkDispatch} from "redux-thunk";
 import {loginMeThunk, logoutThunk} from "../../redux/reducers/authReducer";
 
@@ -14,8 +14,8 @@ const Header = () => {
 
 
     // STATE
-    const isAuth_ = useSelector((state: AppStateType) =>  getIsAuth(state))
-    const login_ = useSelector((state: AppStateType)  => getLogin(state))
+    const isAuth_ = useSelector((state: AppStateType) =>  getIsAuthSelector(state))
+    const login_ = useSelector((state: AppStateType)  => getLoginSelector(state))
 
     // DISPATCH
     const dispatch: ThunkDispatch<AppStateType, any, any> = useDispatch()

@@ -1,8 +1,9 @@
-// Types for UsersPage
 import {PhotosType} from "../../redux/types/type";
-import {instance} from "./api";
-import { ResultCodesEnum } from "./loginApi";
+import {instance, ResponseType} from './api'
+import {AxiosPromise} from 'axios'
 
+
+// Types for UsersPage
 type User = {
     name: string
     id: number
@@ -15,16 +16,7 @@ type GetUsersType = {
     totalCount: number
     error: string
 }
-type FollowUser = {
-    resultCode: ResultCodesEnum
-    messages: string[]
-    data: {}
-}
-type UnfollowUser = {
-    resultCode: ResultCodesEnum
-    messages: string[]
-    data: {}
-}
+
 
 // API for UsersPage
 export const userApi = {
@@ -32,12 +24,11 @@ export const userApi = {
         return instance.get<GetUsersType>(`users?page=${currentPage}&count=${pageSize}`)
             .then(r => r.data);
     },
-    postUserApi(id: number | string){
-        return instance.post<FollowUser>(`follow/${id}`, {})
+    postUserApi(id: number | string) {
+        return instance.post<ResponseType>(`follow/${id}`, {})
             .then(r => r.data);
     },
-    deleteUserApi(id: number | string){
-        return instance.delete<UnfollowUser>(`follow/${id}`)
-            .then(r => r.data);
+    deleteUserApi(id: number | string) {
+        return instance.delete(`follow/${id}`).then(r => r.data) as Promise<ResponseType>
     }
 }

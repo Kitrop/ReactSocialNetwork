@@ -3,15 +3,15 @@ import {loginThunk} from '../../redux/reducers/authReducer'
 import {useDispatch, useSelector} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 import {useEffect} from 'react'
-import {getCaptcha, getIsAuth} from '../../redux/selectors/authSelector'
-import {AppStateType} from "../../redux/redux-store";
-import {ThunkDispatch} from "redux-thunk";
+import {getCaptchaSelector, getIsAuthSelector} from '../../redux/selectors/authSelector'
+import {AppStateType} from '../../redux/redux-store'
+import {ThunkDispatch} from 'redux-thunk'
 
 const Login = () => {
 
     // STATE
-    const captchaUrl_ = useSelector((state: AppStateType) => getCaptcha(state))
-    const isAuth_ = useSelector((state: AppStateType)=> getIsAuth(state))
+    const captchaUrl_ = useSelector((state: AppStateType) => getCaptchaSelector(state))
+    const isAuth_ = useSelector((state: AppStateType)=> getIsAuthSelector(state))
 
     // DISPATCH
     const dispatch: ThunkDispatch<AppStateType, any, any> = useDispatch()

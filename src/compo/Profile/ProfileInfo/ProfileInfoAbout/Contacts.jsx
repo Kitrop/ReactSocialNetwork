@@ -98,7 +98,7 @@ const Contacts = (props) => {
 
                         {/*BUTTON SUBMIT*/}
                         <div>
-                            <button type="submit" disabled={isSubmitting}> Submit< /button>
+                            <button type="submit" disabled={isSubmitting} value={'submit'}/>
                         </div>
                     </div>}
             </form> )}

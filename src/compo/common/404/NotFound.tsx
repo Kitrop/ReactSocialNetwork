@@ -1,5 +1,6 @@
 import {NavLink} from 'react-router-dom';
 import style from './notFound.module.css'
+
 const NotFound = () => {
     return (
         <div>

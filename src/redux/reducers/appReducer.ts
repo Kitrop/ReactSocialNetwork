@@ -2,21 +2,18 @@ import {loginMeThunk} from "./authReducer";
 import {ThunkDispatch} from "redux-thunk";
 import {AppStateType, InferActionsTypes} from "../redux-store";
 
-// Name action
-const SET_INITIALIZED = 'SET_INITIALIZED'
 
 // State
-const initialState: InitialStateInterface = {
+const initialState = {
     initialized: false
 }
-interface InitialStateInterface {
-    initialized: boolean
-}
+type InitialState = typeof initialState
+
 
 // Reducer
-const appReducer = (state = initialState, action: ActionsType): InitialStateInterface => {
+const appReducer = (state = initialState, action: ActionsType): InitialState => {
     switch (action.type) {
-        case SET_INITIALIZED:
+        case 'SET_INITIALIZED':
             return {
                 ...state,
                 initialized: true,
@@ -26,13 +23,13 @@ const appReducer = (state = initialState, action: ActionsType): InitialStateInte
     }
 }
 
-type ActionsType = InferActionsTypes<typeof appAction>
+export type ActionsType = InferActionsTypes<typeof appAction>
 type DispatchThunkType = ThunkDispatch<AppStateType, unknown, ActionsType>
 
 
 // actionCreator
 export const appAction = {
-    initializingAC:() => ({type:SET_INITIALIZED} as const)
+    initializingAC:() => ({type:'SET_INITIALIZED'} as const)
 }
 
 

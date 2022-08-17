@@ -2,7 +2,7 @@ import posts from '../Posts/MyPosts.module.css';
 import Post from './Post/Post';
 import MyPostForm from "./MyPostForm";
 import {useDispatch, useSelector} from "react-redux";
-import {postsDataState} from "../../../redux/selectors/profileSelector";
+import {postsDataSelector} from '../../../redux/selectors/profileSelector'
 import {ActionsType, profileActions} from "../../../redux/reducers/profileReducer";
 import {AppStateType} from "../../../redux/redux-store";
 import {ThunkDispatch} from "redux-thunk";
@@ -12,7 +12,7 @@ import {ThunkDispatch} from "redux-thunk";
 const MyPosts = () => {
 
     // STATE
-    const postsData = useSelector((state: AppStateType) => postsDataState(state))
+    const postsData = useSelector((state: AppStateType) => postsDataSelector(state))
 
     // DISPATCH
     const dispatch: ThunkDispatch<AppStateType, any, ActionsType> = useDispatch()

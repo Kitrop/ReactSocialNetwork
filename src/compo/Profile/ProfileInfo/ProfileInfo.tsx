@@ -4,15 +4,14 @@ import userPhoto from '../../../img/avatar.jpg'
 import ProfileStatus from './ProfileStatus'
 import Job from './ProfileInfoAbout/Job'
 import Contacts from './ProfileInfoAbout/Contacts'
-import {FC, SyntheticEvent} from "react";
-import {bool} from "yup";
-import {PhotosType, ProfileType} from "../../../redux/types/type";
+import {ChangeEvent, FC} from 'react'
+import {ProfileType} from '../../../redux/types/type'
 
 
 type Props = {
-    savePhoto: (photos: PhotosType) => void
+    savePhoto: (photos: File) => void
     isOwner: boolean
-    profile: any
+    profile: ProfileType | null,
     status: string
     putProfileStatus: (status: string) => void
     putProfileInfo: (profile: ProfileType) => void
@@ -23,9 +22,9 @@ const ProfileInfo: FC<Props> = ({savePhoto, isOwner, profile, status, putProfile
         return <Preloader />
     }
 
-    const onAvatarSelected = (e: any) => {
-        if(e.target.files.length) {
-            savePhoto(e.target.files[0])
+    const onAvatarSelected = (event: ChangeEvent<HTMLInputElement>) => {
+        if(event.target.files?.length) {
+            savePhoto(event.target.files[0])
         }
     }
 
