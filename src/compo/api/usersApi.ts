@@ -1,6 +1,5 @@
 import {PhotosType} from "../../redux/types/type";
 import {instance, ResponseType} from './api'
-import {AxiosPromise} from 'axios'
 
 
 // Types for UsersPage
@@ -20,12 +19,9 @@ type GetUsersType = {
 
 // API for UsersPage
 export const userApi = {
-    getUserApi(currentPage: number, pageSize?: number) {
-        return instance.get<GetUsersType>(`users?page=${currentPage}&count=${pageSize}`)
+    getUserApi(currentPage: number, term = '', friend: boolean | null = null,pageSize?: number, ) {
+        return instance.get<GetUsersType>(`users?page=${currentPage}&count=${pageSize}&term=${term}&friend=${friend}`)
             .then(r => r.data);
-    },
-    getMyFriend() {
-        return instance.get<GetUsersType>(`users?friend=true`)
     },
     postUserApi(id: number | string) {
         return instance.post<ResponseType>(`follow/${id}`, {})

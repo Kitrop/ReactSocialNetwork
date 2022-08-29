@@ -85,7 +85,7 @@ export const LoginForm: FC<Props> = ({loginThunk, captchaUrl}) => {
                     <Error>{errors.password && touched.password && errors.password}</Error>
                     <div>
                         <label htmlFor={'rememberMe'}> Remember me</label>
-                        <Field type="checkbox" name={"rememberMe"} onChange={handleChange}  value={values.rememberMe} />
+                        <Field type="checkbox" name={"rememberMe"} onChange={handleChange}/>
                     </div>
                     {captchaUrl && <div> <img src={captchaUrl} alt={'captcha security'}/> </div>}
                     {captchaUrl && <div> <input name={'captcha'} value={values.captcha} onBlur={handleBlur} type={'text'} onChange={handleChange} /> </div>}

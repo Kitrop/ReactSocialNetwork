@@ -93,7 +93,6 @@ export const savePhoto = (photos: File) => async (dispatch: DispatchThunkType) =
         dispatch(profileActions.setProfilePhoto(data.data.data))
     }
 }
-
 export const putProfileInfo = (profile: ProfileType) => async (dispatch: DispatchThunkType, getState: any) => {
     const userId = getState.auth.id
     const data = await profileApi.putProfileInfo(profile)
