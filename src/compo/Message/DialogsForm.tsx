@@ -23,7 +23,7 @@ const DialogForm: FC<Props> = ({SendMessageActionCreater}) => {
     const initialValues: InitialValuesType = {
         messageText: ''
     }
-    let onSubmit =  (values: FormikValues, setSubmitting: any ) => {
+    let onSubmit =  (values: FormikValues, setSubmitting: any) => {
         setTimeout(() => {
             console.log(values.messageText)
             SendMessageActionCreater(values.messageText)

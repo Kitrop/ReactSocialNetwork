@@ -63,25 +63,26 @@ const Users: FC<Props> = ({titleText = 'Users'}) => {
     const getUserThunk_ = useCallback((currentPage: number, filter: FilterType) => dispatch(getUserThunk(currentPage, filter)), [dispatch])
 
 
-    // if user not login, redirect to /login
+    // If user not login, redirect to /login
     let navigator = useNavigate()
     useEffect(() => {
         if (!isAuth) {
             navigator('/login')
         }
-        getUserThunk_(currentPage, filter)
-    }, [navigator, isAuth, getUserThunk_, currentPage])
+        getUserThunk_(currentPage, filter).then(r => r)
+    }, [navigator, isAuth, getUserThunk_])
 
 
-    // if page change
+    // If page change
     const onPageChanged = (pageNumber: number, filter: FilterType) => {
         setCurrentPageAC(pageNumber)
-        console.log('rerender')
-        getUserThunk_(pageNumber, filter)
+        console.log('rerender page')
+        getUserThunk_(pageNumber, filter).then(r => r)
     }
-    // if filter change
+    // If filter change
     const onFilterChanged = (filter: FilterType) => {
-        getUserThunk_(currentPage, filter)
+        console.log('rerender filter')
+        getUserThunk_(1, filter).then(r => r)
     }
 
     return (

@@ -23,7 +23,7 @@ export interface InitialStateInterface {
 }
 const initialState: InitialStateInterface = {
     users: [],
-    pageSize: 5,
+    pageSize: 10,
     portionSize: 15,
     ifFetching: true,
     totalUsersCount: 0,

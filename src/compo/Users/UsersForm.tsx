@@ -21,7 +21,6 @@ type Props = {
 const UsersForm: FC<Props> = ({onFilterChanged}) => {
 
 
-
     // InitialValues
     const initialValues: InitialValues = {
         term: '',

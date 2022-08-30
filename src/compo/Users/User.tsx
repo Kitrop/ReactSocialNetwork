@@ -1,8 +1,8 @@
 import ums from './Users.module.css'
 import {NavLink} from 'react-router-dom'
 import userPhoto from '../../img/avatar.jpg'
-import {UsersInterface} from "../../redux/types/type";
-import {FC} from "react";
+import {UsersInterface} from '../../redux/types/type'
+import {FC, memo} from 'react'
 
 type Prop = {
     users: UsersInterface[]
@@ -11,7 +11,11 @@ type Prop = {
 }
 
 const User: FC<Prop> = ({users, unfollowThunk, followThunk}) => {
-    return <>{
+    return <>
+        <div>
+            {users.length === 0 ? <span>Not found</span> : <span></span>}
+        </div>
+        {
         users.map(u =>
             <div className={ums.profile} key={u.id}>
             <span>

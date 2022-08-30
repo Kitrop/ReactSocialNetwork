@@ -23,8 +23,9 @@ const Pagination: FC<Props> = ({totalUsersCount, pageSize, currentPage, onPageCh
 
     let portionCount = Math.ceil(pagesCount / portionSize);
     let [portionNumber, setPortionNumber] = useState(1);
-    let leftBorder: number = (portionNumber - 1) * portionSize + 1;
-    let rightBorder: number = portionNumber * portionSize;
+    let leftBorder = (portionNumber - 1) * portionSize + 1;
+    let rightBorder = portionNumber * portionSize;
+
 
     useEffect(() => setPortionNumber(Math.ceil(currentPage / portionSize)), [currentPage, portionSize])
     
