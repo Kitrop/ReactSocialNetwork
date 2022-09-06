@@ -37,7 +37,7 @@ const ProfileInfo: FC<Props> = ({savePhoto, isOwner, profile, status, putProfile
                 <img className={i.profile_avatar} src={profile.photos.large != null ? profile.photos.large : userPhoto} alt={'avatar'}/>
                 {isOwner && <span><input type={'file'} onChange={onAvatarSelected}/></span> }
                 {/*Status*/}
-                <ProfileStatus isOwner={isOwner} status={status} putProfileStatus={putProfileStatus}/>
+                <ProfileStatus isOwner={isOwner} status={status} putProfileStatus={putProfileStatus} />
                 {/*MyContacts*/}
                 <Contacts  github={profile.contacts.github} vk={profile.contacts.vk} facebook={profile.contacts.facebook} instagram={profile.contacts.instagram} twitter={profile.contacts.twitter} website={profile.contacts.website} youtube={profile.contacts.youtube} mainLink={profile.contacts.mainLink}/>
                 {/*Job*/}

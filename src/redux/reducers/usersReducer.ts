@@ -6,7 +6,6 @@ import {AppStateType, InferActionsTypes} from '../redux-store'
 import {userApi} from '../../compo/api/usersApi'
 
 
-
 // State
 export interface InitialStateInterface {
     users: UsersInterface[]
@@ -19,7 +18,7 @@ export interface InitialStateInterface {
         term: string,
         friend: boolean | null
     }
-    isFollowing: Array<boolean>
+    isFollowing: number[]
 }
 const initialState: InitialStateInterface = {
     users: [],
@@ -34,7 +33,6 @@ const initialState: InitialStateInterface = {
     },
     isFollowing: []
 }
-
 
 // Reducer
 const usersReducer = (state = initialState, action: ActionsType): InitialStateInterface => {
@@ -107,6 +105,7 @@ export const getUserThunk = (currentPage: number, filter: FilterType) => async (
     dispatch(userActions.setUsers(data.items))
     dispatch(userActions.setFilter(filter))
     dispatch(userActions.setTotalUsersCount(data.totalCount))
+    dispatch(userActions.setCurrentPage(currentPage))
 }
 export const unfollowThunk = (id: number) => async (dispatch: DispatchThunkType) => {
     await followUnfollowFlowThunk(dispatch, id, userApi.deleteUserApi.bind(userApi), userActions.unfollow)

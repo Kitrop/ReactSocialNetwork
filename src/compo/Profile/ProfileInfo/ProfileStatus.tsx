@@ -1,5 +1,6 @@
 import i from './ProfileInfo.module.css';
 import {FC, FormEvent, SyntheticEvent, useEffect, useState} from 'react'
+import {useParams} from 'react-router-dom'
 
 
 type Props = {
@@ -40,10 +41,9 @@ const ProfileStatus: FC<Props> = (props) => {
 
     // устанавливает обновленный статус
     const changeStatus = (event: FormEvent<HTMLInputElement>) => {
-        if (event.currentTarget.value !== ' ') {
-            setStatus(event.currentTarget.value)
-        }
+        setStatus(event.currentTarget.value)
     }
+
 
     // При выходе из фокуса выкл. ред.
     const onBlur = () => {
@@ -51,15 +51,12 @@ const ProfileStatus: FC<Props> = (props) => {
         props.putProfileStatus(status)
     }
 
+    // режим редактирования
     const editMode = () => {
         if (props.isOwner) {
             setToggleView(false)
         }
     }
-
-    useEffect(() => {
-        props.putProfileStatus(status)
-    }, [props.putProfileStatus, status])
 
     return (
         <div>

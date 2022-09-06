@@ -10,13 +10,12 @@ import {lazy, Suspense, useEffect} from 'react'
 import {getInitializedSelector} from './redux/selectors/appSelector'
 import Preloader from './compo/common/Preloader/Preloader'
 import NotFound from './compo/common/404/NotFound'
-import {initializeApp} from './redux/reducers/appReducer'
+import {ActionsType, initializeApp} from './redux/reducers/appReducer'
 import Users from './compo/Users/Users'
 import Profile from './compo/Profile/Profile'
 import Header from './compo/Header/Header'
-import { AppStateType } from './redux/redux-store'
+import {AppStateType} from './redux/redux-store'
 import {ThunkDispatch} from 'redux-thunk'
-import { ActionsType } from './redux/reducers/appReducer'
 
 const Dialogs = lazy(() => import('./compo/Message/Dialogs'))
 
@@ -30,8 +29,8 @@ const App = () => {
     const initialize = () => dispatch(initializeApp())
 
     useEffect(() => {
-        initialize()
-    }, [initialize])
+        initialize().then(r => r)
+    }, [initialized])
     if (!initialized) {
         return <Preloader/>
     }

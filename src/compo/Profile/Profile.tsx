@@ -43,18 +43,18 @@ const Profile = () => {
     }, [navigate, isAuth])
 
 
-    let {userId} = useParams<{userId?: any}>()
+    let {userId} = useParams<{userId: any}>()
     useEffect(() => {
-        getProfileThunk_(userId)
-        getProfileStatus_(userId)
+        getProfileThunk_(userId).then(r => r)
+        getProfileStatus_(userId).then(r => r)
     }, [userId]);
 
-    
+    console.log('rerender profile')
     
     return (
         <div className={myPosts.content}>
             <ProfileInfo savePhoto={savePhoto_} isOwner={authId == userId} profile={profile}
-                         status={status} putProfileStatus={putProfileStatus_} putProfileInfo={putProfileInfo_}/>
+                         status={status} putProfileStatus={putProfileStatus_} putProfileInfo={putProfileInfo_} />
             <MyPosts />
         </div>
     );

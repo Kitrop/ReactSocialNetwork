@@ -1,5 +1,5 @@
 import {LoginForm} from './LoginForm'
-import {loginThunk} from '../../redux/reducers/authReducer'
+import {ActionsType, loginThunk} from '../../redux/reducers/authReducer'
 import {useDispatch, useSelector} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 import {useEffect} from 'react'
@@ -13,9 +13,10 @@ const Login = () => {
     const captchaUrl_ = useSelector((state: AppStateType) => getCaptchaSelector(state))
     const isAuth_ = useSelector((state: AppStateType)=> getIsAuthSelector(state))
 
+
     // DISPATCH
-    const dispatch: ThunkDispatch<AppStateType, any, any> = useDispatch()
-    const loginThunk_ =  (email: string, password: number, rememberMe: boolean, captcha: any) => dispatch(loginThunk(email, password, rememberMe, captcha))
+    const dispatch: ThunkDispatch<AppStateType, unknown, ActionsType> = useDispatch()
+    const loginThunk_ =  (email: string, password: number, rememberMe: boolean, captcha: string | null) => dispatch(loginThunk(email, password, rememberMe, captcha))
 
 
     let navigator = useNavigate()

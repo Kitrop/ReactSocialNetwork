@@ -1,7 +1,7 @@
 import {PhotosType, PostDataType, ProfileType } from '../types/type'
 import {ThunkDispatch} from "redux-thunk";
 import {AppStateType, InferActionsTypes} from "../redux-store";
-import {  } from "../../compo/api/api";
+import {ResultCodesEnum} from '../../compo/api/api'
 import { profileApi } from '../../compo/api/profileApi';
 
 
@@ -83,7 +83,7 @@ export const getProfileStatus = (userId: number | string) => async (dispatch: Di
 }
 export const putProfileStatus = (status: string) => async (dispatch: DispatchThunkType) => {
     let data = await profileApi.putProfileStatus(status)
-    if (data.data.resultCode === 0) {
+    if (data.data.resultCode === ResultCodesEnum.Success) {
         dispatch(profileActions.setProfileStatus(status))
     }
 }

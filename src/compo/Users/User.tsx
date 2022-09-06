@@ -2,15 +2,16 @@ import ums from './Users.module.css'
 import {NavLink} from 'react-router-dom'
 import userPhoto from '../../img/avatar.jpg'
 import {UsersInterface} from '../../redux/types/type'
-import {FC, memo} from 'react'
+import {FC} from 'react'
 
 type Prop = {
     users: UsersInterface[]
     unfollowThunk: (id: number) => void
     followThunk: (id: number) => void
+    isFetching: number[]
 }
 
-const User: FC<Prop> = ({users, unfollowThunk, followThunk}) => {
+const User: FC<Prop> = ({users, unfollowThunk, followThunk, isFetching}) => {
     return <>
         <div>
             {users.length === 0 ? <span>Not found</span> : <span></span>}
@@ -22,10 +23,12 @@ const User: FC<Prop> = ({users, unfollowThunk, followThunk}) => {
                     <div> <NavLink to={'/profile/' + u.id}> <img src={u.photos.small != null ? u.photos.small : userPhoto} className={ums.ava_photo} alt={'profile avatar'}/> </NavLink> </div>
                     <div>
                         {u.followed
-                            ? <button className={ums.btn_unfollow} onClick={() => unfollowThunk(u.id)}>
+                            ? <button disabled={isFetching.some(id => id === u.id)} className={ums.btn_unfollow} onClick={() => {
+                                unfollowThunk(u.id)
+                            }}>
                                 Unfollow
                             </button>
-                            : <button className={ums.btn_follow} onClick={() => followThunk(u.id)}>
+                            : <button disabled={isFetching.some(id => id === u.id)} className={ums.btn_follow} onClick={() => followThunk(u.id)}>
                                 Follow
                             </button>
                         }

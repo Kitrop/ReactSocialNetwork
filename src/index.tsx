@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { StrictMode } from 'react'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 import ReactDOM from 'react-dom'
@@ -18,14 +18,14 @@ const GlobalStyle = createGlobalStyle`
   }`
 
 ReactDOM.render(
-    <React.StrictMode>
+    <StrictMode>
         <BrowserRouter>
             <Provider store={store}>
                 <GlobalStyle/>
                 <App/>
             </Provider>
         </BrowserRouter>
-    </React.StrictMode>,
+    </StrictMode>,
     document.getElementById('root')
 )
 

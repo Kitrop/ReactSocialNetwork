@@ -23,6 +23,8 @@ const DialogForm: FC<Props> = ({SendMessageActionCreater}) => {
     const initialValues: InitialValuesType = {
         messageText: ''
     }
+
+
     let onSubmit =  (values: FormikValues, setSubmitting: any) => {
         setTimeout(() => {
             console.log(values.messageText)
@@ -56,7 +58,7 @@ const DialogForm: FC<Props> = ({SendMessageActionCreater}) => {
                         <Error>{errors.messageText && touched.messageText && errors.messageText}</Error>
                     </div>
                     <div>
-                        <button type="submit" disabled={isSubmitting} className={message.mybutton} >Send Message</button>
+                        <button type="submit" className={message.mybutton} >Send Message</button>
                     </div>
                 </form>
             )}

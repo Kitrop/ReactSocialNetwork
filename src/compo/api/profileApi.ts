@@ -13,7 +13,7 @@ export const profileApi = {
         return instance.get<string>(`profile/status/` + userId);
     },
     putProfileStatus(status: string) {
-        return instance.put<ResponseType>(`profile/status/`, {status });
+        return instance.put<ResponseType>(`profile/status/`, {status});
     },
     putProfilePhoto(photos: any) {
         const formData = new FormData()

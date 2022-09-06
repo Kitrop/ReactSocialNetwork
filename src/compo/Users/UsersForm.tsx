@@ -9,11 +9,9 @@ import {FilterType} from '../../redux/reducers/usersReducer'
 type InitialValues = {
     // isFriends: boolean
     term: string
-    friend: boolean | null
+    friend: boolean | null | string
 }
-type FormType = {
-    term: string
-}
+
 type Props = {
     onFilterChanged: (filter: FilterType) => void
 }
@@ -24,7 +22,7 @@ const UsersForm: FC<Props> = ({onFilterChanged}) => {
     // InitialValues
     const initialValues: InitialValues = {
         term: '',
-        friend: null
+        friend: 'null'
     }
 
     // Error handling scheme
@@ -38,7 +36,7 @@ const UsersForm: FC<Props> = ({onFilterChanged}) => {
     const submitCallback = (values: FormikValues,{setSubmitting}: {setSubmitting: (arg1: boolean) => void}) => {
         const filter: FilterType = {
             term: values.term,
-            friend: values.friend
+            friend: values.friend === 'null' ? null : values.friend === 'true'
         }
         console.log(filter);
         onFilterChanged(filter)
@@ -51,8 +49,6 @@ const UsersForm: FC<Props> = ({onFilterChanged}) => {
                 validationSchema={SignupSchema}>
             {({
                   values,
-                  handleChange,
-                  handleBlur,
                   handleSubmit,
                   isSubmitting
               }) => (
@@ -60,7 +56,7 @@ const UsersForm: FC<Props> = ({onFilterChanged}) => {
                       <div>
                           <label htmlFor={'friend'}>Show</label>
                           <Field as={'select'} name={'friend'}>
-                              <option value={'null'}> all </option>
+                              <option value={undefined}> all </option>
                               <option value={'true'}> only friends </option>
                               <option value={'false'}> no friends </option>
                           </Field>
