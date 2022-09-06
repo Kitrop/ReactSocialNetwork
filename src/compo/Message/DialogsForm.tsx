@@ -1,9 +1,9 @@
-import {Field, Formik} from "formik";
-import message from "./Dialogs.module.css";
-import * as Yup from "yup";
+import {Field, Formik} from 'formik'
+import message from './Dialogs.module.css'
+import * as Yup from 'yup'
 import styled from 'styled-components'
-import {FC} from "react";
-import {FormikValues} from "formik/dist/types";
+import {FC} from 'react'
+import {FormikValues} from 'formik/dist/types'
 
 const Error = styled.div`
   color: red;
@@ -25,7 +25,7 @@ const DialogForm: FC<Props> = ({SendMessageActionCreater}) => {
     }
 
 
-    let onSubmit =  (values: FormikValues, setSubmitting: any) => {
+    let onSubmit =  (values: FormikValues, {setSubmitting}: {setSubmitting: (arg1: boolean) => void}) => {
         setTimeout(() => {
             console.log(values.messageText)
             SendMessageActionCreater(values.messageText)
@@ -50,7 +50,6 @@ const DialogForm: FC<Props> = ({SendMessageActionCreater}) => {
                   handleChange,
                   handleBlur,
                   handleSubmit,
-                  isSubmitting,
               }) => (
                 <form onSubmit={handleSubmit}>
                     <div>
