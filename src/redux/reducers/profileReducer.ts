@@ -79,7 +79,7 @@ export const getProfileThunk = (userId: number | string) => async (dispatch: Dis
 }
 export const getProfileStatus = (userId: number | string) => async (dispatch: DispatchThunkType) => {
     let data = await profileApi.getProfileStatus(userId)
-    dispatch(profileActions.setProfileStatus(data.data))
+    dispatch(profileActions.setProfileStatus(data))
 }
 export const putProfileStatus = (status: string) => async (dispatch: DispatchThunkType) => {
     let data = await profileApi.putProfileStatus(status)

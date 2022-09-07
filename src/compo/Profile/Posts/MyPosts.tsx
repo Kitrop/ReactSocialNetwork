@@ -7,6 +7,7 @@ import {ActionsType, profileActions} from "../../../redux/reducers/profileReduce
 import {AppStateType} from "../../../redux/redux-store";
 import {ThunkDispatch} from "redux-thunk";
 import uniqid from 'uniqid'
+import { useMemo } from 'react';
 
 
 
@@ -20,12 +21,10 @@ const MyPosts = () => {
     const addPostActionCreator_ = (newPostText: string) => dispatch(profileActions.addPostActionCreater(newPostText))
 
 
-    let postsElements = postsData.map(p => <Post name={p.name} text={p.text} key={uniqid()}/>)
+    let postsElements = postsData.map(p => <Post name={p.name} text={p.text} key={uniqid()} />)
     let onAddPost = (newPostText: string) => {
         addPostActionCreator_(newPostText);
     };
-    console.log('rerender postpage')
-
 
     return (
         <div className={posts.postsBlock}>

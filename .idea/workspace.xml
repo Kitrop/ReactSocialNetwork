@@ -1,8 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="add searchParams">
-      <change beforePath="$PROJECT_DIR$/src/compo/Message/DialogsForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Message/DialogsForm.tsx" afterDir="false" />
+    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="fix &quot;setSubmitin is not a function&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/10.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/14.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/14.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/15.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/15.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/16.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/16.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/8.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/8.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Profile/Posts/MyPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Posts/MyPosts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Profile/Posts/Post/Post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Posts/Post/Post.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/Contacts.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/Job.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileStatus.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileStatus.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Users/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/api/profileApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/api/profileApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/profileReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/profileReducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +151,7 @@
       <recent name="C:\Users\artem\my-app\src\compo\Login\LoginForm.jsx" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="Jest.some">
     <configuration name="new post text" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -132,6 +162,19 @@
       <test-file value="$PROJECT_DIR$/src/redux/reducers/profileReducer.test.ts" />
       <test-names>
         <test-name value="new post text" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="some" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileStatus.test.jsx" />
+      <test-names>
+        <test-name value="some" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -161,16 +204,6 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="predeploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="predeploy" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -183,11 +216,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.some" />
         <item itemvalue="npm.start" />
         <item itemvalue="Jest.thunk" />
         <item itemvalue="Jest.new post text" />
         <item itemvalue="Jest.unfollow success" />
-        <item itemvalue="npm.predeploy" />
       </list>
     </recent_temporary>
   </component>
@@ -338,7 +371,8 @@
       <workItem from="1662318237667" duration="124000" />
       <workItem from="1662401529851" duration="1633000" />
       <workItem from="1662404761301" duration="5451000" />
-      <workItem from="1662489600461" duration="380000" />
+      <workItem from="1662489600461" duration="1444000" />
+      <workItem from="1662536714617" duration="8239000" />
     </task>
     <task id="LOCAL-00001" summary="FIX ALL!">
       <created>1655120009106</created>
@@ -606,7 +640,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662489819696</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="fix &quot;setSubmitin is not a function&quot;">
+      <created>1662490052489</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1662490052489</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -634,7 +675,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add login and logout" />
     <MESSAGE value="add Selectors, useSelector, useDispatch to Dialogs&#10;remove connect, mapDispatchToProps, mapStateToProps in Dialogs" />
     <MESSAGE value="minor upd" />
     <MESSAGE value="add initialisation" />
@@ -659,7 +699,8 @@
     <MESSAGE value="add filters for UsersPage" />
     <MESSAGE value="fix Pagination.tsx" />
     <MESSAGE value="add searchParams" />
-    <option name="LAST_COMMIT_MESSAGE" value="add searchParams" />
+    <MESSAGE value="fix &quot;setSubmitin is not a function&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix &quot;setSubmitin is not a function&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

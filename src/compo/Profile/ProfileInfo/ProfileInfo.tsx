@@ -2,8 +2,6 @@ import i from './ProfileInfo.module.css'
 import Preloader from '../../common/Preloader/Preloader'
 import userPhoto from '../../../img/avatar.jpg'
 import ProfileStatus from './ProfileStatus'
-import Job from './ProfileInfoAbout/Job'
-import Contacts from './ProfileInfoAbout/Contacts'
 import {ChangeEvent, FC} from 'react'
 import {ProfileType} from '../../../redux/types/type'
 
@@ -37,11 +35,7 @@ const ProfileInfo: FC<Props> = ({savePhoto, isOwner, profile, status, putProfile
                 <img className={i.profile_avatar} src={profile.photos.large != null ? profile.photos.large : userPhoto} alt={'avatar'}/>
                 {isOwner && <span><input type={'file'} onChange={onAvatarSelected}/></span> }
                 {/*Status*/}
-                <ProfileStatus isOwner={isOwner} status={status} putProfileStatus={putProfileStatus} />
-                {/*MyContacts*/}
-                <Contacts  github={profile.contacts.github} vk={profile.contacts.vk} facebook={profile.contacts.facebook} instagram={profile.contacts.instagram} twitter={profile.contacts.twitter} website={profile.contacts.website} youtube={profile.contacts.youtube} mainLink={profile.contacts.mainLink}/>
-                {/*Job*/}
-                <Job lookingForAJob={profile.lookingForAJob} lookingForAJobDescription={profile.lookingForAJobDescription}/>
+                <ProfileStatus isOwner={isOwner} statusProps={status} putProfileStatus={putProfileStatus} />
             </div>
         </div>
     );

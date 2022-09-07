@@ -64,30 +64,25 @@ const Users: FC<Props> = ({titleText = 'Users'}) => {
     }, [navigator, isAuth, getUserThunk_])
 
 
-
-
-    let [searchParams, setSearchParams] = useSearchParams();
+    let [searchParams, setSearchParams] = useSearchParams()
     useEffect(() => {
         const result: any = {}
         // @ts-ignore
-
         // пробегаемся по URL, где есть ключ(term или friend) и значение(строка или boolean)
-        for ( const [key, value] of searchParams.entries()) {
+        for (const [key, value] of searchParams.entries()) {
             let urlValue: any = +value
             // если urlValue ничему не равен, то ему присваевается value
             if (isNaN(urlValue)) {
                 urlValue = value
             }
-            if(urlValue ===  'true') {
+            if (urlValue === 'true') {
                 urlValue = true
-            }
-            else if(urlValue === 'false') {
+            } else if (urlValue === 'false') {
                 urlValue = false
             }
             // помещаем результат в объект
             result[key] = urlValue
         }
-
         // присваиваем страницу
         let actualPage = result.page || currentPage
 
@@ -96,6 +91,7 @@ const Users: FC<Props> = ({titleText = 'Users'}) => {
 
         // присваиваем друга
         let friend = result.friend || filter.friend
+
         // если в url нету friend или он равен false, присваиваем параметр из бизнеса
         if (result.friend === false) {
             friend = result.friend
@@ -104,22 +100,16 @@ const Users: FC<Props> = ({titleText = 'Users'}) => {
         // определяем актуальный фильтер
         const currentFilter = {term, friend}
 
-
         getUserThunk_(actualPage, currentFilter).then(r => r)
-
     }, [])
 
 
     useEffect(() => {
         const term = filter.term
         const friend = filter.friend
-
         let url = (term === '' ? '' : `&term=${term}`) + (friend === null ? '' : `&friend=${friend}`) + (currentPage === 1 ? '' : `&page=${currentPage}`)
         setSearchParams(url)
-
     }, [filter, currentPage])
-
-
 
 
     // If page change
@@ -136,9 +126,10 @@ const Users: FC<Props> = ({titleText = 'Users'}) => {
         <BorderPageUsers>
             {ifFetching ? <Preloader/> : null}
             <UsersForm onFilterChanged={onFilterChanged}/>
-            <Pagination totalUsersCount={totalUsersCount} pageSize={pageSize} currentPage={currentPage} onPageChanged={onPageChanged} portionSize={portionSize} filter={filter} />
+            <Pagination totalUsersCount={totalUsersCount} pageSize={pageSize} currentPage={currentPage}
+                        onPageChanged={onPageChanged} portionSize={portionSize} filter={filter}/>
             <h2>{titleText}</h2>
-            <User unfollowThunk={unfollowThunk_} followThunk={followThunk_} users={users} isFetching={isFetching} />
+            <User unfollowThunk={unfollowThunk_} followThunk={followThunk_} users={users} isFetching={isFetching}/>
         </BorderPageUsers>
     )
 }
