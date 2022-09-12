@@ -3,7 +3,8 @@ import * as Yup from 'yup'
 import {FormikValues} from 'formik/dist/types'
 import {FC} from 'react'
 import {FilterType} from '../../redux/reducers/usersReducer'
-
+import {Button, TextField} from '@mui/material'
+import styles from './UsersForm.module.css'
 
 // types
 type InitialValues = {
@@ -46,27 +47,29 @@ const UsersForm: FC<Props> = ({onFilterChanged}) => {
     return (
         <Formik initialValues={initialValues}
                 onSubmit={submitCallback}
-                validationSchema={SignupSchema}>
+                validationSchema={SignupSchema} >
             {({
                   values,
                   handleSubmit,
+                  handleChange,
                   isSubmitting
               }) => (
                   <form onSubmit={handleSubmit}>
-                      <div>
+                      <div className={styles.form}>
                           <label htmlFor={'friend'}>Show</label>
-                          <Field as={'select'} name={'friend'}>
-                              <option value={undefined}> all </option>
-                              <option value={'true'}> only friends </option>
-                              <option value={'false'}> no friends </option>
+                          <Field as={'select'} name={'friend'} className={styles.__select}>
+                              <option className={styles.__select__label} value={'null'}> All </option>
+                              <option className={styles.__select__label} value={'true'}> Only followed </option>
+                              <option className={styles.__select__label} value={'false'}> Not followed </option>
                           </Field>
                       </div>
-                      <div>
-                          <label htmlFor={'searchUserName'}>Search user</label>
-                          <Field type={'text'} name={'term'} value={values.term}  placeholder={'Search user'}/>
+                      <div className={styles.form}>
+                          <TextField fullWidth={false} id="filled-basic"  name="term" onChange={handleChange} value={values.term}  label="Search user" variant="filled" />
                       </div>
                       {/*Submit*/}
-                      <button type={'submit'} disabled={isSubmitting} > Find </button>
+                      <div className={styles.formik}>
+                          <Button type={'submit'} disabled={isSubmitting} variant="outlined"> Find </Button>
+                      </div>
                   </form>
             )}
         </Formik>

@@ -6,6 +6,7 @@ import {useEffect} from 'react'
 import {getCaptchaSelector, getIsAuthSelector} from '../../redux/selectors/authSelector'
 import {AppStateType} from '../../redux/redux-store'
 import {ThunkDispatch} from 'redux-thunk'
+import Grid2 from '@mui/material/Unstable_Grid2'
 
 const Login = () => {
 
@@ -27,10 +28,12 @@ const Login = () => {
     }, [navigator, isAuth_])
 
     return (
-        <div>
-            <h1>Login</h1>
-            <LoginForm loginThunk={loginThunk_} captchaUrl={captchaUrl_} />
-        </div>
+        <Grid2 container>
+            <Grid2 xs="auto">
+                <h1>Login</h1>
+                <LoginForm loginThunk={loginThunk_} captchaUrl={captchaUrl_} />
+            </Grid2>
+        </Grid2>
     )
 }
 

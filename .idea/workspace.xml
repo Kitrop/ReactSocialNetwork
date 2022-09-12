@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="fix &quot;setSubmitin is not a function&quot;">
+    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="fix-status on change">
+      <change afterPath="$PROJECT_DIR$/src/compo/Login/Login.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/Contacts.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/ProfileAbout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/ProfileAboutForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compo/Users/UsersForm.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" afterDir="false" />
@@ -23,16 +28,63 @@
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/Posts/MyPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Posts/MyPosts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/Posts/Post/Post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Posts/Post/Post.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/helper-plugin-utils/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/helper-plugin-utils/lib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/helper-plugin-utils/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/helper-plugin-utils/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/plugin-syntax-jsx/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/plugin-syntax-jsx/lib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/plugin-syntax-jsx/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/plugin-syntax-jsx/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/AsyncGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/AsyncGenerator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/applyDecs.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/applyDecs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/asyncGeneratorDelegate.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/asyncGeneratorDelegate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/awaitAsyncGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/awaitAsyncGenerator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/construct.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/construct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/AsyncGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/AsyncGenerator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/applyDecs.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/applyDecs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/asyncGeneratorDelegate.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/asyncGeneratorDelegate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/awaitAsyncGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/awaitAsyncGenerator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/construct.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/construct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/extends.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/extends.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/get.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/get.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/wrapRegExp.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/wrapRegExp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/extends.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/extends.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/get.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/get.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/getPrototypeOf.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/getPrototypeOf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/setPrototypeOf.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/setPrototypeOf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/wrapRegExp.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/wrapRegExp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/regenerator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/regenerator/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.browser.cjs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.browser.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.cjs.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.cjs.prod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/src/props.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/src/props.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/types/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/memoize/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/memoize/dist/emotion-memoize.browser.cjs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/memoize/dist/emotion-memoize.browser.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/memoize/dist/emotion-memoize.cjs.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@emotion/memoize/dist/emotion-memoize.cjs.prod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/memoize/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@emotion/memoize/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/prop-types/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/prop-types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/prop-types/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csstype/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/csstype/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csstype/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/csstype/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csstype/index.js.flow" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/csstype/index.js.flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csstype/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/csstype/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Login/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Login/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Message/DialogsForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Message/DialogsForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Nav/Nav.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Nav/Nav.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compo/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/Contacts.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/Job.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileStatus.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileStatus.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Users/Users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/api/profileApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/api/profileApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Users/UsersForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Users/UsersForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/profileReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/profileReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utility/declaration.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/declaration.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +98,7 @@
         <option value="tsconfig.json" />
         <option value="JavaScript File" />
         <option value="TypeScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -125,6 +178,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;js.last.introduce.type&quot;: &quot;LET&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/artem/my-app/src/compo/api/usersApi.ts&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs.jest.jest_package&quot;: &quot;C:/Users/artem/my-app/node_modules/react-scripts&quot;,
@@ -151,7 +205,7 @@
       <recent name="C:\Users\artem\my-app\src\compo\Login\LoginForm.jsx" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.some">
+  <component name="RunManager" selected="npm.start">
     <configuration name="new post text" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -216,8 +270,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.some" />
         <item itemvalue="npm.start" />
+        <item itemvalue="Jest.some" />
         <item itemvalue="Jest.thunk" />
         <item itemvalue="Jest.new post text" />
         <item itemvalue="Jest.unfollow success" />
@@ -372,7 +426,15 @@
       <workItem from="1662401529851" duration="1633000" />
       <workItem from="1662404761301" duration="5451000" />
       <workItem from="1662489600461" duration="1444000" />
-      <workItem from="1662536714617" duration="8239000" />
+      <workItem from="1662536714617" duration="8501000" />
+      <workItem from="1662555429045" duration="1600000" />
+      <workItem from="1662652991165" duration="8108000" />
+      <workItem from="1662705776881" duration="5987000" />
+      <workItem from="1662715076101" duration="3153000" />
+      <workItem from="1662726172655" duration="52000" />
+      <workItem from="1662800592816" duration="1735000" />
+      <workItem from="1662882008881" duration="11922000" />
+      <workItem from="1663007189264" duration="4148000" />
     </task>
     <task id="LOCAL-00001" summary="FIX ALL!">
       <created>1655120009106</created>
@@ -647,7 +709,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662490052489</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="fix-status on change">
+      <created>1662548877771</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1662548877771</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,7 +744,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add Selectors, useSelector, useDispatch to Dialogs&#10;remove connect, mapDispatchToProps, mapStateToProps in Dialogs" />
     <MESSAGE value="minor upd" />
     <MESSAGE value="add initialisation" />
     <MESSAGE value="selectors for users" />
@@ -700,7 +768,8 @@
     <MESSAGE value="fix Pagination.tsx" />
     <MESSAGE value="add searchParams" />
     <MESSAGE value="fix &quot;setSubmitin is not a function&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix &quot;setSubmitin is not a function&quot;" />
+    <MESSAGE value="fix-status on change" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix-status on change" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -26,11 +26,8 @@ const DialogForm: FC<Props> = ({SendMessageActionCreater}) => {
 
 
     let onSubmit =  (values: FormikValues, {setSubmitting}: {setSubmitting: (arg1: boolean) => void}) => {
-        setTimeout(() => {
-            console.log(values.messageText)
-            SendMessageActionCreater(values.messageText)
-            setSubmitting(false);
-        }, 400);
+        SendMessageActionCreater(values.messageText)
+        setSubmitting(false);
     }
     let SignupSchema = Yup.object().shape({
         messageText: Yup.string()

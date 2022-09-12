@@ -51,8 +51,7 @@ const Profile = () => {
     
     return (
         <div className={myPosts.content}>
-            <ProfileInfo savePhoto={savePhoto_} isOwner={authId == userId} profile={profile}
-                         status={status} putProfileStatus={putProfileStatus_} putProfileInfo={putProfileInfo_} />
+            <ProfileInfo savePhoto={savePhoto_} isOwner={authId == userId} profile={profile} status={status} putProfileStatus={putProfileStatus_} putProfileInfo={putProfileInfo_}/>
             <MyPosts />
         </div>
     );

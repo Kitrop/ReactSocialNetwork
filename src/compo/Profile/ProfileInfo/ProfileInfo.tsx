@@ -2,8 +2,11 @@ import i from './ProfileInfo.module.css'
 import Preloader from '../../common/Preloader/Preloader'
 import userPhoto from '../../../img/avatar.jpg'
 import ProfileStatus from './ProfileStatus'
-import {ChangeEvent, FC} from 'react'
+import {ChangeEvent, FC, useState} from 'react'
 import {ProfileType} from '../../../redux/types/type'
+import Contacts from './ProfileInfoAbout/Contacts'
+import ProfileAboutForm from './ProfileInfoAbout/ProfileAboutForm'
+import ProfileAbout from './ProfileInfoAbout/ProfileAbout'
 
 
 type Props = {
@@ -16,6 +19,9 @@ type Props = {
 }
 
 const ProfileInfo: FC<Props> = ({savePhoto, isOwner, profile, status, putProfileStatus, putProfileInfo}) => {
+
+    const [editMode, setEditMode] = useState(false)
+
     if(!profile) {
         return <Preloader />
     }
@@ -36,6 +42,7 @@ const ProfileInfo: FC<Props> = ({savePhoto, isOwner, profile, status, putProfile
                 {isOwner && <span><input type={'file'} onChange={onAvatarSelected}/></span> }
                 {/*Status*/}
                 <ProfileStatus isOwner={isOwner} statusProps={status} putProfileStatus={putProfileStatus} />
+                <ProfileAboutForm profile={profile} putProfileInfo={putProfileInfo} />
             </div>
         </div>
     );
