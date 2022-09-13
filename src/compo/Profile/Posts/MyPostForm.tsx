@@ -33,7 +33,7 @@ const MyPostForm: FC<Props> = ({onAddPost}) => {
             .min(2, 'Too Short!')
             .max(250, 'Too Long!')
     });
-    let submitCallback =  (values: FormikValues,  setSubmitting: any) => {
+    let submitCallback =  (values: FormikValues, {setSubmitting}: any) => {
         setTimeout(() => {
             onAddPost(values.postText)
             setSubmitting(false);
@@ -80,5 +80,6 @@ const MyPostForm: FC<Props> = ({onAddPost}) => {
         </Formik>
     )
 }
+
 
 export default MyPostForm

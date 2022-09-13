@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="refactoring for selectors">
+    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="add some design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/16.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/16.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/api/usersApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/api/usersApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/8.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/8.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/ProfileAboutForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/ProfileAboutForm.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +33,7 @@
         <option value="tsconfig.json" />
         <option value="JavaScript File" />
         <option value="TypeScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -47,12 +63,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="typescript" />
-                    <option name="lastUsedInstant" value="1659599531" />
+                    <option name="branchName" value="update_NavBar" />
+                    <option name="lastUsedInstant" value="1660731105" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1657783665" />
+                    <option name="lastUsedInstant" value="1660730622" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="typescript" />
+                    <option name="lastUsedInstant" value="1659599531" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="duck_refactoring_" />
@@ -61,10 +81,6 @@
                   <RecentBranch>
                     <option name="branchName" value="selectors" />
                     <option name="lastUsedInstant" value="1657087312" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="initialisation" />
-                    <option name="lastUsedInstant" value="1657019013" />
                   </RecentBranch>
                 </list>
               </option>
@@ -79,7 +95,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2AWJc9QZ7JYaKwgLoMVwBl3UpfK" />
   <component name="ProjectLevelVcsManager">
@@ -97,11 +113,13 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;js.last.introduce.type&quot;: &quot;LET&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/artem/my-app/src/compo/api/usersApi.ts&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;C:/Users/artem/my-app/node_modules/react-scripts&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\artem\\my-app\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -123,48 +141,56 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
-    <configuration name="some.span status null" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="new post text" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileStatus.test.jsx" />
+      <test-file value="$PROJECT_DIR$/src/redux/reducers/profileReducer.test.ts" />
       <test-names>
-        <test-name value="some" />
-        <test-name value="span status null" />
+        <test-name value="new post text" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build" />
-      </scripts>
+    <configuration name="some" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
       <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileStatus.test.jsx" />
+      <test-names>
+        <test-name value="some" />
+      </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="deploy" />
-      </scripts>
+    <configuration name="thunk" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
       <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/redux/reducers/userReducer.thunk.test.ts" />
+      <test-names>
+        <test-name value="thunk" />
+      </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="predeploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="predeploy" />
-      </scripts>
+    <configuration name="unfollow success" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
       <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/redux/reducers/usersReducer.test.js" />
+      <test-names>
+        <test-name value="unfollow success" />
+      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -180,10 +206,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
-        <item itemvalue="npm.predeploy" />
-        <item itemvalue="npm.deploy" />
-        <item itemvalue="npm.build" />
-        <item itemvalue="Jest.some.span status null" />
+        <item itemvalue="Jest.some" />
+        <item itemvalue="Jest.thunk" />
+        <item itemvalue="Jest.new post text" />
+        <item itemvalue="Jest.unfollow success" />
       </list>
     </recent_temporary>
   </component>
@@ -308,7 +334,45 @@
       <workItem from="1660495105171" duration="1004000" />
       <workItem from="1660537954859" duration="14000" />
       <workItem from="1660543156314" duration="5732000" />
-      <workItem from="1660724562078" duration="4305000" />
+      <workItem from="1660724562078" duration="10446000" />
+      <workItem from="1661408077931" duration="2043000" />
+      <workItem from="1661415846440" duration="1600000" />
+      <workItem from="1661434808263" duration="6379000" />
+      <workItem from="1661495391604" duration="5730000" />
+      <workItem from="1661526162057" duration="2821000" />
+      <workItem from="1661607090679" duration="6917000" />
+      <workItem from="1661683351636" duration="1187000" />
+      <workItem from="1661687421066" duration="7411000" />
+      <workItem from="1661756921136" duration="9412000" />
+      <workItem from="1661797344579" duration="618000" />
+      <workItem from="1661845306032" duration="3565000" />
+      <workItem from="1661861137144" duration="6334000" />
+      <workItem from="1661879822308" duration="2306000" />
+      <workItem from="1661889860366" duration="2547000" />
+      <workItem from="1661963411091" duration="1122000" />
+      <workItem from="1662041232931" duration="612000" />
+      <workItem from="1662139595718" duration="32000" />
+      <workItem from="1662145563455" duration="2881000" />
+      <workItem from="1662192630062" duration="478000" />
+      <workItem from="1662198304392" duration="4282000" />
+      <workItem from="1662275045643" duration="14809000" />
+      <workItem from="1662314260424" duration="2145000" />
+      <workItem from="1662318237667" duration="124000" />
+      <workItem from="1662401529851" duration="1633000" />
+      <workItem from="1662404761301" duration="5451000" />
+      <workItem from="1662489600461" duration="1444000" />
+      <workItem from="1662536714617" duration="8501000" />
+      <workItem from="1662555429045" duration="1600000" />
+      <workItem from="1662652991165" duration="8108000" />
+      <workItem from="1662705776881" duration="5987000" />
+      <workItem from="1662715076101" duration="3153000" />
+      <workItem from="1662726172655" duration="52000" />
+      <workItem from="1662800592816" duration="1735000" />
+      <workItem from="1662882008881" duration="11922000" />
+      <workItem from="1663007189264" duration="4720000" />
+      <workItem from="1663014869687" duration="18000" />
+      <workItem from="1663014923239" duration="1166000" />
+      <workItem from="1663016157477" duration="1125000" />
     </task>
     <task id="LOCAL-00001" summary="FIX ALL!">
       <created>1655120009106</created>
@@ -548,7 +612,56 @@
       <option name="project" value="LOCAL" />
       <updated>1660729296319</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="refactoring for selectors">
+      <created>1660730322240</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1660730322240</updated>
+    </task>
+    <task id="LOCAL-00036" summary="add filters for UsersPage">
+      <created>1661763832671</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1661763832671</updated>
+    </task>
+    <task id="LOCAL-00037" summary="fix Pagination.tsx">
+      <created>1661864056658</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1661864056658</updated>
+    </task>
+    <task id="LOCAL-00038" summary="add searchParams">
+      <created>1662489819696</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1662489819696</updated>
+    </task>
+    <task id="LOCAL-00039" summary="fix &quot;setSubmitin is not a function&quot;">
+      <created>1662490052489</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1662490052489</updated>
+    </task>
+    <task id="LOCAL-00040" summary="fix-status on change">
+      <created>1662548877771</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1662548877771</updated>
+    </task>
+    <task id="LOCAL-00041" summary="add some design">
+      <created>1663012188868</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1663012188868</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,12 +689,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add userSelector, refactoring code&#10;update profileStatus" />
-    <MESSAGE value="minor update" />
-    <MESSAGE value="add form for Dialogs messages, Profile postsб &#10;add DialogsForm.jsx and MyPostForm.jsx" />
-    <MESSAGE value="add login and logout" />
-    <MESSAGE value="add Selectors, useSelector, useDispatch to Dialogs&#10;remove connect, mapDispatchToProps, mapStateToProps in Dialogs" />
-    <MESSAGE value="minor upd" />
     <MESSAGE value="add initialisation" />
     <MESSAGE value="selectors for users" />
     <MESSAGE value="add some test and refactoring" />
@@ -601,7 +708,13 @@
     <MESSAGE value="add infer, refactoring types for Action creators" />
     <MESSAGE value="refactoring API" />
     <MESSAGE value="refactoring for selectors" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring for selectors" />
+    <MESSAGE value="add filters for UsersPage" />
+    <MESSAGE value="fix Pagination.tsx" />
+    <MESSAGE value="add searchParams" />
+    <MESSAGE value="fix &quot;setSubmitin is not a function&quot;" />
+    <MESSAGE value="fix-status on change" />
+    <MESSAGE value="add some design" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some design" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

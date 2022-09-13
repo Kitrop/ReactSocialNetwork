@@ -47,7 +47,7 @@ const authReducer = (state = initialState, action: ActionsType): InitialStateInt
 
 
 
-type ActionsType = InferActionsTypes<typeof authActions>
+export type ActionsType = InferActionsTypes<typeof authActions>
 type DispatchThunkType = ThunkDispatch<AppStateType, unknown, ActionsType>
 
 

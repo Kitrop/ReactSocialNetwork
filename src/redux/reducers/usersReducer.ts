@@ -6,27 +6,33 @@ import {AppStateType, InferActionsTypes} from '../redux-store'
 import {userApi} from '../../compo/api/usersApi'
 
 
-
 // State
-interface InitialStateInterface {
+export interface InitialStateInterface {
     users: UsersInterface[]
     pageSize: number
     portionSize: number
     ifFetching: boolean
     totalUsersCount: number
     currentPage: number
-    isFollowing: Array<boolean>
+    filter: {
+        term: string,
+        friend: boolean | null
+    }
+    isFollowing: number[]
 }
-let initialState: InitialStateInterface = {
+const initialState: InitialStateInterface = {
     users: [],
-    pageSize: 5,
+    pageSize: 10,
     portionSize: 15,
     ifFetching: true,
     totalUsersCount: 0,
     currentPage: 1,
+    filter: {
+        term: '',
+        friend: null
+    },
     isFollowing: []
 }
-
 
 // Reducer
 const usersReducer = (state = initialState, action: ActionsType): InitialStateInterface => {
@@ -46,6 +52,9 @@ const usersReducer = (state = initialState, action: ActionsType): InitialStateIn
         }
         case 'SET_CURRENT_PAGE': {
             return {...state, currentPage: action.currentPage}
+        }
+        case 'SET_FILTER': {
+            return {...state, filter: action.payload}
         }
         case 'SET_TOTAL_USERS_COUNT': {
             return {...state, totalUsersCount: action.totalUsersCount}
@@ -70,15 +79,17 @@ const usersReducer = (state = initialState, action: ActionsType): InitialStateIn
 }
 
 
-type ActionsType = InferActionsTypes<typeof userActions>
+// Types
+export type ActionsType = InferActionsTypes<typeof userActions>
 type DispatchThunkType = ThunkDispatch<AppStateType, unknown, ActionsType>
-
+export type FilterType = typeof initialState.filter
 
 // actionCreator
 export const userActions = {
     follow: (userId: number) => ({type: 'FOLLOW_USER', userId} as const),
     unfollow: (userId: number) => ({type: 'UNFOLLOW_USER', userId} as const),
     setCurrentPage: (currentPage: number) => ({type: 'SET_CURRENT_PAGE', currentPage} as const),
+    setFilter: (filter: FilterType) => ({type: 'SET_FILTER', payload: filter} as const),
     switchIsFollowing: (ifFetching: boolean, userId: number) => ({type: 'SWITCH_IS_FOLLOWING', ifFetching, userId} as const),
     setUsers: (users: UsersInterface[]) => ({type: 'SET_USERS', users} as const),
     setTotalUsersCount: (totalUsersCount: number) => ({type: 'SET_TOTAL_USERS_COUNT', totalUsersCount} as const),
@@ -87,13 +98,14 @@ export const userActions = {
 
 
 // thunkCreator
-export const getUserThunk = (currentPage: number) => async (dispatch: DispatchThunkType) => {
-    const apiMethod = userApi.getUserApi.bind(userApi)
+export const getUserThunk = (currentPage: number, filter: FilterType) => async (dispatch: DispatchThunkType) => {
     dispatch(userActions.switchIsFetching(true))
-    let data = await apiMethod(currentPage)
+    let data = await userApi.getUserApi(currentPage, filter.term, filter.friend)
     dispatch(userActions.switchIsFetching(false))
     dispatch(userActions.setUsers(data.items))
+    dispatch(userActions.setFilter(filter))
     dispatch(userActions.setTotalUsersCount(data.totalCount))
+    dispatch(userActions.setCurrentPage(currentPage))
 }
 export const unfollowThunk = (id: number) => async (dispatch: DispatchThunkType) => {
     await followUnfollowFlowThunk(dispatch, id, userApi.deleteUserApi.bind(userApi), userActions.unfollow)

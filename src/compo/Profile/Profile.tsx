@@ -28,7 +28,6 @@ const Profile = () => {
 
     // DISPATCH
     const dispatch:ThunkDispatch<AppStateType, any, any> = useDispatch()
-    // const setUserProfile_ = (profile: ProfileType) => dispatch(profileActions.setUserProfile(profile))
     const getProfileThunk_ = useCallback((userId: number) => dispatch(getProfileThunk(userId)), [dispatch])
     const getProfileStatus_ = useCallback((userId: number) => dispatch(getProfileStatus(userId)), [dispatch])
     const putProfileStatus_ = (status: string) => dispatch(putProfileStatus(status))
@@ -43,18 +42,16 @@ const Profile = () => {
     }, [navigate, isAuth])
 
 
-    let {userId} = useParams<{userId?: any}>()
+    let {userId} = useParams<{userId: any}>()
     useEffect(() => {
-        getProfileThunk_(userId)
-        getProfileStatus_(userId)
+        getProfileThunk_(userId).then(r => r)
+        getProfileStatus_(userId).then(r => r)
     }, [userId]);
 
     
-    
     return (
         <div className={myPosts.content}>
-            <ProfileInfo savePhoto={savePhoto_} isOwner={authId == userId} profile={profile}
-                         status={status} putProfileStatus={putProfileStatus_} putProfileInfo={putProfileInfo_}/>
+            <ProfileInfo savePhoto={savePhoto_} isOwner={authId == userId} profile={profile} status={status} putProfileStatus={putProfileStatus_} putProfileInfo={putProfileInfo_}/>
             <MyPosts />
         </div>
     );

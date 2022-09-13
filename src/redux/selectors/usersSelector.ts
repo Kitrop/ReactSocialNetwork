@@ -8,6 +8,7 @@ const pageSize = (state: AppStateType) => state.usersPage.pageSize
 const portionSize = (state: AppStateType) => state.usersPage.portionSize
 const totalUsersCount = (state: AppStateType) => state.usersPage.totalUsersCount
 const currentPage = (state: AppStateType) => state.usersPage.currentPage
+const filter = (state: AppStateType) => state.usersPage.filter
 const ifFetching = (state: AppStateType) => state.usersPage.ifFetching
 const isFollowing = (state: AppStateType) => state.usersPage.isFollowing
 
@@ -26,6 +27,9 @@ export const totalUsersCountSelector = createSelector( totalUsersCount,(totalUse
 })
 export const currentPageSelector = createSelector(currentPage, (currentPage) => {
     return currentPage
+})
+export const filterSelector = createSelector(filter, (filter) => {
+    return filter
 })
 export const ifFetchingSelector = createSelector(ifFetching ,(ifFetching) => {
     return ifFetching

@@ -10,10 +10,10 @@ export const profileApi = {
             .then(r => r.data);
     },
     getProfileStatus(userId: number | string){
-        return instance.get<string>(`profile/status/` + userId);
+        return instance.get<string>(`profile/status/` + userId).then(res => res.data);
     },
     putProfileStatus(status: string) {
-        return instance.put<ResponseType>(`profile/status/`, {status });
+        return instance.put<ResponseType>(`profile/status/`, {status});
     },
     putProfilePhoto(photos: any) {
         const formData = new FormData()

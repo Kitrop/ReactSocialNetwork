@@ -5,6 +5,7 @@ import usersReducer from "./reducers/usersReducer"
 import authReducer from "./reducers/authReducer"
 import thunk from "redux-thunk";
 import appReducer from './reducers/appReducer'
+import sidebarReducer from './reducers/sidebarReducer'
 
 
 let rootReducer = combineReducers({
@@ -12,7 +13,8 @@ let rootReducer = combineReducers({
     dialogsPage: dialogsReducer,
     usersPage: usersReducer,
     auth: authReducer,
-    app: appReducer
+    app: appReducer,
+    sidebar: sidebarReducer
 })
 
 declare global {

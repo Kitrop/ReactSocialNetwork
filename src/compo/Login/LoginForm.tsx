@@ -1,28 +1,24 @@
-import {Field, Formik} from 'formik';
-import styled from 'styled-components';
-import * as Yup from 'yup';
-import {FC} from "react";
-import {FormikErrors, FormikValues} from "formik/dist/types";
-
-const Error = styled.div`
-  color: red;
-  font-size: 18px;
-  font-style: italic;
-`
+import {Formik} from 'formik'
+import styled from 'styled-components'
+import * as Yup from 'yup'
+import {FC} from 'react'
+import {FormikErrors, FormikValues} from 'formik/dist/types'
+import {Alert, Button, Checkbox, FormControlLabel, TextField} from '@mui/material'
+import style from './Login.module.css'
 
 type Props = {
     loginThunk: (email: string, password: number, rememberMe: boolean, captcha: any) => void
     captchaUrl: string | null
 }
+type InitialValuesType = {
+    email: string | null
+    password: number | null
+    rememberMe: boolean
+    captcha: string
+}
 
 export const LoginForm: FC<Props> = ({loginThunk, captchaUrl}) => {
 
-    type InitialValuesType = {
-        email: string | null
-        password: number | null
-        rememberMe: boolean
-        captcha: string
-    }
 
     let initialValues: InitialValuesType = {
         email: '',
@@ -48,11 +44,9 @@ export const LoginForm: FC<Props> = ({loginThunk, captchaUrl}) => {
         }
         return errors;
     }
-    let submitCallback =  (values: FormikValues, setSubmitting: any) => {
-        setTimeout(() => {
-            loginThunk(values.email, values.password, values.rememberMe, values.captcha);
-            setSubmitting(false);
-        }, 400);
+    let submitCallback =  (values: FormikValues, {setSubmitting}: {setSubmitting: (arg1: boolean) => void}) => {
+        loginThunk(values.email, values.password, values.rememberMe, values.captcha);
+        setSubmitting(false);
     }
 
     return (
@@ -73,24 +67,25 @@ export const LoginForm: FC<Props> = ({loginThunk, captchaUrl}) => {
                   /* and other goodies */
               }) => (
                 <form onSubmit={handleSubmit}>
-                    <div>
-                        <label htmlFor={'email'}>Login / Email</label>
-                        <Field type="email" name="email" onChange={handleChange} onBlur={handleBlur} value={values.email} />
+                    {/*login*/}
+                    <div className={style.form}>
+                        <TextField type="email" id="outlined-basic"  name="email" onChange={handleChange} onBlur={handleBlur} value={values.email}  label="Email/Login" variant="outlined" />
+                        {errors.email != null ? <Alert className={style.formError} severity="error">  {errors.email && touched.email && errors.email} </Alert> : null}
                     </div>
-                    <Error> {errors.email && touched.email && errors.email} </Error>
-                    <div>
-                        <label htmlFor={'password'}>Password</label>
-                        <Field type="password" name="password" onChange={handleChange} onBlur={handleBlur}  value={values.password} />
+                    {/*pass*/}
+                    <div className={style.form}>
+                        <TextField type="password" name="password" onChange={handleChange} onBlur={handleBlur} value={values.password} label="Password" autoComplete="current-password" id="outlined-password-input"/>
+                        {errors.password != null ? <Alert className={style.formError} severity="error"> {errors.password && touched.password && errors.password} </Alert> : null}
                     </div>
-                    <Error>{errors.password && touched.password && errors.password}</Error>
+                    {/*remember me*/}
                     <div>
-                        <label htmlFor={'rememberMe'}> Remember me</label>
-                        <Field type="checkbox" name={"rememberMe"} onChange={handleChange}  value={values.rememberMe} />
+                        <FormControlLabel control={<Checkbox name={"rememberMe"} onChange={handleChange} defaultChecked/>} label={'Remember me'}/>
                     </div>
                     {captchaUrl && <div> <img src={captchaUrl} alt={'captcha security'}/> </div>}
                     {captchaUrl && <div> <input name={'captcha'} value={values.captcha} onBlur={handleBlur} type={'text'} onChange={handleChange} /> </div>}
+                    {/*submit*/}
                     <div>
-                        <button type="submit" disabled={isSubmitting}> Submit </button>
+                        <Button type="submit" disabled={isSubmitting} variant="contained" color="success"> Submit </Button>
                     </div>
                 </form>
             )}

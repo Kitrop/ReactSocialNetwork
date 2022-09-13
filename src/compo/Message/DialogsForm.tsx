@@ -1,9 +1,9 @@
-import {Field, Formik} from "formik";
-import message from "./Dialogs.module.css";
-import * as Yup from "yup";
+import {Field, Formik} from 'formik'
+import message from './Dialogs.module.css'
+import * as Yup from 'yup'
 import styled from 'styled-components'
-import {FC} from "react";
-import {FormikValues} from "formik/dist/types";
+import {FC} from 'react'
+import {FormikValues} from 'formik/dist/types'
 
 const Error = styled.div`
   color: red;
@@ -23,12 +23,11 @@ const DialogForm: FC<Props> = ({SendMessageActionCreater}) => {
     const initialValues: InitialValuesType = {
         messageText: ''
     }
-    let onSubmit =  (values: FormikValues, setSubmitting: any ) => {
-        setTimeout(() => {
-            console.log(values.messageText)
-            SendMessageActionCreater(values.messageText)
-            setSubmitting(false);
-        }, 400);
+
+
+    let onSubmit =  (values: FormikValues, {setSubmitting}: {setSubmitting: (arg1: boolean) => void}) => {
+        SendMessageActionCreater(values.messageText)
+        setSubmitting(false);
     }
     let SignupSchema = Yup.object().shape({
         messageText: Yup.string()
@@ -48,7 +47,6 @@ const DialogForm: FC<Props> = ({SendMessageActionCreater}) => {
                   handleChange,
                   handleBlur,
                   handleSubmit,
-                  isSubmitting,
               }) => (
                 <form onSubmit={handleSubmit}>
                     <div>
@@ -56,7 +54,7 @@ const DialogForm: FC<Props> = ({SendMessageActionCreater}) => {
                         <Error>{errors.messageText && touched.messageText && errors.messageText}</Error>
                     </div>
                     <div>
-                        <button type="submit" disabled={isSubmitting} className={message.mybutton} >Send Message</button>
+                        <button type="submit" className={message.mybutton} >Send Message</button>
                     </div>
                 </form>
             )}

@@ -9,11 +9,7 @@ type Props = {
     text: string
 }
 
-const Post: FC<Props> = ({name, text, }) => {
-
-    function getRndInteger(min: number, max: number) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+const Post: FC<Props> = ({name, text}) => {
 
     return (
     <div>
@@ -24,7 +20,7 @@ const Post: FC<Props> = ({name, text, }) => {
             <Suspense fallback={<Preloader/>}>
                <PhotoPost />
             </Suspense>
-            <div><span>Like: {getRndInteger(0, 100)}</span></div>
+            <div><span>Like: 0</span></div>
         </div>
     </div>
     );

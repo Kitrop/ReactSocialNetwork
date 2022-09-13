@@ -2,6 +2,7 @@ import message from './Dialogs.module.css'
 import DialogUsersItem from './DialogUsersItem/DialogsItem'
 import Message from './MessagesItem/Message'
 import {useEffect} from 'react'
+import uniqid from 'uniqid'
 import {useDispatch, useSelector} from 'react-redux'
 import {getMessageSelector} from '../../redux/selectors/dialogSelectors'
 import DialogsForm from './DialogsForm'
@@ -26,9 +27,8 @@ function Dialogs() {
     }, [isAuth, navigator]);
 
 
-    let dialogsElements = dialogsPage.usersDialogData.map(d => <DialogUsersItem name={d.name} key={d.id} id={d.id} />)
-    let messagesElements = dialogsPage.messagesData.map(m => <Message key={m.id}  messageContent={m.message}/>)
-
+    let dialogsElements = dialogsPage.usersDialogData.map(d => <DialogUsersItem name={d.name} key={uniqid()} id={d.id} />)
+    let messagesElements = dialogsPage.messagesData.map(m => <Message key={uniqid()}  messageContent={m.message}/>)
 
 
     const dispatch: ThunkDispatch<AppStateType, any, any> = useDispatch()

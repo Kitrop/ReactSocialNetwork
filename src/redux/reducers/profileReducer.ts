@@ -1,8 +1,9 @@
 import {PhotosType, PostDataType, ProfileType } from '../types/type'
 import {ThunkDispatch} from "redux-thunk";
 import {AppStateType, InferActionsTypes} from "../redux-store";
-import {  } from "../../compo/api/api";
+import {ResultCodesEnum} from '../../compo/api/api'
 import { profileApi } from '../../compo/api/profileApi';
+import profile from '../../compo/Profile/Profile'
 
 
 
@@ -45,9 +46,6 @@ const profileReducer = (state = initialState, action: ActionsType):initialStateT
         case 'SET_PROFILE_STATUS': {
             return {...state, status: action.status}
         }
-        // case UPDATE_PROFILE_STATUS: {
-        //     return {...state, status: action.status}
-        // }
         case 'SET_PROFILE_PHOTO': {
             return {...state, profile: {...state.profile, photos: action.photos} as ProfileType}
         }
@@ -68,7 +66,7 @@ export const profileActions = {
     addPostActionCreater: (newPostText: string) => ({type: 'ADD_POST', newPostText} as const),
     setUserProfile:  (profile: ProfileType) => ({type: 'SET_USER_PROFILE', profile} as const),
     setProfileStatus: (status: string) => ({type: 'SET_PROFILE_STATUS', status} as const),
-    setProfilePhoto: (photos: PhotosType) => ({type: 'SET_PROFILE_PHOTO', photos} as const)
+    setProfilePhoto: (photos: PhotosType) => ({type: 'SET_PROFILE_PHOTO', photos} as const),
 }
 
 
@@ -79,11 +77,11 @@ export const getProfileThunk = (userId: number | string) => async (dispatch: Dis
 }
 export const getProfileStatus = (userId: number | string) => async (dispatch: DispatchThunkType) => {
     let data = await profileApi.getProfileStatus(userId)
-    dispatch(profileActions.setProfileStatus(data.data))
+    dispatch(profileActions.setProfileStatus(data))
 }
 export const putProfileStatus = (status: string) => async (dispatch: DispatchThunkType) => {
     let data = await profileApi.putProfileStatus(status)
-    if (data.data.resultCode === 0) {
+    if (data.data.resultCode === ResultCodesEnum.Success) {
         dispatch(profileActions.setProfileStatus(status))
     }
 }
@@ -93,12 +91,16 @@ export const savePhoto = (photos: File) => async (dispatch: DispatchThunkType) =
         dispatch(profileActions.setProfilePhoto(data.data.data))
     }
 }
-
 export const putProfileInfo = (profile: ProfileType) => async (dispatch: DispatchThunkType, getState: any) => {
-    const userId = getState.auth.id
-    const data = await profileApi.putProfileInfo(profile)
-    if (data.data.resultCode === 0) {
-        dispatch(getProfileThunk(userId))
+    const userId = getState().auth.userId
+    let data = await profileApi.putProfileInfo(profile)
+    if (data.data.resultCode === ResultCodesEnum.Success) {
+        if (userId !== null) {
+            dispatch(getProfileThunk(userId)).then(r => r)
+        }
+        else {
+            throw new Error('userId not be found')
+        }
     }
     else {
         return Promise.reject(data.data.messages[0])

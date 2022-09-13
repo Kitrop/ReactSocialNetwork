@@ -2,11 +2,11 @@ import i from './ProfileInfo.module.css'
 import Preloader from '../../common/Preloader/Preloader'
 import userPhoto from '../../../img/avatar.jpg'
 import ProfileStatus from './ProfileStatus'
-import Job from './ProfileInfoAbout/Job'
-import Contacts from './ProfileInfoAbout/Contacts'
 import {ChangeEvent, FC} from 'react'
 import {ProfileType} from '../../../redux/types/type'
-
+import ProfileAboutForm from './ProfileInfoAbout/ProfileAboutForm'
+import {IconButton} from '@mui/material'
+import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 
 type Props = {
     savePhoto: (photos: File) => void
@@ -18,6 +18,7 @@ type Props = {
 }
 
 const ProfileInfo: FC<Props> = ({savePhoto, isOwner, profile, status, putProfileStatus, putProfileInfo}) => {
+
     if(!profile) {
         return <Preloader />
     }
@@ -35,13 +36,10 @@ const ProfileInfo: FC<Props> = ({savePhoto, isOwner, profile, status, putProfile
                 <div className={i.info_profile}>{profile.fullName}</div>
                 {/*Photos*/}
                 <img className={i.profile_avatar} src={profile.photos.large != null ? profile.photos.large : userPhoto} alt={'avatar'}/>
-                {isOwner && <span><input type={'file'} onChange={onAvatarSelected}/></span> }
+                {isOwner && <span>  <IconButton color="primary" aria-label="upload picture" component="label"> <input hidden type={'file'} onChange={onAvatarSelected}/>  <PhotoCameraIcon /></IconButton>   </span> }
                 {/*Status*/}
-                <ProfileStatus isOwner={isOwner} status={status} putProfileStatus={putProfileStatus}/>
-                {/*MyContacts*/}
-                <Contacts  github={profile.contacts.github} vk={profile.contacts.vk} facebook={profile.contacts.facebook} instagram={profile.contacts.instagram} twitter={profile.contacts.twitter} website={profile.contacts.website} youtube={profile.contacts.youtube} mainLink={profile.contacts.mainLink}/>
-                {/*Job*/}
-                <Job lookingForAJob={profile.lookingForAJob} lookingForAJobDescription={profile.lookingForAJobDescription}/>
+                <ProfileStatus isOwner={isOwner} statusProps={status} putProfileStatus={putProfileStatus} />
+                <ProfileAboutForm profile={profile} putProfileInfo={putProfileInfo} />
             </div>
         </div>
     );
