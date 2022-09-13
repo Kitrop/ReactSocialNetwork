@@ -3,6 +3,7 @@ import {FC, useState} from 'react'
 import {ProfileType} from '../../../../redux/types/type'
 import {Field, Formik} from 'formik'
 import {FormikValues} from 'formik/dist/types'
+import { Button } from '@mui/material'
 
 type Props = {
     profile: ProfileType
@@ -53,7 +54,7 @@ const ProfileAboutForm: FC<Props> = ({profile, putProfileInfo}) => {
                     <div className={i.info_profile}>Job Description: <span>{profile.lookingForAJobDescription !== null ? profile.lookingForAJobDescription : 'No'}</span></div>
                 </div>
             }
-            <button onClick={() => setEditMode(true)}>Edit</button>
+            <Button color={'inherit'} variant="contained" size={'small'} onClick={() => setEditMode(true)}>Edit</Button>
         </>
     )
 }

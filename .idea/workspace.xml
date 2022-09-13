@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="fix-status on change">
-      <change afterPath="$PROJECT_DIR$/src/compo/Login/Login.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/Contacts.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/ProfileAbout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/ProfileAboutForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compo/Users/UsersForm.module.css" afterDir="false" />
+    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="add some design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/10.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/14.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/14.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/15.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/15.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/16.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/16.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" afterDir="false" />
@@ -29,62 +16,10 @@
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/helper-plugin-utils/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/helper-plugin-utils/lib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/helper-plugin-utils/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/helper-plugin-utils/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/plugin-syntax-jsx/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/plugin-syntax-jsx/lib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/plugin-syntax-jsx/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/plugin-syntax-jsx/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/AsyncGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/AsyncGenerator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/applyDecs.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/applyDecs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/asyncGeneratorDelegate.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/asyncGeneratorDelegate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/awaitAsyncGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/awaitAsyncGenerator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/construct.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/construct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/AsyncGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/AsyncGenerator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/applyDecs.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/applyDecs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/asyncGeneratorDelegate.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/asyncGeneratorDelegate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/awaitAsyncGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/awaitAsyncGenerator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/construct.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/construct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/extends.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/extends.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/get.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/get.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/wrapRegExp.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/esm/wrapRegExp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/extends.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/extends.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/get.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/get.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/getPrototypeOf.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/getPrototypeOf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/setPrototypeOf.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/setPrototypeOf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/wrapRegExp.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/helpers/wrapRegExp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/runtime/regenerator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/runtime/regenerator/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.browser.cjs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.browser.esm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.cjs.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.cjs.prod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/src/props.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/src/props.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@emotion/is-prop-valid/types/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/memoize/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/memoize/dist/emotion-memoize.browser.cjs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/memoize/dist/emotion-memoize.browser.esm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/memoize/dist/emotion-memoize.cjs.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@emotion/memoize/dist/emotion-memoize.cjs.prod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@emotion/memoize/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@emotion/memoize/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/prop-types/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/prop-types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/prop-types/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/prop-types/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/csstype/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/csstype/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/csstype/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/csstype/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/csstype/index.js.flow" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/csstype/index.js.flow" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/csstype/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/csstype/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Login/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Login/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Login/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Message/DialogsForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Message/DialogsForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Nav/Nav.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Nav/Nav.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Users/UsersForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Users/UsersForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/profileReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/profileReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utility/declaration.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/declaration.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/ProfileAboutForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/ProfileAboutForm.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -434,7 +369,10 @@
       <workItem from="1662726172655" duration="52000" />
       <workItem from="1662800592816" duration="1735000" />
       <workItem from="1662882008881" duration="11922000" />
-      <workItem from="1663007189264" duration="4148000" />
+      <workItem from="1663007189264" duration="4720000" />
+      <workItem from="1663014869687" duration="18000" />
+      <workItem from="1663014923239" duration="1166000" />
+      <workItem from="1663016157477" duration="1125000" />
     </task>
     <task id="LOCAL-00001" summary="FIX ALL!">
       <created>1655120009106</created>
@@ -716,7 +654,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662548877771</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="add some design">
+      <created>1663012188868</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1663012188868</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -744,7 +689,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="minor upd" />
     <MESSAGE value="add initialisation" />
     <MESSAGE value="selectors for users" />
     <MESSAGE value="add some test and refactoring" />
@@ -769,7 +713,8 @@
     <MESSAGE value="add searchParams" />
     <MESSAGE value="fix &quot;setSubmitin is not a function&quot;" />
     <MESSAGE value="fix-status on change" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix-status on change" />
+    <MESSAGE value="add some design" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some design" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
