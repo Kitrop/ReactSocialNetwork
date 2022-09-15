@@ -1,14 +1,12 @@
-import posts from '../Posts/MyPosts.module.css';
-import Post from './Post/Post';
-import MyPostForm from "./MyPostForm";
-import {useDispatch, useSelector} from "react-redux";
+import posts from '../Posts/MyPosts.module.css'
+import Post from './Post/Post'
+import MyPostForm from './MyPostForm'
+import {useDispatch, useSelector} from 'react-redux'
 import {postsDataSelector} from '../../../redux/selectors/profileSelector'
-import {ActionsType, profileActions} from "../../../redux/reducers/profileReducer";
-import {AppStateType} from "../../../redux/redux-store";
-import {ThunkDispatch} from "redux-thunk";
+import {ActionsType, profileActions} from '../../../redux/reducers/profileReducer'
+import {AppStateType} from '../../../redux/redux-store'
+import {ThunkDispatch} from 'redux-thunk'
 import uniqid from 'uniqid'
-import { useMemo } from 'react';
-
 
 
 const MyPosts = () => {

@@ -38,7 +38,7 @@ const App = () => {
     return (
         <div className={s.grid}>
             <Header/>
-            <Nav/>
+            {/*<Nav/>*/}
             <ScrollToTop smooth/>
             <div className={s.content}>
                 <Routes>

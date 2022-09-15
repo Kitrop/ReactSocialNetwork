@@ -6,3 +6,11 @@
     max-width: 300px;
     max-height: 200px;
 }
+
+.post {
+    margin-top: 10px;
+}
+
+.usernamePost {
+    font-style: italic;
+}

@@ -12,15 +12,15 @@ type Props = {
 const Post: FC<Props> = ({name, text}) => {
 
     return (
-    <div>
-        <div className={post.item}>
-            {name}: {text}
+    <div className={post.post}>
+        <div>
+            <span className={post.usernamePost}>{name}</span>: {text}
         </div>
         <div className={post.item}>
             <Suspense fallback={<Preloader/>}>
                <PhotoPost />
             </Suspense>
-            <div><span>Like: 0</span></div>
+            <div><span className={post.item}>Like: 0</span></div>
         </div>
     </div>
     );
