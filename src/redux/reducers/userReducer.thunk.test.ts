@@ -1,6 +1,6 @@
 import {followThunk} from './usersReducer'
-import {userApi} from '../../compo/api/usersApi'
-import {ResponseType, ResultCodesEnum} from '../../compo/api/api'
+import {userApi} from '../../api/usersApi'
+import {ResponseType, ResultCodesEnum} from '../../api/api'
 
 // Create mock
 jest.mock('../../compo/api/usersApi')

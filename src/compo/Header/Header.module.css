@@ -7,14 +7,7 @@
 }
 
 .header {
-    width: 100%;
-    grid-area: header;
-    background-color: #42cd6a;
-}
-
-.logout_icon {
-    width: 20px;
-    height: 20px;
+    background-color: #0091cf;
 }
 
 .logout_btn {
@@ -33,4 +26,21 @@
 .login_btn a{
     text-decoration: none;
     color: #054287;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.authBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.linkIcon {
+    color: rgb(0, 0, 0);
 }

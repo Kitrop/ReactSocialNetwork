@@ -42,7 +42,7 @@
   display: grid;
   grid-template-areas:
 "header header header"
-"nav content content";
+"content content content";
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
@@ -50,9 +50,9 @@
 }
 
 .content {
+  margin-left: 20px;
   grid-area: content;
-  background-color: #ffffff;
-  margin: 0 auto;
+  background-color: #ffffff;;
   width: 100%;
 }
 

@@ -1,8 +1,8 @@
 import {PhotosType, PostDataType, ProfileType } from '../types/type'
 import {ThunkDispatch} from "redux-thunk";
 import {AppStateType, InferActionsTypes} from "../redux-store";
-import {ResultCodesEnum} from '../../compo/api/api'
-import { profileApi } from '../../compo/api/profileApi';
+import {ResultCodesEnum} from '../../api/api'
+import { profileApi } from '../../api/profileApi';
 import profile from '../../compo/Profile/Profile'
 
 

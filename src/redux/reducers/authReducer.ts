@@ -1,7 +1,7 @@
-import {ResultCodesEnum, securityApi} from '../../compo/api/api'
+import {ResultCodesEnum, securityApi} from '../../api/api'
 import {ThunkDispatch} from "redux-thunk";
 import {AppStateType, InferActionsTypes} from "../redux-store";
-import {loginApi} from '../../compo/api/loginApi';
+import {loginApi} from '../../api/loginApi';
 
 
 

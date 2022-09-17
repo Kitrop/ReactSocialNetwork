@@ -1,9 +1,9 @@
-import {ResultCodesEnum} from '../../compo/api/api'
+import {ResultCodesEnum} from '../../api/api'
 import {updateObj} from '../../utility/updateObjectArray'
 import {UsersInterface} from '../types/type'
 import {ThunkDispatch} from 'redux-thunk'
 import {AppStateType, InferActionsTypes} from '../redux-store'
-import {userApi} from '../../compo/api/usersApi'
+import {userApi} from '../../api/usersApi'
 
 
 // State
@@ -23,7 +23,7 @@ export interface InitialStateInterface {
 const initialState: InitialStateInterface = {
     users: [],
     pageSize: 10,
-    portionSize: 15,
+    portionSize: 5,
     ifFetching: true,
     totalUsersCount: 0,
     currentPage: 1,

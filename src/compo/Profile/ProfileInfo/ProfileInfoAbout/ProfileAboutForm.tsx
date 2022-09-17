@@ -12,7 +12,6 @@ type Props = {
 
 const ProfileAboutForm: FC<Props> = ({profile, putProfileInfo}) => {
     const initialValues = JSON.parse(JSON.stringify(profile))
-    console.log(initialValues)
     const submitCallback = (values: FormikValues, {setSubmitting}: {setSubmitting: (arg1: boolean) => void}) => {
         putProfileInfo(profile)
         setSubmitting(false)

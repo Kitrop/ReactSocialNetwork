@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import Pagination from './Pagination'
 import {FC, useCallback, useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
@@ -21,12 +20,6 @@ import Preloader from '../common/Preloader/Preloader'
 import User from './User'
 import UsersForm from './UsersForm'
 
-
-// style
-const BorderPageUsers = styled.div`
-  border: 0.5px solid rgba(0, 0, 0, 0.68);
-  padding: 10px;
-`
 
 type Props = {
     titleText: string
@@ -123,14 +116,14 @@ const Users: FC<Props> = ({titleText = 'Users'}) => {
     }
 
     return (
-        <BorderPageUsers>
+        <>
             {ifFetching ? <Preloader/> : null}
             <UsersForm onFilterChanged={onFilterChanged}/>
-            <Pagination totalUsersCount={totalUsersCount} pageSize={pageSize} currentPage={currentPage}
-                        onPageChanged={onPageChanged} portionSize={portionSize} filter={filter}/>
+            <Pagination totalUsersCount={totalUsersCount} pageSize={pageSize} currentPage={currentPage} onPageChanged={onPageChanged} portionSize={portionSize} filter={filter}/>
             <h2>{titleText}</h2>
             <User unfollowThunk={unfollowThunk_} followThunk={followThunk_} users={users} isFetching={isFetching}/>
-        </BorderPageUsers>
+        </>
+
     )
 }
 
