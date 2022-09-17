@@ -1,9 +1,9 @@
-import {ResultCodesEnum} from '../../compo/api/api'
+import {ResultCodesEnum} from '../../api/api'
 import {updateObj} from '../../utility/updateObjectArray'
 import {UsersInterface} from '../types/type'
 import {ThunkDispatch} from 'redux-thunk'
 import {AppStateType, InferActionsTypes} from '../redux-store'
-import {userApi} from '../../compo/api/usersApi'
+import {userApi} from '../../api/usersApi'
 
 
 // State

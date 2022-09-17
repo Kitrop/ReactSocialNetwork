@@ -1,4 +1,4 @@
-import {PhotosType} from "../../redux/types/type";
+import {PhotosType} from "../redux/types/type";
 import {instance, ResponseType} from './api'
 
 

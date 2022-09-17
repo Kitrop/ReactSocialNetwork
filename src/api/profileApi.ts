@@ -1,5 +1,5 @@
 // Types for Profile
-import {PhotosType, ProfileType} from "../../redux/types/type";
+import {PhotosType, ProfileType} from "../redux/types/type";
 import {instance, ResponseType} from "./api";
 
 

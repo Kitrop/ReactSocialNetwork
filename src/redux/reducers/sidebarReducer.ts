@@ -2,7 +2,7 @@ import {UsersInterface} from '../types/type'
 import {AppStateType, InferActionsTypes} from '../redux-store'
 import {ThunkDispatch} from 'redux-thunk'
 import {userActions} from './usersReducer'
-import {userApi} from '../../compo/api/usersApi'
+import {userApi} from '../../api/usersApi'
 
 
 // Initial State
