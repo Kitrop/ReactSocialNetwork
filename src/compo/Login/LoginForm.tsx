@@ -79,7 +79,7 @@ export const LoginForm: FC<Props> = ({loginThunk, captchaUrl}) => {
                     </div>
                     {/*remember me*/}
                     <div>
-                        <FormControlLabel control={<Checkbox name={"rememberMe"} onChange={handleChange} defaultChecked/>} label={'Remember me'}/>
+                        <FormControlLabel control={<Checkbox name={"rememberMe"} onChange={handleChange} />} label={'Remember me'}/>
                     </div>
                     {captchaUrl && <div> <img src={captchaUrl} alt={'captcha security'}/> </div>}
                     {captchaUrl && <div> <input name={'captcha'} value={values.captcha} onBlur={handleBlur} type={'text'} onChange={handleChange} /> </div>}

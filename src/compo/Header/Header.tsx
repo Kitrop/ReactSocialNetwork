@@ -1,11 +1,12 @@
 import style from './Header.module.css'
 import {NavLink} from 'react-router-dom'
-import {FC, useCallback, useEffect, useState} from 'react'
+import {FC, memo, useCallback, useEffect, useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {AppStateType} from '../../redux/redux-store'
 import {getIsAuthSelector, getLoginSelector} from '../../redux/selectors/authSelector'
 import {ThunkDispatch} from 'redux-thunk'
 import {ActionsType, loginMeThunk, logoutThunk} from '../../redux/reducers/authReducer'
+import ChatIcon from '@mui/icons-material/Chat';
 import {
     AppBar,
     Box,
@@ -41,7 +42,7 @@ const theme = createTheme({
     },
 });
 
-const Header: FC<Props> = (props) => {
+const Header: FC<Props> = memo((props) => {
 
 
     // STATE
@@ -56,7 +57,7 @@ const Header: FC<Props> = (props) => {
     const drawerWidth = 240;
     const navItems = [
         <span className={style.linkSpan}> <NavLink className={style.link} to="/profile/24394"> <PersonIcon className={style.linkIcon}/> Profile</NavLink> </span> ,
-        <span className={style.linkSpan}> <NavLink className={style.link} to="/dialogs"> <SendIcon className={style.linkIcon}/> Dialogs</NavLink> </span> ,
+        <span className={style.linkSpan}> <NavLink className={style.link} to="/chat"> <ChatIcon className={style.linkIcon}/> Chat</NavLink> </span> ,
         <span className={style.linkSpan}> <NavLink className={style.link} to="/users"> <PeopleIcon className={style.linkIcon}/> Find user</NavLink> </span>,
         <span> {isAuth_ ?  <button onClick={logoutThunk_} className={style.logout_btn}> {login_} - <LogoutIcon className={style.logout_icon}/> </button> : <NavLink className={style.link} to={'/Login'}> Login </NavLink>} </span>
     ]
@@ -92,9 +93,9 @@ const Header: FC<Props> = (props) => {
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box  className={style.header} sx={{ display: 'flex' }}>
+        <Box  sx={{ display: 'grid' }}>
             <ThemeProvider theme={theme}>
-                <AppBar color={'secondary'} component="nav">
+                <AppBar className={style.header} color={'secondary'} component="nav">
                     <Toolbar>
                         <IconButton
                             color="inherit"
@@ -138,16 +139,7 @@ const Header: FC<Props> = (props) => {
             </div>
         </Box>
     )
-
-    // return <header className={style.header}>
-    //         {/*<img src={logo} alt={'logo'} className={style.logo}/>*/}
-    //         <div className={style.login_btn}>
-    //             { isAuth_
-    //                 ? <div> {login_} - <button onClick={logoutThunk_} className={style.logout_btn}> <img className={style.logout_icon} src={logout} alt={'logout'}/> </button></div>
-    //                 : <NavLink to={'/Login'}> Login </NavLink> }
-    //         </div>
-    //     </header>
-}
+})
 
 
 export default Header;

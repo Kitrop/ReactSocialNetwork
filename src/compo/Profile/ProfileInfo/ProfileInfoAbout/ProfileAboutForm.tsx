@@ -8,16 +8,16 @@ import { Button } from '@mui/material'
 type Props = {
     profile: ProfileType
     putProfileInfo: (profile: ProfileType) => void
+    isOwner: boolean
 }
 
-const ProfileAboutForm: FC<Props> = ({profile, putProfileInfo}) => {
+const ProfileAboutForm: FC<Props> = ({profile, putProfileInfo, isOwner}) => {
     const initialValues = JSON.parse(JSON.stringify(profile))
     const submitCallback = (values: FormikValues, {setSubmitting}: {setSubmitting: (arg1: boolean) => void}) => {
         putProfileInfo(profile)
         setSubmitting(false)
     }
-
-    const job = initialValues.fullName
+    // const job = initialValues.fullName
 
     const [editMode, setEditMode] = useState(false)
 
@@ -26,7 +26,6 @@ const ProfileAboutForm: FC<Props> = ({profile, putProfileInfo}) => {
             {editMode
                 ? <Formik initialValues={initialValues} onSubmit={submitCallback}>
                     {({
-                          values,
                           handleSubmit,
                           isSubmitting
                       }) => (
@@ -53,7 +52,8 @@ const ProfileAboutForm: FC<Props> = ({profile, putProfileInfo}) => {
                     <div className={i.info_profile}>Job Description: <span>{profile.lookingForAJobDescription !== null ? profile.lookingForAJobDescription : 'No'}</span></div>
                 </div>
             }
-            <Button color={'inherit'} variant="contained" size={'small'} onClick={() => setEditMode(true)}>Edit</Button>
+            {isOwner ? <Button color={'inherit'} variant="contained" size={'small'} onClick={() => setEditMode(true)}>Edit</Button> : null}
+
         </>
     )
 }

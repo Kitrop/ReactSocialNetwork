@@ -1,6 +1,6 @@
 import message from './Dialogs.module.css'
 import DialogUsersItem from './DialogUsersItem/DialogsItem'
-import Message from './MessagesItem/Message'
+import DialogsMessage from './MessagesItem/DialogsMessage'
 import {useEffect} from 'react'
 import uniqid from 'uniqid'
 import {useDispatch, useSelector} from 'react-redux'
@@ -28,7 +28,7 @@ function Dialogs() {
 
 
     let dialogsElements = dialogsPage.usersDialogData.map(d => <DialogUsersItem name={d.name} key={uniqid()} id={d.id} />)
-    let messagesElements = dialogsPage.messagesData.map(m => <Message key={uniqid()}  messageContent={m.message}/>)
+    let messagesElements = dialogsPage.messagesData.map(m => <DialogsMessage key={uniqid()} messageContent={m.message}/>)
 
 
     const dispatch: ThunkDispatch<AppStateType, any, any> = useDispatch()

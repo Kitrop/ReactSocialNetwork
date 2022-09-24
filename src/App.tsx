@@ -16,6 +16,7 @@ import Profile from './compo/Profile/Profile'
 import Header from './compo/Header/Header'
 import {AppStateType} from './redux/redux-store'
 import {ThunkDispatch} from 'redux-thunk'
+import ChatPage from './compo/pages/Chat/ChatPage'
 
 const Dialogs = lazy(() => import('./compo/Message/Dialogs'))
 
@@ -43,10 +44,11 @@ const App = () => {
             <div className={s.content}>
                 <Routes>
                     <Route path="/dialogs/*" element={<Suspense fallback={<Preloader/>}> <Dialogs/> </Suspense>}/>
-                    <Route path="/profile/:userId" element={<Profile/>}/>
-                    <Route path="/profile" element={<Profile/>}/>
+                    <Route path="/profile/:userId" element={<Suspense fallback={<Preloader/>}> <Profile/> </Suspense>}/>
+                    <Route path="/profile" element={<Suspense fallback={<Preloader/>}> <Profile/> </Suspense>}/>
                     <Route path="/users" element={<Users titleText={'Samurais'}/>}/>
                     <Route path="/login" element={<Login/>}/>
+                    <Route path="/chat" element={<ChatPage />}/>
                     <Route path="*" element={<NotFound/>}/>
                     <Route path="/" element={<Navigate to="/users"/>}/>
                 </Routes>

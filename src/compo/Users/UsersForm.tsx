@@ -1,7 +1,7 @@
 import {Field, Formik} from 'formik'
 import * as Yup from 'yup'
 import {FormikValues} from 'formik/dist/types'
-import {FC} from 'react'
+import {FC, memo} from 'react'
 import {FilterType} from '../../redux/reducers/usersReducer'
 import {Button, TextField} from '@mui/material'
 import styles from './UsersForm.module.css'
@@ -17,7 +17,7 @@ type Props = {
     onFilterChanged: (filter: FilterType) => void
 }
 
-const UsersForm: FC<Props> = ({onFilterChanged}) => {
+const UsersForm: FC<Props> = memo(({onFilterChanged}) => {
 
 
     // InitialValues
@@ -74,6 +74,6 @@ const UsersForm: FC<Props> = ({onFilterChanged}) => {
             )}
         </Formik>
     )
-}
+})
 
 export default UsersForm

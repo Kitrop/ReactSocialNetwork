@@ -47,14 +47,13 @@ const Users: FC<Props> = ({titleText = 'Users'}) => {
     const getUserThunk_ = useCallback((currentPage: number, filter: FilterType) => dispatch(getUserThunk(currentPage, filter)), [dispatch])
 
 
+
+
+
     // If user not login, redirect to /login
-    let navigator = useNavigate()
     useEffect(() => {
-        if (!isAuth) {
-            navigator('/login')
-        }
-        getUserThunk_(currentPage, filter).then(r => r)
-    }, [navigator, isAuth, getUserThunk_])
+        getUserThunk_(currentPage, filter)
+    },  [isAuth, getUserThunk_])
 
 
     let [searchParams, setSearchParams] = useSearchParams()
@@ -114,6 +113,15 @@ const Users: FC<Props> = ({titleText = 'Users'}) => {
     const onFilterChanged = (filter: FilterType) => {
         getUserThunk_(1, filter).then(r => r)
     }
+
+
+    let navigator = useNavigate()
+    useEffect(() => {
+        if ( !isAuth ) {
+            return navigator('/login')
+        }
+    }, [isAuth, navigator]);
+
 
     return (
         <>

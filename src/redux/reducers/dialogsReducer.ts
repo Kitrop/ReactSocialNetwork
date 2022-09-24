@@ -1,18 +1,6 @@
 import {InferActionsTypes} from "../redux-store";
 
 
-
-//types
-type DialogsDataType = {
-    id: number,
-    name: string,
-}
-type MessagesDataType = {
-    id: number,
-    message: string
-}
-
-
 // State
 let initialState = {
     usersDialogData: [
@@ -57,3 +45,15 @@ export const dialogsActions = {
 
 
 export default dialogsReducer;
+
+
+
+//types
+type DialogsDataType = {
+    id: number,
+    name: string,
+}
+type MessagesDataType = {
+    id: number,
+    message: string
+}

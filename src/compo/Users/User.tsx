@@ -2,7 +2,7 @@ import ums from './Users.module.css'
 import {NavLink} from 'react-router-dom'
 import userPhoto from '../../img/avatar.jpg'
 import {UsersInterface} from '../../redux/types/type'
-import {FC} from 'react'
+import {FC, memo} from 'react'
 
 type Prop = {
     users: UsersInterface[]
@@ -11,7 +11,7 @@ type Prop = {
     isFetching: number[]
 }
 
-const User: FC<Prop> = ({users, unfollowThunk, followThunk, isFetching}) => {
+const User: FC<Prop> = memo(({users, unfollowThunk, followThunk, isFetching}) => {
     return <>
         <div>
             {users.length === 0 ? <span>Not found</span> : <span></span>}
@@ -42,6 +42,6 @@ const User: FC<Prop> = ({users, unfollowThunk, followThunk, isFetching}) => {
             </span>
             </div>)
     }</>
-}
+})
 
 export default User
