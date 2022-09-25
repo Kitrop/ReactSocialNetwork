@@ -21,9 +21,9 @@ const ChatPage = () => {
     const dispatch: ThunkDispatch<AppStateType, unknown, ActionsType> = useDispatch()
 
     useEffect(() => {
-        dispatch(startMessagesListening())
+        dispatch(startMessagesListening()).then(r => r)
         return () => {
-            dispatch(stopMessagesListening())
+            dispatch(stopMessagesListening()).then(r => r)
         }
     }, [dispatch])
 

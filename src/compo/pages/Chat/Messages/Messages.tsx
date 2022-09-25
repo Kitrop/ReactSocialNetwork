@@ -10,11 +10,11 @@ interface Props {
 
 const Messages: FC<Props> = memo(({messages}) => {
 
-    const messagesAnchorRef = useRef<HTMLDivElement>(null);
+    const messagesAnchorRef = useRef<HTMLDivElement>(null)
     useEffect(() => {
-        messagesAnchorRef.current?.scrollIntoView(true);
-    }, [messages]);
-    console.log(messages)
+        messagesAnchorRef.current?.scrollIntoView(true)
+    }, [messages])
+
     return (
         <div style={{height: '500px', overflowY: 'auto'}}>
             {/*@ts-ignore*/}
