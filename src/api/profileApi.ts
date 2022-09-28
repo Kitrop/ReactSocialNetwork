@@ -5,7 +5,7 @@ import {instance, ResponseType} from "./api";
 
 // API for Profile
 export const profileApi = {
-    getProfileAPI(userId: number | string){
+    getProfileAPI(userId: number | string) {
         return instance.get<ProfileType>(`profile/` + userId)
             .then(r => r.data);
     },

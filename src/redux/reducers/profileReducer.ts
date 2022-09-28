@@ -95,7 +95,7 @@ export const putProfileInfo = (profile: ProfileType) => async (dispatch: Dispatc
     const userId = getState().auth.userId
     let data = await profileApi.putProfileInfo(profile)
     if (data.data.resultCode === ResultCodesEnum.Success) {
-        if (userId !== null) {
+        if (userId) {
             dispatch(getProfileThunk(userId)).then(r => r)
         }
         else {

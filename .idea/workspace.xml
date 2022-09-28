@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="update chat, add support for errors, connection and disconnection, memoization for some components">
-      <change afterPath="$PROJECT_DIR$/src/compo/pages/Chat/chat.module.css" afterDir="false" />
+    <list default="true" id="b308f0e9-6aca-49c0-b10b-66fd538d3563" name="Changes" comment="delete dialogs, add margin for chat">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/10.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" afterDir="false" />
@@ -15,12 +18,13 @@
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/Login/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Login/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/pages/Chat/ChatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/pages/Chat/ChatPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/pages/Chat/MessageForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/pages/Chat/MessageForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/pages/Chat/Messages/Message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/pages/Chat/Messages/Message.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compo/pages/Chat/Messages/Messages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/pages/Chat/Messages/Messages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/headlogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/profileApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/profileApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/ProfileAboutForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compo/Profile/ProfileInfo/ProfileInfoAbout/ProfileAboutForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/dialogsReducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/profileReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/profileReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/selectors/dialogSelectors.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +38,8 @@
         <option value="tsconfig.json" />
         <option value="JavaScript File" />
         <option value="TypeScript JSX File" />
-        <option value="TypeScript File" />
         <option value="CSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -389,6 +393,10 @@
       <workItem from="1664034151309" duration="911000" />
       <workItem from="1664041604612" duration="4098000" />
       <workItem from="1664095950841" duration="5561000" />
+      <workItem from="1664127983901" duration="1010000" />
+      <workItem from="1664201950169" duration="2444000" />
+      <workItem from="1664288979579" duration="5000" />
+      <workItem from="1664379272991" duration="3926000" />
     </task>
     <task id="LOCAL-00001" summary="FIX ALL!">
       <created>1655120009106</created>
@@ -691,7 +699,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664045810999</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="delete dialogs, add margin for chat">
+      <created>1664128109269</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1664128109270</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -719,7 +734,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add some test and refactoring" />
     <MESSAGE value="reducer refactoring" />
     <MESSAGE value="components refactoring" />
     <MESSAGE value="add lazy and suspense" />
@@ -744,7 +758,8 @@
     <MESSAGE value="add some design" />
     <MESSAGE value="add design" />
     <MESSAGE value="update chat, add support for errors, connection and disconnection, memoization for some components" />
-    <option name="LAST_COMMIT_MESSAGE" value="update chat, add support for errors, connection and disconnection, memoization for some components" />
+    <MESSAGE value="delete dialogs, add margin for chat" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete dialogs, add margin for chat" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
