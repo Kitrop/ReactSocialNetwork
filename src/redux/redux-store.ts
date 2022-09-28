@@ -1,20 +1,18 @@
 import {applyMiddleware, combineReducers, compose, createStore} from 'redux'
-import profileReducer from "./reducers/profileReducer"
-import dialogsReducer from "./reducers/dialogsReducer"
-import usersReducer from "./reducers/usersReducer"
-import authReducer from "./reducers/authReducer"
-import thunk from "redux-thunk";
+import profileReducer from './reducers/profileReducer'
+import usersReducer from './reducers/usersReducer'
+import authReducer from './reducers/authReducer'
+import thunk from 'redux-thunk'
 import appReducer from './reducers/appReducer'
-import sidebarReducer from './reducers/sidebarReducer'
+import chatReducer from './reducers/chatReducer'
 
 
 let rootReducer = combineReducers({
     profilePage: profileReducer,
-    dialogsPage: dialogsReducer,
     usersPage: usersReducer,
     auth: authReducer,
     app: appReducer,
-    sidebar: sidebarReducer
+    chat: chatReducer
 })
 
 declare global {

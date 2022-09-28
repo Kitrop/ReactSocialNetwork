@@ -46,9 +46,8 @@ const Profile = () => {
     useEffect(() => {
         getProfileThunk_(userId).then(r => r)
         getProfileStatus_(userId).then(r => r)
-    }, [userId]);
+    }, [getProfileStatus_, getProfileThunk_, userId]);
 
-    
     return (
         <div className={myPosts.content}>
             <ProfileInfo savePhoto={savePhoto_} isOwner={authId == userId} profile={profile} status={status} putProfileStatus={putProfileStatus_} putProfileInfo={putProfileInfo_}/>

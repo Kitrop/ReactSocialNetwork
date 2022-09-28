@@ -6,10 +6,6 @@
     vertical-align: center;
 }
 
-.header {
-    background-color: #0091cf;
-}
-
 .logout_btn {
     border: none;
     background: none;
@@ -43,4 +39,8 @@
 
 .linkIcon {
     color: rgb(0, 0, 0);
+}
+
+.header {
+    width: 100% !important;
 }

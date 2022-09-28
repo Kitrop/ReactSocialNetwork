@@ -29,7 +29,7 @@ type DispatchThunkType = ThunkDispatch<AppStateType, unknown, ActionsType>
 
 // actionCreator
 export const appAction = {
-    initializingAC:() => ({type:'SET_INITIALIZED'} as const)
+    initializingAC: () => ({type:'SET_INITIALIZED'} as const)
 }
 
 

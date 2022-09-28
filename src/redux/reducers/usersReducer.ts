@@ -5,21 +5,6 @@ import {ThunkDispatch} from 'redux-thunk'
 import {AppStateType, InferActionsTypes} from '../redux-store'
 import {userApi} from '../../api/usersApi'
 
-
-// State
-export interface InitialStateInterface {
-    users: UsersInterface[]
-    pageSize: number
-    portionSize: number
-    ifFetching: boolean
-    totalUsersCount: number
-    currentPage: number
-    filter: {
-        term: string,
-        friend: boolean | null
-    }
-    isFollowing: number[]
-}
 const initialState: InitialStateInterface = {
     users: [],
     pageSize: 10,
@@ -79,11 +64,6 @@ const usersReducer = (state = initialState, action: ActionsType): InitialStateIn
 }
 
 
-// Types
-export type ActionsType = InferActionsTypes<typeof userActions>
-type DispatchThunkType = ThunkDispatch<AppStateType, unknown, ActionsType>
-export type FilterType = typeof initialState.filter
-
 // actionCreator
 export const userActions = {
     follow: (userId: number) => ({type: 'FOLLOW_USER', userId} as const),
@@ -123,4 +103,26 @@ const followUnfollowFlowThunk = async (dispatch: DispatchThunkType, id: number, 
 }
 
 
-export default usersReducer
+export default usersReducer;
+
+
+
+
+// Types
+export type ActionsType = InferActionsTypes<typeof userActions>
+type DispatchThunkType = ThunkDispatch<AppStateType, unknown, ActionsType>
+export type FilterType = typeof initialState.filter
+
+export interface InitialStateInterface {
+    users: UsersInterface[]
+    pageSize: number
+    portionSize: number
+    ifFetching: boolean
+    totalUsersCount: number
+    currentPage: number
+    filter: {
+        term: string,
+        friend: boolean | null
+    }
+    isFollowing: number[]
+}

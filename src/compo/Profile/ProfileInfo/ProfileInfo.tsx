@@ -39,7 +39,7 @@ const ProfileInfo: FC<Props> = ({savePhoto, isOwner, profile, status, putProfile
                 {isOwner && <span>  <IconButton color="primary" aria-label="upload picture" component="label"> <input hidden type={'file'} onChange={onAvatarSelected}/>  <PhotoCameraIcon /></IconButton>   </span> }
                 {/*Status*/}
                 <ProfileStatus isOwner={isOwner} statusProps={status} putProfileStatus={putProfileStatus} />
-                <ProfileAboutForm profile={profile} putProfileInfo={putProfileInfo} />
+                <ProfileAboutForm isOwner={isOwner} profile={profile} putProfileInfo={putProfileInfo} />
             </div>
         </div>
     );

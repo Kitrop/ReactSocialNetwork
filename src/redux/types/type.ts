@@ -36,4 +36,13 @@ export type UsersInterface = {
     followed: boolean
 }
 
-// dispatch
+// Chat
+
+export interface ChatMessageAPI {
+    message: string
+    photo: string
+    userId: number
+    userName: string
+}
+
+export type StatusMessage = 'pending' | 'ready' | 'error'
